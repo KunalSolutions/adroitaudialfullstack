@@ -18,51 +18,6 @@ const ProductCategories = () => {
       image: "https://i.pinimg.com/1200x/44/d8/07/44d807b49997b54f06ca7579314ef84b.jpg",
       slug: "monitor-speakers",
     },
-    {
-      name: "Monitor Speakers Bundles",
-      image: "/Categories/monitor-speakers-bundles.webp",
-      slug: "monitor-speakers-bundles",
-    },
-    {
-      name: "Midi Keyboards",
-      image: "/Categories/midi-keyboards.webp",
-      slug: "midi-keyboards",
-    },
-    {
-      name: "Mackie - Pro Audio Gear",
-      image: "/Categories/mackie.webp",
-      slug: "mackie-pro-audio-gear",
-    },
-    {
-      name: "Headphones",
-      image: "/Categories/headphones.webp",
-      slug: "headphones",
-    },
-    {
-      name: "Preamplifiers",
-      image: "/Categories/preamplifiers.webp",
-      slug: "preamplifiers",
-    },
-    {
-      name: "Groove Production",
-      image: "/Categories/groove-production.webp",
-      slug: "groove-production",
-    },
-    {
-      name: "Mixers",
-      image: "/Categories/mixers.webp",
-      slug: "mixers",
-    },
-    {
-      name: "Sound Proofing / Acoustic Treatment",
-      image: "/Categories/acoustic-treatment.webp",
-      slug: "sound-proofing-acoustic-treatment",
-    },
-    {
-      name: "Studio Accessories",
-      image: "/Categories/studio-accessories.webp",
-      slug: "studio-accessories",
-    },
   ];
 
   return (

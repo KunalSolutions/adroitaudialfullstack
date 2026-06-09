@@ -8,6 +8,7 @@ import Offers from "@components/HomePage/Offers";
 import UpComing from "@components/HomePage/UpComing";
 import BigSaving from "@components/HomePage/BigSaving";
 import Features from "@components/HomePage/Features";
+import AboutSection from "./AboutSection";
 
 const HomeScreen = () => {
   const { pageNumber = 1, keyword = "" } = useParams();
@@ -21,9 +22,10 @@ const HomeScreen = () => {
   return (
     <div className="bg-white">
       	<HeroSection id="#products" />
-        <NewArrival />  
-        <ProductSection />
-        <Features />
+        <AboutSection />
+        {/* <NewArrival />   */}
+        {/* <ProductSection /> */}
+        {/* <Features />   */}
 
         {/* <BigSaving /> */}
         {/* <Offers />

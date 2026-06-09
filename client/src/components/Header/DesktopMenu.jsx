@@ -55,19 +55,19 @@ const DesktopMenu = () => {
 	}, []);
 
 	return (
-		<nav className='hidden items-center text-white sm:ml-6 sm:flex sm:space-x-8'>
+		<nav className='hidden items-center text-black sm:ml-6 sm:flex sm:space-x-8'>
 
 			<div className='flex items-center gap-2'>
 				<MenuItem url='/cart' label='Cart' icon={ShoppingBagIcon} />
 				{cartItems.length > 0 && (
-					<span className='min-w-5 rounded-full bg-indigo-500 text-center text-sm font-semibold text-white'>
+					<span className='min-w-5 rounded-full bg-indigo-500 text-center text-sm font-semibold text-black'>
 						{cartItems.length}
 					</span>
 				)}
 			</div>
 			
 			{/* ORDERS */}
-			<div className='flex items-center gap-2'>
+			<div className='flex text-black items-center gap-2'>
 			<MenuItem 
 				url='/orders' 
 				label='Orders' 
@@ -118,7 +118,7 @@ const DesktopMenu = () => {
 						className='focus:outline-offset-3 rounded-xl px-2 bg-red-400 text-black p-1 cursor-pointer focus:outline focus:outline-2'
 						onClick={() => setAdminIsOpen(!adminIsOpen)}>
 						{/* <Cog8ToothIcon className='h-5 w-5' /> */}
-						<h1 className='text-white text-sm'>Dashboard</h1>
+						<h1 className='text-black text-sm'>Dashboard</h1>
 
 					</button>
 

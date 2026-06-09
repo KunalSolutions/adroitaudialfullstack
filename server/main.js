@@ -18,7 +18,7 @@ dotenv.config();
 
 connectDB();
 
-const port = https://av-prizor-backend.onrender.com || 5000;
+const port =  process.env.PORT || 5000;
 
 const app = express();
 
@@ -27,7 +27,7 @@ app.use(cookieParser()); // Cookies parsing and reading
 
 app.use(
   cors({
-    origin: "https://avsi-solutions-59y9.vercel.app", // your frontend URL
+    origin: "http://localhost:3000", // your frontend URL
     credentials: true,
   })
 );
@@ -68,5 +68,3 @@ app.listen(port, () => {
 		`Server running in ${process.env.NODE_ENV} mode on port ${port}.`.cyan.bold
 	);
 });
-
-

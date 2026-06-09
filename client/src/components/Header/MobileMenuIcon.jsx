@@ -6,9 +6,9 @@ const MobileMenuIcon = ({ isOpen, setIsOpen }) => {
 			onClick={() => setIsOpen(!isOpen)}
 			className='block sm:hidden cursor-pointer'>
 			{isOpen ? (
-				<XMarkIcon className='h-6 w-6 text-white' />
+				<XMarkIcon className='h-6 w-6 text-black' />
 			) : (
-				<Bars3Icon className='h-6 w-6 text-white' />
+				<Bars3Icon className='h-6 w-6 text-black' />
 			)}
 		</button>
 	);

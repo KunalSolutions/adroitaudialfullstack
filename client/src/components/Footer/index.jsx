@@ -1,60 +1,43 @@
-import { Link } from "react-router-dom";
+import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
+import { MapPin } from "lucide-react";
 
-const Footer = () => {
+export default function Footer() {
+  const socialLinks = [
+    { icon: FaFacebookF, bgColor: "#1877F2", link: "https://www.facebook.com/AVSITechnologies" },
+    { icon: FaInstagram, bgColor: "#E4405F", link: "https://www.instagram.com/avsitechnologies/" },
+    { icon: FaLinkedinIn, bgColor: "#0A66C2", link: "https://in.linkedin.com/company/avsitechnologies" },
+    { icon: FaYoutube, bgColor: "#FF0000", link: "https://www.youtube.com/channel/UCoxw1_ttEGxRaCY0HxoLLlg" },
+  ];
+
+  const solutions = [
+    { name: "Audio Solutions", link: "/solutions/audio-solutions" },
+    { name: "Visual Solutions", link: "/solutions/visual-solutions" },
+    { name: "Video Conferencing", link: "/solutions/video-conferencing" },
+    { name: "Projection Systems", link: "/solutions/projection-systems" },
+    { name: "Corporate Solutions", link: "/solutions/corporate-solutions" },
+    // { name: "Retail & Hospitality", link: "/solutions/retail-hospitality" },
+    // { name: "AI Technology", link: "/solutions/ai-technology" },
+    // { name: "Boardroom Solutions", link: "/solutions/boardroom" },
+    // { name: "Home Cinema", link: "/solutions/home-cinema" },
+  ];
+
+   const services = [
+    { name: "Audio Visual", link: "/services/audio-video-system" },
+    { name: "Information Technology", link: "/services/information-technology" },
+    { name: "Surviallance & Security", link: "/services/surveillance-system" },
+    { name: "Interior Desgin", link: "/services/interior-design" },
+    { name: "Electrical", link: "/services/electrical-system" },
+    { name: "Digital Marketing", link: "/services/digital-marketing" },
+   ]
+
   return (
-    <footer className="bg-[#232F3E] text-gray-300 mt-16">
-      
-      {/* Top Back To Top */}
-      <div className="bg-[#37475A] text-center py-3">
-        <button
-          onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-          className="text-sm hover:underline"
-        >
-          Back to top
-        </button>
-      </div>
+    <footer className="bg-slate-950 text-slate-300">
 
-      {/* Main Footer */}
-      <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-2 md:grid-cols-4 gap-8 text-sm">
-
-        <div>
-          <h3 className="text-white font-semibold mb-4">Get to Know Us</h3>
-          <ul className="space-y-2">
-            <li><Link to="/" className="hover:underline">Home</Link></li>
-            <li><Link to="/shop" className="hover:underline">Shop</Link></li>
-            <li><Link to="/blog" className="hover:underline">Blog</Link></li>
-            <li><Link to="/contact" className="hover:underline">Contact</Link></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 className="text-white font-semibold mb-4">Sort By</h3>
-          <ul className="space-y-2">
-            <li><Link to="/shop" className="hover:underline">Bestseller</Link></li>
-            <li><Link to="/shop" className="hover:underline">Top Rated</Link></li>
-            <li><Link to="/shop" className="hover:underline">Under 999</Link></li>
-            <li><Link to="/shop" className="hover:underline">Gadget</Link></li>
-          </ul>
-        </div>
-
-        <div>
-          <h3 className="text-white font-semibold mb-4">Let Us Help You</h3>
-          <ul className="space-y-2">
-            <li><Link to="/profile" className="hover:underline">Your Account</Link></li>
-            <li><Link to="/orders" className="hover:underline">Your Orders</Link></li>
-            <li><Link to="/Cart" className="hover:underline">Your Cart</Link></li>
-          </ul>
-        </div>
-
-      </div>
-
-      {/* Bottom Section */}
-      <div className="border-t border-gray-600 py-6 text-center text-xs text-gray-400">
-        © {new Date().getFullYear()} Amazon. All rights reserved.
+      {/* BOTTOM */}
+      <div className="border-t border-white/10 py-5 text-center text-[12px] text-white">
+        © {new Date().getFullYear()} Adroit Audial. All rights reserved
       </div>
 
     </footer>
   );
-};
-
-export default Footer;
+}

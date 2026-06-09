@@ -42,15 +42,14 @@ const Contact = () => {
   };
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-white flex items-center justify-center px-4 py-16">
+    <section className="min-h-screen bg-gradient-to-br from-white flex items-center justify-center px-4 py-10 mt-10">
       <div className="max-w-6xl w-full grid md:grid-cols-2 bg-white shadow-2xl rounded-3xl overflow-hidden">
 
         {/* LEFT SIDE - INFO */}
-        <div className="bg-indigo-500 text-white p-10 flex flex-col justify-center">
+        <div className="bg-sky-500 text-white p-10 flex flex-col justify-center">
           <h2 className="text-4xl font-bold mb-4">Contact Us</h2>
           <p className="text-sm opacity-90 mb-8">
-            Have questions about TVs, speakers, or accessories? 
-            Our team is here to help you choose the perfect product.
+            Have questions?
           </p>
 
           <div className="space-y-6 text-sm">
@@ -65,8 +64,13 @@ const Contact = () => {
             </div>
 
             <div className="flex items-center gap-4">
+              <FaPhoneAlt />
+              <span>+91 77096 83131</span>
+            </div>
+
+            <div className="flex items-center gap-4">
               <FaMapMarkerAlt />
-              <span>Mumabi, Maharashtra, India</span>
+              <span>C Wing, Flat No. 101, Chheda Complex, Near Panchmuskhi Hanuman Mandir, Nalasopara West</span>
             </div>
           </div>
         </div>
@@ -128,7 +132,7 @@ const Contact = () => {
             <button
               type="submit"
               disabled={loading}
-              className="w-full py-3 rounded-xl font-semibold bg-indigo-600 text-white hover:bg-indigo-700 hover:scale-[1.02] transition duration-200 disabled:opacity-60"
+              className="w-full py-3 rounded-xl font-semibold bg-sky-500 text-white hover:opacity-90 cursor-pointer hover:scale-[1.02] transition duration-200 disabled:opacity-60"
             >
               {loading ? "Sending..." : "Send Message"}
             </button>

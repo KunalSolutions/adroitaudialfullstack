@@ -146,125 +146,154 @@ const ProductDetails = () => {
   </script>
 </Helmet>
 
-      <section className="py-12">
-        <div className="container mx-auto px-4">
-            <Link onClick={() => navigate(-1)} >
-            <p  className="mb-3 underline text-lg hover:opacity-90" >Go back</p>
-            </Link>
-            <div className="flex flex-wrap items-center gap-2 text-sm mb-10">
-                <Link
-                    to="/"
-                    className="relative inline-block text-gray-500 cursor-pointer after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 hover:text-black after:bg-black after:transition-all after:duration-300 hover:after:w-full"
-                >
-                    Home
-                </Link>
+     <section className="py-16 lg:py-20 bg-white">
+      <div className="container mx-auto px-4">
 
-                <span className="text-gray-400">/</span>
+        {/* Back Button */}
+        <button
+          onClick={() => navigate(-1)}
+          className="mb-8 inline-flex items-center text-[#232466] font-medium hover:text-[#EF5622] transition-colors"
+        >
+          ← Go Back
+        </button>
 
-                <Link
-                    to="/products"
-                    className="relative inline-block text-gray-500 cursor-pointer after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 hover:text-black after:bg-black after:transition-all after:duration-300 hover:after:w-full"
-                >
-                    Products
-                </Link>
+        {/* Breadcrumb */}
+        <div className="flex flex-wrap items-center gap-2 text-sm mb-12 text-slate-500">
 
-                <span className="text-gray-400">/</span>
+          <Link
+            to="/"
+            className="hover:text-[#EF5622] transition-colors"
+          >
+            Home
+          </Link>
 
-                 <Link
-                to={`/category/${product.category
-                    .toLowerCase()
-                    .replace(/\s+/g, "-")}`}
-                className="relative inline-block text-gray-500 cursor-pointer after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 hover:text-black after:bg-black after:transition-all after:duration-300 hover:after:w-full"
-                >
-                {product.category}
-                </Link>
-                <span className="text-gray-400">/</span>
+          <span>/</span>
 
-                <Link
-                    to={`/category/${product.category.toLowerCase().replace(/\s+/g, "-")}/${product.subCategory.toLowerCase().replace(/\s+/g, "-")}`}
-                    className="relative inline-block text-gray-500 cursor-pointer after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 hover:text-black after:bg-black after:transition-all after:duration-300 hover:after:w-full"
-                >
-                    {product.subCategory}
-                </Link>
-                <span className="text-gray-400">/</span>
+          <Link
+            to="/products"
+            className="hover:text-[#EF5622] transition-colors"
+          >
+            Products
+          </Link>
 
-                <Link
-                    to={`#`}
-                    className="text-slate-900 font-bold hover:text-primary transition-colors"
-                >
-                    {product.name}
-                </Link>
-                </div>
+          <span>/</span>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <Link
+            to={`/category/${product.category
+              .toLowerCase()
+              .replace(/\s+/g, "-")}`}
+            className="hover:text-[#EF5622] transition-colors"
+          >
+            {product.category}
+          </Link>
 
-            {/* Product Image */}
-            <div>
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full shadow-xs"
-              />
+          <span>/</span>
+
+          <Link
+            to={`/category/${product.category
+              .toLowerCase()
+              .replace(/\s+/g, "-")}/${product.subCategory
+              .toLowerCase()
+              .replace(/\s+/g, "-")}`}
+            className="hover:text-[#EF5622] transition-colors"
+          >
+            {product.subCategory}
+          </Link>
+
+          <span>/</span>
+
+          <span className="font-medium text-[#232466]">
+            {product.name}
+          </span>
+
+        </div>
+
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
+
+          {/* Product Image */}
+          <div className="bg-slate-50 shadow-sm">
+            <img
+              src={product.image}
+              alt={product.name}
+              className="w-full object-contain"
+            />
+          </div>
+
+          {/* Product Content */}
+          <div>
+
+            <span className="inline-block px-4 py-1 bg-[#EF5622]/10 text-[#EF5622] text-sm font-semibold uppercase tracking-wider">
+              {product.brand}
+            </span>
+
+            <h1 className="mt-5 text-3xl md:text-4xl lg:text-5xl font-bold text-[#232466] leading-tight">
+              {product.name}
+            </h1>
+
+            {/* Price */}
+            <div className="mt-8 flex flex-wrap items-center gap-4">
+
+              <span className="text-4xl font-bold text-[#EF5622]">
+                ₹{product.offPrice}
+              </span>
+
+              <span className="text-xl text-slate-400 line-through">
+                ₹{product.price}
+              </span>
+
+              <span className="px-3 py-1 bg-[#232466] text-white text-sm font-semibold rounded-full">
+                {discountPercent}% OFF
+              </span>
+
             </div>
 
-            {/* Product Content */}
-            <div>
-                
-              <p className="text-sm uppercase tracking-wider text-gray-500">
-                {product.brand}
+            {/* Tags */}
+            <div className="mt-8 flex flex-wrap gap-3">
+
+              <span className="px-4 py-2 bg-slate-100 text-slate-700 text-sm">
+                {product.category}
+              </span>
+
+              <span className="px-4 py-2 bg-slate-100 text-slate-700 text-sm">
+                {product.subCategory}
+              </span>
+
+            </div>
+
+            {/* Description */}
+            <div className="mt-10 border-t border-slate-200 pt-8">
+
+              <h2 className="text-2xl font-bold text-[#232466] mb-4">
+                Product Description
+              </h2>
+
+              <p className="text-slate-600 leading-relaxed text-base md:text-lg">
+                {product.seo.metaDescription}
               </p>
 
-              <h1 className="mt-2 text-3xl md:text-4xl font-bold text-gray-900">
-                {product.name}
-              </h1>
+            </div>
 
-              <div className="mt-4 flex items-center gap-3">
-                <span className="text-3xl text-rose-700 font-bold text-primary">
-                  ₹{product.offPrice}
-                </span>
-
-                <span className="text-xl text-gray-400 line-through">
-                  ₹{product.price}
-                </span>
-
-                <span className="text-white bg-rose-700 px-2 rounded-full font-semibold">
-                  {discountPercent}% OFF
-                </span>
-              </div>
-
-              <div className="mt-6">
-                <div className="flex flex-wrap gap-3">
-                  <span className="px-3 py-1 bg-gray-100 text-sm">
-                    {product.category}
-                  </span>
-
-                  <span className="px-3 py-1 bg-gray-100 text-sm">
-                    {product.subCategory}
-                  </span>
-                </div>
-              </div>
-
-              <div className="mt-8">
-                <h2 className="text-xl font-semibold mb-3">
-                  Product Description
-                </h2>
-
-                <p className="text-gray-600 leading-relaxed">
-                  {product.seo.metaDescription}
-                </p>
-              </div>
-
-              <div className="mt-8 flex gap-4">
-                <button className="px-8 py-3 bg-black text-white hover:bg-gray-800 transition">
-                  Enquire Now
-                </button>
-
-              </div>
+            {/* CTA */}
+            <div className="mt-10">
+              <Link
+                to={`https://wa.me/919511609437?text=${encodeURIComponent(
+                `Hello Adroit Audial, I am interested in the ${product.name}. Please share more details, pricing, and availability.`
+                )}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-[#25D366] text-white px-8 py-2 font-semibold hover:bg-[#1ebe5d] transition-all duration-300"
+              >
+                 Enquiry Now
+                <span>↗</span>
+              </Link>
             </div>
 
           </div>
+
         </div>
-      </section>
+
+      </div>
+    </section>
     </>
   );
 };

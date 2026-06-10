@@ -2,19 +2,19 @@ import { NavLink } from "react-router-dom";
 
 const Pages = () => {
   const baseStyle =
-    "relative text-sm font-medium text-black transition-all duration-300";
+    "relative text-sm font-medium text-[#232466] transition-all duration-300";
 
   return (
-    <nav className="hidden md:flex items-center gap-10">
-      
+    <nav className="hidden md:flex items-center gap-8 lg:gap-10">
+
       <NavLink
         to="/"
         end
         className={({ isActive }) =>
           `${baseStyle} ${
             isActive
-              ? "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white"
-              : "hover:opacity-80"
+              ? "text-[#232466] after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-full after:bg-[#EF5622]"
+              : "hover:text-[#EF5622]"
           }`
         }
       >
@@ -26,8 +26,8 @@ const Pages = () => {
         className={({ isActive }) =>
           `${baseStyle} ${
             isActive
-              ? "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white"
-              : "hover:opacity-80"
+              ? "text-[#232466] after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-full after:bg-[#EF5622]"
+              : "hover:text-[#EF5622]"
           }`
         }
       >
@@ -39,12 +39,12 @@ const Pages = () => {
         className={({ isActive }) =>
           `${baseStyle} ${
             isActive
-              ? "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white"
-              : "hover:opacity-80"
+              ? "text-[#232466] after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-full after:bg-[#EF5622]"
+              : "hover:text-[#EF5622]"
           }`
         }
       >
-        Brand
+        Brands
       </NavLink>
 
       <NavLink
@@ -52,8 +52,8 @@ const Pages = () => {
         className={({ isActive }) =>
           `${baseStyle} ${
             isActive
-              ? "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white"
-              : "hover:opacity-80"
+              ? "text-[#232466] after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-full after:bg-[#EF5622]"
+              : "hover:text-[#EF5622]"
           }`
         }
       >
@@ -65,8 +65,8 @@ const Pages = () => {
         className={({ isActive }) =>
           `${baseStyle} ${
             isActive
-              ? "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white"
-              : "hover:opacity-80"
+              ? "text-[#232466] after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-full after:bg-[#EF5622]"
+              : "hover:text-[#EF5622]"
           }`
         }
       >
@@ -78,8 +78,8 @@ const Pages = () => {
         className={({ isActive }) =>
           `${baseStyle} ${
             isActive
-              ? "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white"
-              : "hover:opacity-80"
+              ? "text-[#232466] after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-full after:bg-[#EF5622]"
+              : "hover:text-[#EF5622]"
           }`
         }
       >
@@ -91,8 +91,8 @@ const Pages = () => {
         className={({ isActive }) =>
           `${baseStyle} ${
             isActive
-              ? "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white"
-              : "hover:opacity-80"
+              ? "text-[#232466] after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-full after:bg-[#EF5622]"
+              : "hover:text-[#EF5622]"
           }`
         }
       >

@@ -27,7 +27,9 @@ const Contact = () => {
 
     try {
       await axios.post("/api/contact", formData);
+
       setSuccess(true);
+
       setFormData({
         name: "",
         email: "",
@@ -42,104 +44,136 @@ const Contact = () => {
   };
 
   return (
-    <section className="min-h-screen bg-gradient-to-br from-white flex items-center justify-center px-4 py-10 mt-10">
-      <div className="max-w-6xl w-full grid md:grid-cols-2 bg-white shadow-2xl rounded-3xl overflow-hidden">
+    <section className="bg-slate-50 py-16 md:py-20 lg:py-24">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid lg:grid-cols-2 bg-white shadow-xl overflow-hidden">
 
-        {/* LEFT SIDE - INFO */}
-        <div className="bg-sky-500 text-white p-10 flex flex-col justify-center">
-          <h2 className="text-4xl font-bold mb-4">Contact Us</h2>
-          <p className="text-sm opacity-90 mb-8">
-            Have questions?
-          </p>
+          {/* LEFT SIDE */}
+          <div className="bg-[#232466] text-white p-8 md:p-10 lg:p-12 flex flex-col justify-center">
 
-          <div className="space-y-6 text-sm">
-            <div className="flex items-center gap-4">
-              <FaEnvelope />
-              <span>info@avsi.in</span>
-            </div>
+            <span className="text-[#EF5622] uppercase tracking-[0.2em] text-sm font-semibold mb-3">
+              Get In Touch
+            </span>
 
-            <div className="flex items-center gap-4">
-              <FaPhoneAlt />
-              <span>+91 95116 09437</span>
-            </div>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-5 leading-tight">
+              Let's Discuss Your Audio Requirements
+            </h2>
 
-            <div className="flex items-center gap-4">
-              <FaPhoneAlt />
-              <span>+91 77096 83131</span>
-            </div>
+            <p className="text-slate-300 leading-relaxed mb-10">
+              Whether you're planning an auditorium, conference room,
+              classroom, public address system, background music setup,
+              or professional audio installation, our team is ready to
+              help you find the right solution.
+            </p>
 
-            <div className="flex items-center gap-4">
-              <FaMapMarkerAlt />
-              <span>C Wing, Flat No. 101, Chheda Complex, Near Panchmuskhi Hanuman Mandir, Nalasopara West</span>
+            <div className="space-y-7">
+
+              <div className="flex items-start gap-4">
+                <FaEnvelope className="text-[#EF5622] mt-1 text-lg" />
+                <div>
+                  <p className="font-semibold">Email</p>
+                  <p className="text-slate-300">
+                    info@adroitaudial.in
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <FaPhoneAlt className="text-[#EF5622] mt-1 text-lg" />
+                <div>
+                  <p className="font-semibold">Phone</p>
+                  <p className="text-slate-300">
+                    +91 77096 83131
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex items-start gap-4">
+                <FaMapMarkerAlt className="text-[#EF5622] mt-1 text-lg" />
+                <div>
+                  <p className="font-semibold">Location</p>
+                  <p className="text-slate-300">
+                    C Wing, Flat No. 101, Chheda Complex, Near Panchmuskhi Hanuman Mandir, Nalasopara West
+                  </p>
+                </div>
+              </div>
+
             </div>
           </div>
+
+          {/* RIGHT SIDE */}
+          <div className="p-8 md:p-10 lg:p-12 bg-white">
+
+            <h3 className="text-3xl font-bold mb-3 text-[#232466]">
+              Send Us a Message
+            </h3>
+
+            <p className="text-slate-600 mb-8">
+              Fill out the form below and our team will get back to you
+              as soon as possible.
+            </p>
+
+            {success && (
+              <div className="mb-6 p-4 bg-green-50 border border-green-200 text-green-700 rounded-xl text-sm text-center">
+                Message sent successfully!
+              </div>
+            )}
+
+            <form onSubmit={handleSubmit} className="space-y-5">
+
+              <input
+                type="text"
+                name="name"
+                placeholder="Full Name"
+                value={formData.name}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#EF5622] focus:border-[#EF5622] transition"
+              />
+
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                value={formData.email}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#EF5622] focus:border-[#EF5622] transition"
+              />
+
+              <input
+                type="text"
+                name="subject"
+                placeholder="Subject"
+                value={formData.subject}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#EF5622] focus:border-[#EF5622] transition"
+              />
+
+              <textarea
+                name="message"
+                rows="5"
+                placeholder="Tell us about your project or requirement..."
+                value={formData.message}
+                onChange={handleChange}
+                required
+                className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#EF5622] focus:border-[#EF5622] transition"
+              />
+
+              <button
+                type="submit"
+                disabled={loading}
+                className="w-full py-4 rounded-xl font-semibold bg-[#EF5622] text-white hover:bg-[#d94a1b] cursor-pointer transition-all duration-300 disabled:opacity-60"
+              >
+                {loading ? "Sending..." : "Send Message"}
+              </button>
+
+            </form>
+
+          </div>
+
         </div>
-
-        {/* RIGHT SIDE - FORM */}
-        <div className="p-10">
-          <h3 className="text-2xl font-semibold mb-6 text-gray-800">
-            Send us a Message
-          </h3>
-
-          {success && (
-            <div className="mb-5 p-3 text-green-700 rounded-lg text-sm text-center">
-              Message sent successfully!
-            </div>
-          )}
-
-          <form onSubmit={handleSubmit} className="space-y-5">
-
-            <input
-              type="text"
-              name="name"
-              placeholder="Full Name"
-              value={formData.name}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
-            />
-
-            <input
-              type="email"
-              name="email"
-              placeholder="Email Address"
-              value={formData.email}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
-            />
-
-            <input
-              type="text"
-              name="subject"
-              placeholder="Subject"
-              value={formData.subject}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
-            />
-
-            <textarea
-              name="message"
-              rows="4"
-              placeholder="Your Message"
-              value={formData.message}
-              onChange={handleChange}
-              required
-              className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition"
-            />
-
-            <button
-              type="submit"
-              disabled={loading}
-              className="w-full py-3 rounded-xl font-semibold bg-sky-500 text-white hover:opacity-90 cursor-pointer hover:scale-[1.02] transition duration-200 disabled:opacity-60"
-            >
-              {loading ? "Sending..." : "Send Message"}
-            </button>
-
-          </form>
-        </div>
-
       </div>
     </section>
   );

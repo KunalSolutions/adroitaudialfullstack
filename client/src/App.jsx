@@ -35,6 +35,7 @@ import AboutSection from '@screens/Home/AboutSection';
 import CategoryProducts from '@components/Product/CategoryProducts';
 import SubCategoryProduct from '@components/Product/SubCategoryProduct';
 import ProductDetails from '@components/Product/ProductDetails';
+import Brand from '@components/Brand';
 
 const router = createBrowserRouter([
 	{
@@ -74,6 +75,10 @@ const router = createBrowserRouter([
 			{
 				path: 'about-us',
 				element: <About />
+			},
+			{
+				path: '/brand',
+				element: <Brand />
 			},
 			{
 				path: '/shop',

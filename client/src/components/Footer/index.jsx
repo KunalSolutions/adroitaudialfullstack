@@ -1,5 +1,6 @@
 import { FaFacebookF, FaInstagram, FaLinkedinIn, FaYoutube } from "react-icons/fa";
 import { MapPin } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const socialLinks = [
@@ -31,11 +32,14 @@ export default function Footer() {
    ]
 
   return (
-    <footer className="bg-slate-950 text-slate-300">
+    <footer className="bg-[#232466] text-white">
 
-      {/* BOTTOM */}
-      <div className="border-t border-white/10 py-5 text-center text-[12px] text-white">
-        © {new Date().getFullYear()} Adroit Audial. All rights reserved
+      {/* Main Footer */}
+
+
+      {/* Bottom */}
+      <div className="border-t border-white/10 py-5 text-center text-sm text-white/70">
+        © {new Date().getFullYear()} Adroit Audial LLP. All Rights Reserved.
       </div>
 
     </footer>

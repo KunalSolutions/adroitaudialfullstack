@@ -5,46 +5,51 @@ import { Link } from "react-router-dom";
 const ProductCard = ({ product }) => {
   return (
     
-      <div className="overflow-hidden bg-white transition">
-        <div className="aspect-square overflow-hidden">
-          <img
-            src={product.image}
-            alt={product.name}
-            className="w-full h-full object-contain transition duration-300"
-          />
+    <div className="group bg-white border border-slate-200 overflow-hidden transition-all duration-300 hover:border-slate-300">
+
+      {/* Product Image */}
+      <div className="aspect-square bg-white overflow-hidden">
+        <img
+          src={product.image}
+          alt={product.name}
+          className="w-full h-full object-contain p-4 transition-transform duration-500 group-hover:scale-[1.02]"
+        />
+      </div>
+
+      {/* Content */}
+      <div className="px-5 pb-5">
+
+        <p className="text-xs uppercase tracking-[0.15em] text-slate-500 font-medium">
+          {product.brand}
+        </p>
+
+        <h3 className="mt-2 text-sm md:text-base font-medium text-[#232466] leading-6 min-h-[52px] line-clamp-2">
+          {product.name}
+        </h3>
+
+        <div className="mt-4 flex items-center gap-3">
+
+          <span className="text-xl font-semibold text-[#232466]">
+            ₹{product.offPrice}
+          </span>
+
+          <span className="text-sm text-slate-400 line-through">
+            ₹{product.price}
+          </span>
+
         </div>
 
-        <div className="p-4">
-          <p className="text-xs uppercase tracking-wide text-gray-500">
-            {product.brand}
-          </p>
-
-          <h3 className="mt-2 text-sm md:text-base font-medium text-gray-900 line-clamp-2 min-h-[48px]">
-            {product.name}
-          </h3>
-
-          <div className="mt-3 flex items-center gap-2">
-            <span className="text-lg font-semibold text-rose-700">
-              ₹{product.offPrice}
-            </span>
-
-            <span className="text-sm text-gray-400 line-through">
-              ₹{product.price}
-            </span>
-          </div>
-        </div>
         <Link
           to={`/products/${product.slug}`}
-          className="group block"
+          className="inline-flex items-center mt-5 px-6 py-2.5 bg-[#EF5622] text-white text-sm tracking-wide font-medium hover:bg-[#d94a1b] transition-all duration-300"
         >
-        <div className="text-center cursor-pointer bg-indigo-700 text-white py-2 hover:bg-indigo-800" >
-          <button className="cursor-pointer" >
-            View Details
-          </button>
-        </div>
+          View Details
+          <span className="ml-2">→</span>
         </Link>
 
       </div>
+
+    </div>
   );
 };
 

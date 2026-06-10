@@ -17,51 +17,74 @@ const SubCategoryProduct = () => {
     const subCategoryName = filteredProducts[0]?.subCategory || subCategory;
     const categoryName = filteredProducts[0]?.category || "";
   return (
-    <section className="py-16">
+    <section className="py-16 lg:py-20 bg-white">
       <div className="container mx-auto px-4">
-        <div className="flex text-gray-400 gap-1 mb-3 " >
-          {/* Home */}
-          <Link to={'/'}>
-          <p className="relative inline-block text-gray-500 cursor-pointer after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 hover:text-black after:bg-black after:transition-all after:duration-300 hover:after:w-full">Home</p>
-          </Link>
-          <span className="text-gray-400">/</span>
-          {/* Products  */}
-          <Link to={'/products'} >
-          <p className="relative inline-block text-gray-500 cursor-pointer after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 hover:text-black after:bg-black after:transition-all after:duration-300 hover:after:w-full">Products</p>
-          </Link>
-          <span className="text-gray-400">/</span>
-          
-          {/* Category  */}
-            <Link
-                to={`/category/${categoryName.toLowerCase().replace(/\s+/g, "-")}`}
-                >
-                <p className="relative inline-block text-gray-500 cursor-pointer after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 hover:text-black after:bg-black after:transition-all after:duration-300 hover:after:w-full">
-                    {categoryName}
-                </p>
-            </Link>
 
-          {/* SubCategory  */}
-          <span className="text-gray-400">/</span>
-          <Link>
-          <p className="text-black cursor-not-allowed" > {subCategory}</p>
+        {/* Breadcrumb */}
+        <div className="flex flex-wrap items-center gap-2 text-sm mb-8">
+
+          <Link
+            to="/"
+            className="text-slate-500 hover:text-[#EF5622] transition-colors"
+          >
+            Home
           </Link>
+
+          <span className="text-slate-300">/</span>
+
+          <Link
+            to="/products"
+            className="text-slate-500 hover:text-[#EF5622] transition-colors"
+          >
+            Products
+          </Link>
+
+          <span className="text-slate-300">/</span>
+
+          <Link
+            to={`/category/${categoryName
+              .toLowerCase()
+              .replace(/\s+/g, "-")}`}
+            className="text-slate-500 hover:text-[#EF5622] transition-colors"
+          >
+            {categoryName}
+          </Link>
+
+          <span className="text-slate-300">/</span>
+
+          <span className="font-medium text-[#232466]">
+            {subCategory}
+          </span>
+
         </div>
 
-      <div className="text-center uppercase mt-15 mb-10" >
-        <h1 className="text-4xl text-indigo-700 tracking-normal leading-relaxed font-semibold">
-          {subCategory}
-        </h1>
-        <span className="inline-block w-10 h-0.5 bg-indigo-700 mr-2 "></span>
-      
-      </div>
+        {/* Heading */}
+        <div className="text-center mb-14">
 
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+          <h1 className="mt-4 text-3xl md:text-5xl font-bold text-[#232466]">
+            {subCategory}
+          </h1>
+
+          <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
+            Explore our premium range of {subCategory.toLowerCase()} designed
+            for professional audio applications, installations, studios,
+            commercial spaces, and performance environments.
+          </p>
+
+          <div className="w-20 h-1 bg-[#EF5622] mx-auto mt-6"></div>
+
+        </div>
+
+        {/* Product Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 lg:gap-8">
+
           {filteredProducts.map((product) => (
             <ProductCard
               key={product.id}
               product={product}
             />
           ))}
+
         </div>
 
       </div>

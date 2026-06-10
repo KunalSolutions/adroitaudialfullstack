@@ -30,27 +30,41 @@ const ProductCategories = () => {
   ];
 
   return (
-    <section className="py-12 mx-auto max-w-7xl">
-      <div className="mb-8">
-        <p className="text-black font-medium">
-          Browse Categories
-        </p>
+    <section className="py-16 lg:py-20 max-w-7xl mx-auto px-4">
 
-        <h2 className="text-3xl font-semibold tracking-normal text-indigo-700 mt-2 mb-10">
+      {/* Heading */}
+      <div className="mb-12 text-center">
+
+        <span className="text-[#EF5622] uppercase tracking-[0.25em] text-sm font-semibold">
+          Browse Categories
+        </span>
+
+        <h2 className="mt-4 text-4xl md:text-5xl font-bold text-[#232466]">
           Explore Our Products
         </h2>
+
+        <p className="mt-4 max-w-2xl mx-auto text-slate-600">
+          Discover professional audio equipment, integrated solutions,
+          and industry-leading technologies designed for commercial,
+          educational, hospitality, and entertainment environments.
+        </p>
+
+        <div className="w-24 h-1 bg-[#EF5622] mx-auto mt-8"></div>
+
       </div>
 
-      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-5">
+      {/* Categories */}
+      <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
+
         {categories.map((category) => (
           <Link
             key={category.slug}
             to={`/category/${category.slug}`}
             className="group"
           >
-            <div className="border border-gray-200 bg-white overflow-hidden transition-all duration-300">
+            <div className="bg-white border border-slate-200 overflow-hidden transition-all duration-300 hover:border-[#EF5622] hover:-translate-y-1 hover:shadow-lg">
 
-              <div className="aspect-square overflow-hidden">
+              <div className="aspect-square overflow-hidden bg-slate-50">
                 <img
                   src={category.image}
                   alt={category.name}
@@ -58,16 +72,20 @@ const ProductCategories = () => {
                 />
               </div>
 
-              <div className="p-3">
-                <h3 className="text-sm tracking-tight font-medium text-center leading-5 min-h-[20px]">
+              <div className="p-4">
+
+                <h3 className="text-sm md:text-base font-semibold text-center text-[#232466] leading-5 min-h-[40px] flex items-center justify-center">
                   {category.name}
                 </h3>
+
               </div>
 
             </div>
           </Link>
         ))}
+
       </div>
+
     </section>
   );
 };

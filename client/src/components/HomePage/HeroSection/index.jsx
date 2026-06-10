@@ -4,7 +4,7 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 const slides = [
   "/Hero/01.jpg",
   "/Hero/02.jpg",
-  "/Hero/03.jpg",
+  "/Hero/03.jpeg",
 ];
 
 export default function HeroSection() {

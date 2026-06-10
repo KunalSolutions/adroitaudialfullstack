@@ -16,34 +16,55 @@ const CategoryProducts = () => {
   const categoryName = filteredProducts[0]?.category || category;
 
   return (
-    <section className="py-16">
-      <div className="container mx-auto px-4">
-        <div className="flex text-gray-400 gap-1 mb-3 " >
-          <Link to={'/'}>
-          <p className="relative inline-block text-gray-500 cursor-pointer after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 hover:text-black after:bg-black after:transition-all after:duration-300 hover:after:w-full">Home</p>
+    <section className="py-16 lg:py-20 bg-white">
+      <div className="max-w-7xl mx-auto px-4">
+
+        {/* Breadcrumb */}
+        <div className="flex flex-wrap items-center gap-2 text-sm mb-10">
+
+          <Link
+            to="/"
+            className="relative inline-block text-slate-500 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 hover:text-[#232466] after:bg-[#EF5622] after:transition-all after:duration-300 hover:after:w-full"
+          >
+            Home
           </Link>
-          <span className="text-gray-400">/</span>
-          <Link to={'/products'} >
-          <p className="relative inline-block text-gray-500 cursor-pointer after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 hover:text-black after:bg-black after:transition-all after:duration-300 hover:after:w-full">Products</p>
+
+          <span className="text-slate-400">/</span>
+
+          <Link
+            to="/products"
+            className="relative inline-block text-slate-500 after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 hover:text-[#232466] after:bg-[#EF5622] after:transition-all after:duration-300 hover:after:w-full"
+          >
+            Products
           </Link>
-          <span className="text-gray-400">/</span>
-          <Link>
-          <p className="text-black cursor-not-allowed" > {categoryName}</p>
-          </Link>
+
+          <span className="text-slate-400">/</span>
+
+          <span className="font-medium text-[#232466]">
+            {categoryName}
+          </span>
+
         </div>
 
-      <div className="text-center mt-15 mb-10" >
-        <h1 className="text-4xl text-indigo-700 tracking-normal leading-relaxed font-semibold">
-          {categoryName}
-        </h1>
+        {/* Heading */}
+        <div className="text-center mb-14">
 
-        <p className="text-gray-500 ">
-          Explore our {categoryName} collection.
-        </p>
-        <span className="inline-block w-10 h-0.5 bg-indigo-700 mr-2 "></span>
-      
-      </div>
+          <h1 className="mt-4 text-4xl md:text-5xl font-bold text-[#232466]">
+            {categoryName}
+          </h1>
 
+          <p className="mt-4 text-slate-600 max-w-2xl mx-auto">
+            Explore our premium range of {categoryName.toLowerCase()} <br />
+            designed for professional audio applications, studios,
+            auditoriums, educational institutions, commercial spaces,
+            and integrated sound solutions.
+          </p>
+
+          <div className="w-24 h-1 bg-[#EF5622] mx-auto mt-8"></div>
+
+        </div>
+
+        {/* Product Grid */}
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {filteredProducts.map((product) => (
             <ProductCard

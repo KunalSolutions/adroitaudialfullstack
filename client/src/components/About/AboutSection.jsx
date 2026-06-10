@@ -1,48 +1,73 @@
+import { Link } from "react-router-dom";
 import { ArrowRight } from "lucide-react";
 
 export default function AboutSection() {
   return (
-    <section id="about" className="py-16 md:py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="about" className="py-20 lg:py-28 bg-white">
+      <div className="container mx-auto px-4">
 
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-            
           {/* Content */}
           <div>
-            <span className="inline-block px-4 py-2 rounded-full bg-blue-50 text-blue-600 text-sm font-semibold mb-5">
+
+            <span className="inline-block text-[#EF5622] font-semibold tracking-[0.25em] uppercase text-sm mb-4">
               About Us
             </span>
 
-            <h2 className="text-3xl md:text-4xl xl:text-5xl font-bold text-slate-900 leading-tight mb-6">
-              Our Story
+            <h2 className="text-4xl md:text-5xl font-bold text-[#232466] leading-tight mb-6">
+              Creating Exceptional Audio Experiences Through Innovation
             </h2>
 
-            <p className="text-slate-600 leading-relaxed text-base md:text-lg mb-6">
-                Adroit Audial LLP is a leading audio solutions company specializing in manufacturing, retail, servicing, and complete audio system integration solutions. We provide innovative and high-quality audio products and customized solutions for various industries and applications.
+            <div className="w-24 h-1 bg-[#EF5622] mb-8"></div>
+
+            <p className="text-slate-600 text-lg leading-relaxed mb-6">
+              Adroit Audial LLP is a leading audio solutions company
+              specializing in manufacturing, retail, servicing, and
+              complete audio system integration solutions. We provide
+              innovative, high-quality audio products and customized
+              solutions for diverse industries and applications.
             </p>
 
-            <p className="text-slate-600 leading-relaxed text-base md:text-lg mb-8">
-              Our expertise includes designing and delivering professional audio solutions for Auditoriums, Classrooms, Training Rooms, Theatres, Conference Rooms, PA, BGM, indoor and outdoor music system and other commercial and institutional spaces. With a strong focus on performance, reliability, and customer satisfaction, we create tailored audio environments that meet modern communication and entertainment needs.
+            <p className="text-slate-600 text-lg leading-relaxed mb-6">
+              Our expertise includes designing and delivering professional
+              audio solutions for auditoriums, classrooms, training rooms,
+              theatres, conference rooms, public address systems, background
+              music systems, and various commercial and institutional spaces.
             </p>
 
-            <p className="text-slate-600 leading-relaxed text-base md:text-lg mb-8">
-              We offer multiple in-house brands and an extensive range of professional audio products, including Speakers, Amplifiers, Microphones, DSPs, Mixers, Controllers, Digital Voice Recorders Digital Voice Recorders and various other audio devices. Along with manufacturing advanced technical and non-technical audio products, we also supply and support a wide range of market-leading audio equipment.
+            <p className="text-slate-600 text-lg leading-relaxed mb-10">
+              We offer multiple in-house brands and a comprehensive range
+              of professional audio products including speakers,
+              amplifiers, microphones, DSPs, mixers, controllers,
+              digital voice recorders, and advanced audio technologies
+              designed to meet modern communication and entertainment needs.
             </p>
 
+            {/* Stats */}
+            <div className="grid grid-cols-3 gap-6 mb-10">
 
+               <a
+                  href="/about-us"
+                  className="inline-flex items-center gap-2 px-8 py-4 bg-[#232466] text-white font-semibold hover:bg-[#1b1c52] transition-all duration-300"
+                >
+                  Contact Us
+                  <ArrowRight size={18} />
+              </a>
 
+            </div>
           </div>
 
           {/* Image */}
-          <div className="relative overflow-hidden rounded-3xl shadow-xl">
+          <div className="relative">
             <img
-              src="/Hero/01.jpg"
-              alt="Our Story"
-              className="w-full h-[350px] sm:h-[450px] lg:h-[600px] object-cover"
+              src="/Hero/04.jpeg"
+              alt="Adroit Audial"
+              className="w-full h-[400px] lg:h-[650px] object-cover rounded-2xl"
             />
 
-            <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent" />
+            {/* Orange Accent */}
+            <div className="absolute -bottom-6 -right-6 hidden lg:block w-40 h-40 bg-[#EF5622] rounded-2xl -z-10" />
           </div>
 
         </div>

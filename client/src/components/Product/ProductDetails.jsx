@@ -19,6 +19,61 @@ const ProductDetails = () => {
     ((price - offPrice) / price) * 100
   );
 
+  const productSchema = {
+      "@context": "https://schema.org",
+      "@type": "Product",
+      name: product.name,
+      image: [`https://www.adroitaudial.in${product.image}`],
+      description: product.seo.metaDescription,
+      sku: product.id,
+      category: product.category,
+      brand: {
+        "@type": "Brand",
+        name: product.brand,
+      },
+      offers: {
+        "@type": "Offer",
+        url: `https://www.adroitaudial.in/products/${product.slug}`,
+        priceCurrency: "INR",
+        price: product.offPrice.replace(/,/g, ""),
+        availability: "https://schema.org/InStock",
+        itemCondition: "https://schema.org/NewCondition",
+      },
+    };
+
+    const breadcrumbSchema = {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        {
+          "@type": "ListItem",
+          position: 1,
+          name: "Home",
+          item: "https://www.adroitaudial.in",
+        },
+        {
+          "@type": "ListItem",
+          position: 2,
+          name: "Products",
+          item: "https://www.adroitaudial.in/products",
+        },
+        {
+          "@type": "ListItem",
+          position: 3,
+          name: product.category,
+          item: `https://www.adroitaudial.in/category/${product.category
+            .toLowerCase()
+            .replace(/\s+/g, "-")}`,
+        },
+        {
+          "@type": "ListItem",
+          position: 4,
+          name: product.name,
+          item: `https://www.adroitaudial.in/products/${product.slug}`,
+        },
+      ],
+    };
+
   if (!product) {
     return (
       <div className="container mx-auto px-4 py-20 text-center">
@@ -43,7 +98,53 @@ const ProductDetails = () => {
           name="keywords"
           content={product.seo.keywords.join(", ")}
         />
-      </Helmet>
+
+        <link
+          rel="canonical"
+          href={`https://www.adroitaudial.in/products/${product.slug}`}
+        />
+
+        {/* Open Graph */}
+        <meta property="og:type" content="product" />
+        <meta property="og:title" content={product.seo.metaTitle} />
+        <meta
+          property="og:description"
+          content={product.seo.metaDescription}
+        />
+        <meta
+          property="og:url"
+          content={`https://www.adroitaudial.in/products/${product.slug}`}
+        />
+        <meta
+          property="og:image"
+          content={`https://www.adroitaudial.in${product.image}`}
+        />
+
+        {/* Twitter */}
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content={product.seo.metaTitle}
+  />
+  <meta
+    name="twitter:description"
+    content={product.seo.metaDescription}
+  />
+  <meta
+    name="twitter:image"
+    content={`https://www.adroitaudial.in${product.image}`}
+  />
+
+  {/* Product Schema */}
+  <script type="application/ld+json">
+    {JSON.stringify(productSchema)}
+  </script>
+
+  {/* Breadcrumb Schema */}
+  <script type="application/ld+json">
+    {JSON.stringify(breadcrumbSchema)}
+  </script>
+</Helmet>
 
       <section className="py-12">
         <div className="container mx-auto px-4">

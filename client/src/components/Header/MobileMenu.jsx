@@ -10,6 +10,7 @@ import { useLogoutMutation } from '@slices/userApiSlice';
 
 import MenuItemMobile from './MenuItemMobile';
 import Pages from './Pages';
+import { NavLink } from 'react-router-dom'; 
 
 const MobileMenu = ({ setIsOpen }) => {
   const dispatch = useDispatch();
@@ -31,98 +32,107 @@ const MobileMenu = ({ setIsOpen }) => {
     }
   };
 
+  const baseStyle =
+    "relative text-sm font-medium text-black transition-all duration-300";
+
   return (
     <nav className='relative z-10 w-full bg-white sm:max-w-sm overflow-y-auto h-full'>
 
       {/* Header */}
-      <div className='border-b p-4 text-lg font-semibold'>
-        Menu
-      </div>
+      <div className='border-b flex flex-col gap-2 text-center border-t border-slate-500 p-4 text-lg font-medium md:hidden'>
+        <NavLink
+        to="/"
+        end
+        className={({ isActive }) =>
+          `${baseStyle} ${
+            isActive
+              ? "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white"
+              : "hover:opacity-80"
+          }`
+        }
+      >
+        Home
+      </NavLink>
 
-      <div className='flex flex-col'>
-
-        {/* PAGES FIRST */}
-        <Pages isMobile={true} closeMenu={() => setIsOpen(false)} />
-
-        <div className='border-t my-3' />
-
-        {/* CART */}
-        <MenuItemMobile
-          url='/cart'
-          label={`Cart (${cartItems.length})`}
-          icon={ShoppingBagIcon}
-          closeMenu={setIsOpen}
-        />
-
-        {/* ORDERS */}
-        {userInfo && (
-          <MenuItemMobile
-            url='/orders'
-            label='Orders'
-            icon={HiOutlineClipboardList}
-            closeMenu={setIsOpen}
-          />
-        )}
-
-        {/* USER SECTION */}
-        {!userInfo ? (
-          <MenuItemMobile
-            url='/login'
-            label='Login'
-            icon={UserIcon}
-            closeMenu={setIsOpen}
-          />
-        ) : (
-          <>
-            <MenuItemMobile
-              url='/profile'
-              label='Profile'
-              icon={UserIcon}
-              closeMenu={setIsOpen}
-            />
-
-            <button
-              onClick={handleLogout}
-              className='flex items-center gap-3 px-4 py-3 text-left text-gray-700 hover:bg-gray-100 w-full'
+      <NavLink
+              to="/about-us"
+              className={({ isActive }) =>
+                `${baseStyle} ${
+                  isActive
+                    ? "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white"
+                    : "hover:opacity-80"
+                }`
+              }
             >
-              <UserIcon className='h-5 w-5' />
-              Logout
-            </button>
-          </>
-        )}
-
-        {/* ADMIN SECTION */}
-        {userInfo && userInfo.isAdmin && (
-          <>
-            <div className='border-t mt-3 pt-3' />
-            <p className='px-4 text-xs text-gray-500 uppercase mb-2'>
-              Admin
-            </p>
-
-            <MenuItemMobile
-              url='/admin/orderlist'
-              label='All Orders'
-              icon={HiOutlineClipboardList}
-              closeMenu={setIsOpen}
-            />
-
-            <MenuItemMobile
-              url='/admin/userlist'
-              label='All Users'
-              icon={UserIcon}
-              closeMenu={setIsOpen}
-            />
-
-            <MenuItemMobile
-              url='/admin/productlist'
-              label='All Products'
-              icon={ShoppingBagIcon}
-              closeMenu={setIsOpen}
-            />
-          </>
-        )}
-
+              About Us
+            </NavLink>
+      
+            <NavLink
+              to="/brand"
+              className={({ isActive }) =>
+                `${baseStyle} ${
+                  isActive
+                    ? "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white"
+                    : "hover:opacity-80"
+                }`
+              }
+            >
+              Brand
+            </NavLink>
+      
+            <NavLink
+              to="/products"
+              className={({ isActive }) =>
+                `${baseStyle} ${
+                  isActive
+                    ? "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white"
+                    : "hover:opacity-80"
+                }`
+              }
+            >
+              Products
+            </NavLink>
+      
+            <NavLink
+              to="/services"
+              className={({ isActive }) =>
+                `${baseStyle} ${
+                  isActive
+                    ? "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white"
+                    : "hover:opacity-80"
+                }`
+              }
+            >
+              Services
+            </NavLink>
+      
+            <NavLink
+              to="/software"
+              className={({ isActive }) =>
+                `${baseStyle} ${
+                  isActive
+                    ? "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white"
+                    : "hover:opacity-80"
+                }`
+              }
+            >
+              Software & Plugins
+            </NavLink>
+      
+            <NavLink
+              to="/contact"
+              className={({ isActive }) =>
+                `${baseStyle} ${
+                  isActive
+                    ? "after:absolute after:left-0 after:-bottom-1 after:h-[2px] after:w-full after:bg-white"
+                    : "hover:opacity-80"
+                }`
+              }
+            >
+              Contact
+            </NavLink>
       </div>
+
     </nav>
   );
 };

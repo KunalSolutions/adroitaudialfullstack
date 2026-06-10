@@ -60,6 +60,15 @@ const ProductDetails = () => {
 
                 <span className="text-gray-400">/</span>
 
+                <Link
+                    to="/products"
+                    className="relative inline-block text-gray-500 cursor-pointer after:absolute after:left-0 after:bottom-0 after:h-[2px] after:w-0 hover:text-black after:bg-black after:transition-all after:duration-300 hover:after:w-full"
+                >
+                    Products
+                </Link>
+
+                <span className="text-gray-400">/</span>
+
                  <Link
                 to={`/category/${product.category
                     .toLowerCase()

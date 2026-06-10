@@ -10,13 +10,22 @@ const ProductCategories = () => {
     {
       name: "Audio Interfaces",
       image: "https://i.pinimg.com/736x/5a/dd/38/5add38eeebfde35896bd73165c5fd519.jpg",
-              
       slug: "audio-interfaces",
     },
     {
       name: "Monitor Speakers",
       image: "https://i.pinimg.com/1200x/44/d8/07/44d807b49997b54f06ca7579314ef84b.jpg",
       slug: "monitor-speakers",
+    },
+    {
+      name: "Monitor Speaker Bundle",
+      image: "https://i.pinimg.com/1200x/f7/e9/08/f7e908f200d99b6c9e2dd018260d7c0b.jpg",
+      slug: "monitor-speaker-bundle",
+    },
+    {
+      name: "Mixers",
+      image: "https://i.pinimg.com/1200x/38/50/4c/38504c7b79843b6d1be56423f2cb80a2.jpg",
+      slug: "mixers",
     },
   ];
 
@@ -39,7 +48,7 @@ const ProductCategories = () => {
             to={`/category/${category.slug}`}
             className="group"
           >
-            <div className="border border-gray-200 bg-white overflow-hidden hover:shadow-lg transition-all duration-300">
+            <div className="border border-gray-200 bg-white overflow-hidden transition-all duration-300">
 
               <div className="aspect-square overflow-hidden">
                 <img
@@ -50,7 +59,7 @@ const ProductCategories = () => {
               </div>
 
               <div className="p-3">
-                <h3 className="text-sm font-medium text-center leading-5 min-h-[20px]">
+                <h3 className="text-sm tracking-tight font-medium text-center leading-5 min-h-[20px]">
                   {category.name}
                 </h3>
               </div>

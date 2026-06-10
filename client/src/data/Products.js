@@ -1570,7 +1570,551 @@ const products = [
         "Audio Production Monitor"
         ]
     }
+    },
+
+    // Monitor Speaker Bundle 
+    {
+  id: "45",
+  slug: "vault-c8-powered-monitors-standard-bundle-with-2xspeaker-cables-polishing-cloth-bitwig-8-track",
+  name: "Vault C8 Powered Monitor Pair Standard Bundle with 2xSpeaker Cables, Polishing Cloth & Bitwig 8-Track",
+  price: "33,250",
+  offPrice: "28,699",
+  brand: "Vault",
+  category: "Monitor Speaker Bundle",
+  subCategory: "Monitor Speaker Bundle",
+  image: "/Products/45.webp",
+  seo: {
+    metaTitle:
+      "Vault C8 Powered Monitor Pair Bundle with Speaker Cables & Bitwig 8-Track",
+
+    metaDescription:
+      "Buy the Vault C8 Powered Monitor Pair Standard Bundle including 2 speaker cables, polishing cloth, and Bitwig 8-Track software. Ideal for music production, mixing, mastering, recording studios, and professional audio monitoring.",
+
+    keywords: [
+      "Vault C8 Bundle",
+      "Vault C8 Powered Monitor",
+      "Studio Monitor Bundle",
+      "Vault Monitor Pair",
+      "Bitwig 8 Track Bundle",
+      "Professional Studio Monitors",
+      "Powered Monitor Speakers",
+      "Recording Studio Bundle",
+      "Music Production Speakers",
+      "Mixing Monitor Speakers",
+      "Mastering Monitor Bundle",
+      "Nearfield Studio Monitors",
+      "Audio Monitoring System",
+      "Studio Speaker Bundle",
+      "Vault Studio Monitor Package"
+    ]
+  }
+    },
+    {
+    id: "46",
+    slug: "yamaha-hs-5-studio-monitor-speaker-with-isolation-pad-cable-and-ebook-single-unit",
+    name: "Yamaha HS5 Studio Monitor Speaker with Isolation Pad, Cable and Ebook - Single Unit",
+    price: "44,800",
+    offPrice: "19,999",
+    brand: "Yamaha",
+    category: "Monitor Speaker Bundle",
+    subCategory: "Monitor Speaker Bundle",
+    image: "/Products/46.webp",
+    seo: {
+        metaTitle:
+        "Yamaha HS5 Studio Monitor Bundle with Isolation Pad, Cable & Ebook",
+
+        metaDescription:
+        "Shop the Yamaha HS5 Studio Monitor Bundle featuring an isolation pad, audio cable, and ebook. Delivering accurate sound reproduction and professional monitoring for mixing, mastering, recording, and music production.",
+
+        keywords: [
+        "Yamaha HS5 Bundle",
+        "Yamaha HS5 Studio Monitor",
+        "HS5 Monitor Speaker",
+        "Studio Monitor Bundle",
+        "Yamaha Monitor Bundle",
+        "Isolation Pad Bundle",
+        "Professional Studio Monitor",
+        "Reference Monitor Speaker",
+        "Music Production Speaker",
+        "Recording Studio Monitor",
+        "Mixing Monitor Speaker",
+        "Single Studio Monitor",
+        "Nearfield Monitor Speaker",
+        "Home Studio Setup",
+        "Yamaha Studio Speaker"
+        ]
     }
+    },
+    {
+    id: "47",
+    slug: "yamaha-hs7-two-way-6-5inch-active-monitor-with-isolation-pads-cable-and-ebook-pair",
+    name: "Yamaha HS7 Two Way 6.5inch Active Monitor with Isolation Pads, Cable and Ebook - Pair",
+    price: "59,100",
+    offPrice: "53,109",
+    brand: "Yamaha",
+    category: "Monitor Speaker Bundle",
+    subCategory: "Monitor Speaker Bundle",
+    image: "/Products/47.webp",
+    seo: {
+        metaTitle:
+        "Yamaha HS7 Active Studio Monitor Pair Bundle with Isolation Pads & Cable",
+
+        metaDescription:
+        "Buy the Yamaha HS7 Active Studio Monitor Pair Bundle with isolation pads, cable, and ebook. Experience professional-grade audio monitoring for mixing, mastering, recording, and music production environments.",
+
+        keywords: [
+        "Yamaha HS7 Bundle",
+        "Yamaha HS7 Pair",
+        "HS7 Studio Monitor",
+        "Active Monitor Bundle",
+        "Studio Monitor Pair",
+        "Professional Studio Speakers",
+        "Reference Monitor Pair",
+        "Mixing Monitor Speakers",
+        "Mastering Studio Monitor",
+        "Recording Studio Bundle",
+        "Music Production Monitors",
+        "Isolation Pads Bundle",
+        "Nearfield Monitor Pair",
+        "Yamaha Studio Monitor Pair",
+        "Audio Production Speakers"
+        ]
+    }
+    },
+    {
+    id: "48",
+    slug: "yamaha-hs7-two-way-6-5inch-active-monitor-with-isolation-pads-cable-and-ebook-single-unit",
+    name: "Yamaha HS7 Two Way 6.5inch Active Monitor with Isolation Pads, Cable and Ebook - Single Unit",
+    price: "29,990",
+    offPrice: "27,000",
+    brand: "Yamaha",
+    category: "Monitor Speaker Bundle",
+    subCategory: "Monitor Speaker Bundle",
+    image: "/Products/48.webp",
+    seo: {
+        metaTitle:
+        "Yamaha HS7 Active Studio Monitor Bundle with Isolation Pads & Cable",
+
+        metaDescription:
+        "Shop the Yamaha HS7 Active Studio Monitor Bundle including isolation pads, cable, and ebook. Designed for precise audio monitoring, mixing, mastering, music production, and professional recording studios.",
+
+        keywords: [
+        "Yamaha HS7",
+        "HS7 Studio Monitor",
+        "Yamaha HS7 Bundle",
+        "Single Studio Monitor",
+        "Active Studio Speaker",
+        "Professional Monitor Speaker",
+        "Reference Monitor Speaker",
+        "Recording Studio Monitor",
+        "Mixing Speaker",
+        "Mastering Monitor",
+        "Music Production Speaker",
+        "Isolation Pad Bundle",
+        "Nearfield Studio Monitor",
+        "Yamaha Monitor Speaker",
+        "Studio Audio Monitor"
+        ]
+    }
+    },
+    {
+    id: "49",
+    slug: "yamaha-hs8-powered-studio-monitor-speakers-pair",
+    name: "Yamaha HS8 Powered Studio Monitor Speakers - Pair",
+    price: "65,000",
+    offPrice: "54,099",
+    brand: "Yamaha",
+    category: "Monitor Speaker Bundle",
+    subCategory: "Monitor Speaker Bundle",
+    image: "/Products/49.webp",
+    seo: {
+        metaTitle:
+        "Yamaha HS8 Powered Studio Monitor Speakers Pair | Professional Monitoring",
+
+        metaDescription:
+        "Buy Yamaha HS8 Powered Studio Monitor Speakers Pair featuring exceptional clarity, extended low-frequency response, and accurate sound reproduction. Ideal for mixing, mastering, recording, and professional music production.",
+
+        keywords: [
+        "Yamaha HS8",
+        "Yamaha HS8 Pair",
+        "HS8 Studio Monitor",
+        "Powered Studio Monitor",
+        "Professional Studio Speakers",
+        "Reference Monitor Pair",
+        "8 Inch Studio Monitor",
+        "Mixing Monitor Speakers",
+        "Mastering Studio Monitors",
+        "Recording Studio Speakers",
+        "Music Production Monitors",
+        "Nearfield Studio Monitor",
+        "Home Studio Speaker Pair",
+        "Audio Monitoring System",
+        "Yamaha Monitor Speakers"
+        ]
+    }
+    },
+
+    // Mixers 
+    {
+    id: "50",
+    slug: "mackie-battery-powered-analog-mixer",
+    name: "Mackie ProFX Battery Powered Analog Mixer",
+    price: "49,259",
+    offPrice: "35,499",
+    brand: "Mackie",
+    category: "Mixers",
+    subCategory: "Analog Mixers",
+    image: "/Products/50.webp",
+    seo: {
+        metaTitle:
+        "Vault C8 Powered Monitor Pair Bundle with Speaker Cables & Bitwig 8-Track",
+
+        metaDescription:
+        "Buy the Vault C8 Powered Monitor Pair Standard Bundle including 2 speaker cables, polishing cloth, and Bitwig 8-Track software. Ideal for music production, mixing, mastering, recording studios, and professional audio monitoring.",
+
+        keywords: [
+        "Vault C8 Bundle",
+        "Vault C8 Powered Monitor",
+        "Studio Monitor Bundle",
+        "Vault Monitor Pair",
+        "Bitwig 8 Track Bundle",
+        "Professional Studio Monitors",
+        "Powered Monitor Speakers",
+        "Recording Studio Bundle",
+        "Music Production Speakers",
+        "Mixing Monitor Speakers",
+        "Mastering Monitor Bundle",
+        "Nearfield Studio Monitors",
+        "Audio Monitoring System",
+        "Studio Speaker Bundle",
+        "Vault Studio Monitor Package"
+        ]
+    }
+    },
+    {
+    id: "51",
+    slug: "mackie-battery-powered-analog-mixer",
+    name: "Mackie ProFX Battery Powered Analog Mixer",
+    price: "49,259",
+    offPrice: "35,499",
+    brand: "Mackie",
+    category: "Mixers",
+    subCategory: "Analog Mixers",
+    image: "/Products/51.webp",
+    seo: {
+        metaTitle:
+        "Vault C8 Powered Monitor Pair Bundle with Speaker Cables & Bitwig 8-Track",
+
+        metaDescription:
+        "Buy the Vault C8 Powered Monitor Pair Standard Bundle including 2 speaker cables, polishing cloth, and Bitwig 8-Track software. Ideal for music production, mixing, mastering, recording studios, and professional audio monitoring.",
+
+        keywords: [
+        "Vault C8 Bundle",
+        "Vault C8 Powered Monitor",
+        "Studio Monitor Bundle",
+        "Vault Monitor Pair",
+        "Bitwig 8 Track Bundle",
+        "Professional Studio Monitors",
+        "Powered Monitor Speakers",
+        "Recording Studio Bundle",
+        "Music Production Speakers",
+        "Mixing Monitor Speakers",
+        "Mastering Monitor Bundle",
+        "Nearfield Studio Monitors",
+        "Audio Monitoring System",
+        "Studio Speaker Bundle",
+        "Vault Studio Monitor Package"
+        ]
+    }
+    },
+    {
+    id: "52",
+    slug: "mackie-compact-analog-mixer",
+    name: "Mackie Mix5 230V EU 5-Channel Compact Mixer",
+    price: "9,852",
+    offPrice: "7,999",
+    brand: "Mackie",
+    category: "Mixers",
+    subCategory: "Analog Mixers",
+    image: "/Products/52.webp",
+    seo: {
+        metaTitle:
+        "Vault C8 Powered Monitor Pair Bundle with Speaker Cables & Bitwig 8-Track",
+
+        metaDescription:
+        "Buy the Vault C8 Powered Monitor Pair Standard Bundle including 2 speaker cables, polishing cloth, and Bitwig 8-Track software. Ideal for music production, mixing, mastering, recording studios, and professional audio monitoring.",
+
+        keywords: [
+        "Vault C8 Bundle",
+        "Vault C8 Powered Monitor",
+        "Studio Monitor Bundle",
+        "Vault Monitor Pair",
+        "Bitwig 8 Track Bundle",
+        "Professional Studio Monitors",
+        "Powered Monitor Speakers",
+        "Recording Studio Bundle",
+        "Music Production Speakers",
+        "Mixing Monitor Speakers",
+        "Mastering Monitor Bundle",
+        "Nearfield Studio Monitors",
+        "Audio Monitoring System",
+        "Studio Speaker Bundle",
+        "Vault Studio Monitor Package"
+        ]
+    }
+    },
+    {
+    id: "53",
+    slug: "mackie-premium-analog-usb-mixer",
+    name: "Mackie ONYX Series Premium Analog USB Mixer",
+    price: "55,416",
+    offPrice: "53,999",
+    brand: "Mackie",
+    category: "Mixers",
+    subCategory: "Analog Mixers",
+    image: "/Products/53.webp",
+    seo: {
+        metaTitle:
+        "Vault C8 Powered Monitor Pair Bundle with Speaker Cables & Bitwig 8-Track",
+
+        metaDescription:
+        "Buy the Vault C8 Powered Monitor Pair Standard Bundle including 2 speaker cables, polishing cloth, and Bitwig 8-Track software. Ideal for music production, mixing, mastering, recording studios, and professional audio monitoring.",
+
+        keywords: [
+        "Vault C8 Bundle",
+        "Vault C8 Powered Monitor",
+        "Studio Monitor Bundle",
+        "Vault Monitor Pair",
+        "Bitwig 8 Track Bundle",
+        "Professional Studio Monitors",
+        "Powered Monitor Speakers",
+        "Recording Studio Bundle",
+        "Music Production Speakers",
+        "Mixing Monitor Speakers",
+        "Mastering Monitor Bundle",
+        "Nearfield Studio Monitors",
+        "Audio Monitoring System",
+        "Studio Speaker Bundle",
+        "Vault Studio Monitor Package"
+        ]
+    }
+    },
+    {
+    id: "54",
+    slug: "mackie-onyx-premium-analog-usb-mixer-bundle",
+    name: "Mackie ONYX Premium Analog USB Mixer Bundle",
+    price: "73,889",
+    offPrice: "62,199",
+    brand: "Mackie",
+    category: "Mixers",
+    subCategory: "Analog Mixers",
+    image: "/Products/54.webp",
+    seo: {
+        metaTitle:
+        "Vault C8 Powered Monitor Pair Bundle with Speaker Cables & Bitwig 8-Track",
+
+        metaDescription:
+        "Buy the Vault C8 Powered Monitor Pair Standard Bundle including 2 speaker cables, polishing cloth, and Bitwig 8-Track software. Ideal for music production, mixing, mastering, recording studios, and professional audio monitoring.",
+
+        keywords: [
+        "Vault C8 Bundle",
+        "Vault C8 Powered Monitor",
+        "Studio Monitor Bundle",
+        "Vault Monitor Pair",
+        "Bitwig 8 Track Bundle",
+        "Professional Studio Monitors",
+        "Powered Monitor Speakers",
+        "Recording Studio Bundle",
+        "Music Production Speakers",
+        "Mixing Monitor Speakers",
+        "Mastering Monitor Bundle",
+        "Nearfield Studio Monitors",
+        "Audio Monitoring System",
+        "Studio Speaker Bundle",
+        "Vault Studio Monitor Package"
+        ]
+    }
+    },
+    {
+    id: "55",
+    slug: "yamaha-mg16xu-16-input-6-bus-mixer",
+    name: "Yamaha MG16XU 16-Input 6 Bus Mixer",
+    price: "58,800",
+    offPrice: "43,600",
+    brand: "Yamaha",
+    category: "Mixers",
+    subCategory: "Analog Mixers",
+    image: "/Products/55.webp",
+    seo: {
+        metaTitle:
+        "Vault C8 Powered Monitor Pair Bundle with Speaker Cables & Bitwig 8-Track",
+
+        metaDescription:
+        "Buy the Vault C8 Powered Monitor Pair Standard Bundle including 2 speaker cables, polishing cloth, and Bitwig 8-Track software. Ideal for music production, mixing, mastering, recording studios, and professional audio monitoring.",
+
+        keywords: [
+        "Vault C8 Bundle",
+        "Vault C8 Powered Monitor",
+        "Studio Monitor Bundle",
+        "Vault Monitor Pair",
+        "Bitwig 8 Track Bundle",
+        "Professional Studio Monitors",
+        "Powered Monitor Speakers",
+        "Recording Studio Bundle",
+        "Music Production Speakers",
+        "Mixing Monitor Speakers",
+        "Mastering Monitor Bundle",
+        "Nearfield Studio Monitors",
+        "Audio Monitoring System",
+        "Studio Speaker Bundle",
+        "Vault Studio Monitor Package"
+        ]
+    }
+    },
+    {
+    id: "56",
+    slug: "studiomaster-club-xs8-plus-8-channel-analog-mixer",
+    name: "Studiomaster CLUB XS8 Plus 8 Channel Analog Mixer",
+    price: "58,800",
+    offPrice: "19,699",
+    brand: "Studiomaster",
+    category: "Mixers",
+    subCategory: "Analog Mixers",
+    image: "/Products/56.webp",
+    seo: {
+        metaTitle:
+        "Vault C8 Powered Monitor Pair Bundle with Speaker Cables & Bitwig 8-Track",
+
+        metaDescription:
+        "Buy the Vault C8 Powered Monitor Pair Standard Bundle including 2 speaker cables, polishing cloth, and Bitwig 8-Track software. Ideal for music production, mixing, mastering, recording studios, and professional audio monitoring.",
+
+        keywords: [
+        "Vault C8 Bundle",
+        "Vault C8 Powered Monitor",
+        "Studio Monitor Bundle",
+        "Vault Monitor Pair",
+        "Bitwig 8 Track Bundle",
+        "Professional Studio Monitors",
+        "Powered Monitor Speakers",
+        "Recording Studio Bundle",
+        "Music Production Speakers",
+        "Mixing Monitor Speakers",
+        "Mastering Monitor Bundle",
+        "Nearfield Studio Monitors",
+        "Audio Monitoring System",
+        "Studio Speaker Bundle",
+        "Vault Studio Monitor Package"
+        ]
+    }
+    },
+    {
+    id: "57",
+    slug: "studiomaster-club-xs10-10-channel-analog-mixer-1",
+    name: "Studiomaster CLUB XS10+ 10 Channel Analog Mixer",
+    price: "26,297",
+    offPrice: "22,450",
+    brand: "Studiomaster",
+    category: "Mixers",
+    subCategory: "Analog Mixers",
+    image: "/Products/57.webp",
+    seo: {
+        metaTitle:
+        "Vault C8 Powered Monitor Pair Bundle with Speaker Cables & Bitwig 8-Track",
+
+        metaDescription:
+        "Buy the Vault C8 Powered Monitor Pair Standard Bundle including 2 speaker cables, polishing cloth, and Bitwig 8-Track software. Ideal for music production, mixing, mastering, recording studios, and professional audio monitoring.",
+
+        keywords: [
+        "Vault C8 Bundle",
+        "Vault C8 Powered Monitor",
+        "Studio Monitor Bundle",
+        "Vault Monitor Pair",
+        "Bitwig 8 Track Bundle",
+        "Professional Studio Monitors",
+        "Powered Monitor Speakers",
+        "Recording Studio Bundle",
+        "Music Production Speakers",
+        "Mixing Monitor Speakers",
+        "Mastering Monitor Bundle",
+        "Nearfield Studio Monitors",
+        "Audio Monitoring System",
+        "Studio Speaker Bundle",
+        "Vault Studio Monitor Package"
+        ]
+    }
+    },
+    {
+    id: "58",
+    slug: "studiomaster-club-xs12-12-channel-analog-mixer-1",
+    name: "Studiomaster CLUB XS12+ 12 Channel Analog Mixer",
+    price: "29,834",
+    offPrice: "25,459",
+    brand: "Studiomaster",
+    category: "Mixers",
+    subCategory: "Analog Mixers",
+    image: "/Products/58.webp",
+    seo: {
+        metaTitle:
+        "Vault C8 Powered Monitor Pair Bundle with Speaker Cables & Bitwig 8-Track",
+
+        metaDescription:
+        "Buy the Vault C8 Powered Monitor Pair Standard Bundle including 2 speaker cables, polishing cloth, and Bitwig 8-Track software. Ideal for music production, mixing, mastering, recording studios, and professional audio monitoring.",
+
+        keywords: [
+        "Vault C8 Bundle",
+        "Vault C8 Powered Monitor",
+        "Studio Monitor Bundle",
+        "Vault Monitor Pair",
+        "Bitwig 8 Track Bundle",
+        "Professional Studio Monitors",
+        "Powered Monitor Speakers",
+        "Recording Studio Bundle",
+        "Music Production Speakers",
+        "Mixing Monitor Speakers",
+        "Mastering Monitor Bundle",
+        "Nearfield Studio Monitors",
+        "Audio Monitoring System",
+        "Studio Speaker Bundle",
+        "Vault Studio Monitor Package"
+        ]
+    }
+    },
+    {
+    id: "59",
+    slug: "studiomaster-club-xs-16-16-input-channel-analog-mixer",
+    name: "Studiomaster Club XS 16+ 16 Input Channel Analog Mixer",
+    price: "38,119",
+    offPrice: "32,500",
+    brand: "Studiomaster",
+    category: "Mixers",
+    subCategory: "Analog Mixers",
+    image: "/Products/59.webp",
+    seo: {
+        metaTitle:
+        "Vault C8 Powered Monitor Pair Bundle with Speaker Cables & Bitwig 8-Track",
+
+        metaDescription:
+        "Buy the Vault C8 Powered Monitor Pair Standard Bundle including 2 speaker cables, polishing cloth, and Bitwig 8-Track software. Ideal for music production, mixing, mastering, recording studios, and professional audio monitoring.",
+
+        keywords: [
+        "Vault C8 Bundle",
+        "Vault C8 Powered Monitor",
+        "Studio Monitor Bundle",
+        "Vault Monitor Pair",
+        "Bitwig 8 Track Bundle",
+        "Professional Studio Monitors",
+        "Powered Monitor Speakers",
+        "Recording Studio Bundle",
+        "Music Production Speakers",
+        "Mixing Monitor Speakers",
+        "Mastering Monitor Bundle",
+        "Nearfield Studio Monitors",
+        "Audio Monitoring System",
+        "Studio Speaker Bundle",
+        "Vault Studio Monitor Package"
+        ]
+    }
+    },
 ];
 
 export default products;

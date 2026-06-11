@@ -110,7 +110,7 @@ const handleSubmit = async (e) => {
                 <div>
                   <p className="font-semibold">Location</p>
                   <p className="text-slate-300">
-                    C Wing, Flat No. 101, Chheda Complex, Near Panchmuskhi Hanuman Mandir, Nalasopara West
+                    5B-267, Akshay Mittal Industrial Estate, Marol Naka, Andheri East, Mumbai, Maharashtra - 400059
                   </p>
                 </div>
               </div>

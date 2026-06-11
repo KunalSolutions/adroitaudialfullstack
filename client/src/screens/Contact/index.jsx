@@ -1,12 +1,14 @@
 import axios from "axios";
 import { useState } from "react";
 import { FaEnvelope, FaPhoneAlt, FaMapMarkerAlt } from "react-icons/fa";
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
+    const [formData, setFormData] = useState({
     name: "",
     email: "",
-    subject: "",
+    phone: "",
+    company: "",
     message: "",
   });
 
@@ -20,28 +22,43 @@ const Contact = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setLoading(true);
-    setSuccess(false);
+const handleSubmit = async (e) => {
+  e.preventDefault();
 
-    try {
-      await axios.post("/api/contact", formData);
+  setLoading(true);
+  setSuccess(false);
 
-      setSuccess(true);
+  try {
+    await emailjs.send(
+      "service_vnk3g6y", // Service ID
+      "template_engvy9h", // Template ID
+      {
+        name: formData.name,
+        email: formData.email,
+        phone: formData.phone,
+        company: formData.company,
+        message: formData.message ,
+      },
+      "t9NymGoRAINsgl4bY"
+    );
 
-      setFormData({
-        name: "",
-        email: "",
-        subject: "",
-        message: "",
-      });
-    } catch (error) {
-      alert("Error sending message");
-    }
+    setSuccess(true);
 
-    setLoading(false);
-  };
+    setFormData({
+      name: "",
+      email: "",
+      phone: "",
+      company: "",
+      message: "",
+    });
+
+  } catch (error) {
+    console.error(error);
+    alert("Failed to send message");
+  }
+
+  setLoading(false);
+}; 
 
   return (
     <section className="bg-slate-50 py-16 md:py-20 lg:py-24">
@@ -121,52 +138,65 @@ const Contact = () => {
 
             <form onSubmit={handleSubmit} className="space-y-5">
 
-              <input
-                type="text"
-                name="name"
-                placeholder="Full Name"
-                value={formData.name}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#EF5622] focus:border-[#EF5622] transition"
-              />
+              <div className="grid md:grid-cols-2 gap-5">
 
-              <input
-                type="email"
-                name="email"
-                placeholder="Email Address"
-                value={formData.email}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#EF5622] focus:border-[#EF5622] transition"
-              />
+                <input
+                  type="text"
+                  name="name"
+                  placeholder="Full Name *"
+                  value={formData.name}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#EF5622] focus:border-[#EF5622] transition"
+                />
 
-              <input
-                type="text"
-                name="subject"
-                placeholder="Subject"
-                value={formData.subject}
-                onChange={handleChange}
-                required
-                className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#EF5622] focus:border-[#EF5622] transition"
-              />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email Address *"
+                  value={formData.email}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#EF5622] focus:border-[#EF5622] transition"
+                />
+
+                <input
+                  type="tel"
+                  name="phone"
+                  placeholder="Phone Number *"
+                  value={formData.phone}
+                  onChange={handleChange}
+                  required
+                  className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#EF5622] focus:border-[#EF5622] transition"
+                />
+
+                <input
+                  type="text"
+                  name="company"
+                  placeholder="Company Name"
+                  value={formData.company}
+                  onChange={handleChange}
+                  className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#EF5622] focus:border-[#EF5622] transition"
+                />
+
+              </div>
 
               <textarea
                 name="message"
-                rows="5"
-                placeholder="Tell us about your project or requirement..."
+                rows="6"
+                placeholder="Tell us about your project, audio requirements, products, installation, support, or any specific enquiry..."
                 value={formData.message}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#EF5622] focus:border-[#EF5622] transition"
+                className="w-full px-4 py-3 rounded-xl border border-slate-300 focus:outline-none focus:ring-2 focus:ring-[#EF5622] focus:border-[#EF5622] transition mt-5"
               />
 
               <button
                 type="submit"
                 disabled={loading}
-                className="w-full py-4 rounded-xl font-semibold bg-[#EF5622] text-white hover:bg-[#d94a1b] cursor-pointer transition-all duration-300 disabled:opacity-60"
+                className="w-full py-4 rounded-xl font-semibold bg-[#EF5622] text-white hover:bg-[#d94a1b] cursor-pointer transition-all duration-300 disabled:opacity-60 mt-5"
               >
-                {loading ? "Sending..." : "Send Message"}
+                {loading ? "Sending..." : "Send Enquiry"}
               </button>
 
             </form>

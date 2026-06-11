@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 
+{/* Professional Audio */}
 const brands = [
   {
     name: "Yamaha",
@@ -33,6 +34,30 @@ const brands = [
     name: "d&b",
     image: "/Brands/08.png",
   },
+];
+
+{/* Home Audio */}
+const studioBrands = [
+  {
+    name: "denon",
+    image: "/Brands/16.png",
+  },
+  {
+    name: "maratnz",
+    image: "/Brands/17.svg",
+  },
+  {
+    name: "internationkef",
+    image: "/Brands/18.png",
+  },
+  {
+    name: "klipsch",
+    image: "/Brands/19.svg",
+  },
+  {
+    name: "polk",
+    image: "/Brands/20.png",
+  },
   {
     name: "accoustice",
     image: "/Brands/09.svg",
@@ -51,21 +76,20 @@ const brands = [
   },
 ];
 
+{/* Studio & Monitoring */}
 const homeBrands = [
-  "Denon",
-  "Marantz",
-  "KEF",
-  "Klipsch",
-  "Polk Audio",
-  "ELAC",
-];
-
-const studioBrands = [
-  "AKG",
-  "Beyerdynamic",
-  "Audeze",
-  "Marshall",
-  "Sony",
+  {
+    name: "beyer",
+    image: "/Brands/13.svg",
+  },
+  {
+    name: "marshell",
+    image: "/Brands/14.png",
+  },
+  {
+    name: "Sony",
+    image: "/Brands/15.svg",
+  },
 ];
 
 export default function BrandSection() {
@@ -121,44 +145,55 @@ export default function BrandSection() {
         </div>
 
         {/* Home Audio */}
-        {/* <div className="mb-14">
+        <div className="mb-14">
           <h3 className="text-2xl font-bold text-[#232466] mb-6">
             Home Audio & Hi-Fi
           </h3>
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
-            {homeBrands.map((brand) => (
-              <div
-                key={brand}
-                className="bg-white border border-slate-200 py-5 px-4 text-center font-semibold text-slate-700 hover:border-[#EF5622] hover:text-[#232466] transition"
-              >
-                {brand}
-              </div>
+            {studioBrands.map((studio, index) => (
+                <div
+                key={index}
+                className="group bg-white border border-slate-200 hover:border-[#EF5622] p-8 flex flex-col items-center justify-center transition-all duration-300"
+                >
+                <img
+                    src={studio.image}
+                    alt={studio.name}
+                    className="h-16 object-contain transition duration-300"
+                />
+
+                </div>
             ))}
 
-          </div>
-        </div> */}
+            </div>
+        </div>
 
         {/* Studio & Monitoring */}
-        {/* <div>
+        <div>
           <h3 className="text-2xl font-bold text-[#232466] mb-6">
             Studio & Monitoring
           </h3>
+            
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
 
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            {homeBrands.map((home, index) => (
+                <div
+                key={index}
+                className="group bg-white border border-slate-200 hover:border-[#EF5622] p-8 flex flex-col items-center justify-center transition-all duration-300"
+                >
+                <img
+                    src={home.image}
+                    alt={home.name}
+                    className="h-16 object-contain transition duration-300"
+                />
 
-            {studioBrands.map((brand) => (
-              <div
-                key={brand}
-                className="bg-white border border-slate-200 py-5 px-4 text-center font-semibold text-slate-700 hover:border-[#EF5622] hover:text-[#232466] transition"
-              >
-                {brand}
-              </div>
+                </div>
             ))}
 
-          </div>
-        </div> */}
+            </div>
+          
+        </div>
 
         {/* Bottom Content */}
         <div className="mt-16 bg-[#232466] p-8 md:p-12 text-center">
@@ -186,5 +221,5 @@ export default function BrandSection() {
 
       </div>
     </section>
-  );
+    );
 }

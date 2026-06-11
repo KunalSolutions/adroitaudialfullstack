@@ -48,7 +48,7 @@ export default function AboutSection() {
             <div className="grid grid-cols-3 gap-6 mb-10">
 
                <a
-                  href="/about-us"
+                  href="/contact"
                   className="inline-flex items-center gap-2 px-8 py-4 bg-[#232466] text-white font-semibold hover:bg-[#1b1c52] transition-all duration-300"
                 >
                   Contact Us

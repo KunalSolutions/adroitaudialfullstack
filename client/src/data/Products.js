@@ -2115,6 +2115,1313 @@ const products = [
         ]
     }
     },
-];
+
+    // Headphones 
+    {
+    id: "60",
+    slug: "vault-sonic-m30-studio-monitoring-headphone",
+    name: "Vault Sonic M30 Studio Monitoring Headphone",
+    price: "6,650",
+    offPrice: "4,374",
+    brand: "Vault",
+    category: "Studio Headphones",
+    subCategory: "Headphones",
+    image: "/Products/60.webp",
+    seo: {
+        metaTitle:
+        "Vault Sonic M30 Studio Monitoring Headphone for Recording & Mixing",
+
+        metaDescription:
+        "Buy the Vault Sonic M30 Studio Monitoring Headphone designed for accurate audio monitoring, recording, mixing, podcasting, content creation, and home studio applications. Comfortable fit with detailed sound reproduction.",
+
+        keywords: [
+        "Vault Sonic M30",
+        "Vault Studio Headphone",
+        "Studio Monitoring Headphone",
+        "Closed Back Headphone",
+        "Recording Headphones",
+        "Mixing Headphones",
+        "Music Production Headphones",
+        "Studio Monitor Headphones",
+        "Professional Headphones",
+        "Podcast Monitoring Headphones",
+        "Home Studio Headphones",
+        "Audio Monitoring Headphones",
+        "Vault M30 Headphones",
+        "Studio Recording Gear",
+        "Headphones for Music Production"
+        ]
+    }
+    },
+    {
+    id: "61",
+    slug: "vault-sonic-m50-studio-monitoring-headphones",
+    name: "Vault Sonic M50 Studio Monitoring Headphones",
+    price: "10,500",
+    offPrice: "6,749",
+    brand: "Vault",
+    category: "Studio Headphones",
+    subCategory: "Headphones",
+    image: "/Products/61.webp",
+    seo: {
+        metaTitle:
+        "Vault Sonic M50 Studio Monitoring Headphones for Professional Audio",
+
+        metaDescription:
+        "Shop the Vault Sonic M50 Studio Monitoring Headphones featuring detailed sound reproduction for recording, mixing, mastering, podcasting, studio monitoring, and music production environments.",
+
+        keywords: [
+        "Vault Sonic M50",
+        "Vault M50 Headphones",
+        "Studio Monitoring Headphones",
+        "Professional Studio Headphones",
+        "Recording Headphones",
+        "Mixing Headphones",
+        "Mastering Headphones",
+        "Music Production Headphones",
+        "Closed Back Studio Headphones",
+        "Audio Monitoring Headphones",
+        "Podcast Headphones",
+        "Studio Audio Gear",
+        "Reference Headphones",
+        "Home Studio Headphones",
+        "Vault Professional Headphones"
+        ]
+    }
+    },
+    {
+    id: "62",
+    slug: "beyerdynamic-dt-770-pro-32-ohm-studio-headphone-black",
+    name: "Beyerdynamic DT-770 PRO 32 Ohm Studio Headphone - Black",
+    price: "19,999",
+    offPrice: "19,099",
+    brand: "Beyerdynamic",
+    category: "Studio Headphones",
+    subCategory: "Headphones",
+    image: "/Products/62.webp",
+    seo: {
+        metaTitle:
+        "Beyerdynamic DT 770 PRO 32 Ohm Studio Headphones Black",
+
+        metaDescription:
+        "Buy the Beyerdynamic DT 770 PRO 32 Ohm Studio Headphones in Black. Ideal for recording, monitoring, mixing, content creation, home studios, and professional audio applications with exceptional comfort and isolation.",
+
+        keywords: [
+        "Beyerdynamic DT 770 PRO",
+        "DT 770 PRO 32 Ohm",
+        "Beyerdynamic Studio Headphones",
+        "Closed Back Headphones",
+        "Recording Headphones",
+        "Mixing Headphones",
+        "Monitoring Headphones",
+        "Professional Studio Headphones",
+        "Audio Production Headphones",
+        "DT770 Pro Black",
+        "Music Production Headphones",
+        "Home Studio Headphones",
+        "Reference Monitoring Headphones",
+        "Studio Audio Headphones",
+        "Beyerdynamic Headphones"
+        ]
+    }
+    },
+    {
+    id: "63",
+    slug: "aiaiai-tma-2-professional-studio-xe-headphones",
+    name: "AIAIAI TMA-2 Professional Studio XE Headphones",
+    price: "16,942",
+    offPrice: "16,618",
+    brand: "AIAIAI",
+    category: "Studio Headphones",
+    subCategory: "Headphones",
+    image: "/Products/63.webp",
+    seo: {
+        metaTitle:
+        "AIAIAI TMA-2 Studio XE Professional Monitoring Headphones",
+
+        metaDescription:
+        "Shop AIAIAI TMA-2 Studio XE Professional Headphones built for music production, studio monitoring, recording, mixing, podcasting, and creative workflows with accurate audio reproduction.",
+
+        keywords: [
+        "AIAIAI TMA-2",
+        "TMA-2 Studio XE",
+        "AIAIAI Headphones",
+        "Studio Monitoring Headphones",
+        "Professional Headphones",
+        "Recording Headphones",
+        "Mixing Headphones",
+        "Music Production Headphones",
+        "Audio Monitoring",
+        "Studio Audio Headphones",
+        "Reference Headphones",
+        "Podcast Headphones",
+        "Creative Studio Headphones",
+        "Professional Monitoring Headphones",
+        "AIAIAI Studio Headphones"
+        ]
+    }
+    },
+    {
+    id: "64",
+    slug: "eikon-h800-closed-back-professional-headphone",
+    name: "Eikon H800 Closed Back Professional Headphone",
+    price: "7,406",
+    offPrice: "7,199",
+    brand: "Eikon",
+    category: "Studio Headphones",
+    subCategory: "Headphones",
+    image: "/Products/64.webp",
+    seo: {
+        metaTitle:
+        "Eikon H800 Closed Back Professional Studio Headphone",
+
+        metaDescription:
+        "Buy the Eikon H800 Closed Back Professional Headphone for studio monitoring, recording, mixing, podcasting, content creation, and accurate audio playback with enhanced isolation.",
+
+        keywords: [
+        "Eikon H800",
+        "Eikon Studio Headphone",
+        "Closed Back Headphones",
+        "Professional Headphones",
+        "Recording Headphones",
+        "Mixing Headphones",
+        "Studio Monitoring Headphones",
+        "Audio Monitoring",
+        "Music Production Headphones",
+        "Reference Headphones",
+        "Podcast Headphones",
+        "Home Studio Headphones",
+        "Professional Audio Headphones",
+        "Studio Audio Equipment",
+        "Eikon Headphones"
+        ]
+    }
+    },
+    {
+    id: "65",
+    slug: "eikon-h200-closed-back-professional-headphone",
+    name: "Eikon H200 Closed Back Professional Headphone",
+    price: "4,132",
+    offPrice: "4,000",
+    brand: "Eikon",
+    category: "Studio Headphones",
+    subCategory: "Headphones",
+    image: "/Products/65.webp",
+    seo: {
+        metaTitle:
+        "Eikon H200 Closed Back Professional Monitoring Headphone",
+
+        metaDescription:
+        "Shop the Eikon H200 Closed Back Professional Headphone for recording, monitoring, music production, podcasting, streaming, and home studio audio applications.",
+
+        keywords: [
+        "Eikon H200",
+        "Closed Back Studio Headphones",
+        "Professional Monitoring Headphones",
+        "Studio Headphones",
+        "Recording Headphones",
+        "Mixing Headphones",
+        "Audio Monitoring Headphones",
+        "Music Production Gear",
+        "Home Studio Headphones",
+        "Reference Headphones",
+        "Podcast Headphones",
+        "Professional Audio Headphones",
+        "Studio Recording Headphones",
+        "Eikon Audio",
+        "Budget Studio Headphones"
+        ]
+    }
+    },
+    {
+    id: "66",
+    slug: "austrian-audio-hi-x15-professional-over-ear-headphones",
+    name: "Austrian Audio Hi-X15 Professional Over-Ear Headphones",
+    price: "14,020",
+    offPrice: "13,500",
+    brand: "Austrian",
+    category: "Studio Headphones",
+    subCategory: "Headphones",
+    image: "/Products/66.webp",
+    seo: {
+        metaTitle:
+        "Austrian Audio Hi-X15 Professional Over-Ear Studio Headphones",
+
+        metaDescription:
+        "Buy Austrian Audio Hi-X15 Professional Over-Ear Headphones for recording, monitoring, podcasting, content creation, mixing, and professional studio applications.",
+
+        keywords: [
+        "Austrian Audio Hi-X15",
+        "Hi-X15 Headphones",
+        "Professional Studio Headphones",
+        "Over Ear Headphones",
+        "Recording Headphones",
+        "Mixing Headphones",
+        "Monitoring Headphones",
+        "Music Production Headphones",
+        "Audio Monitoring",
+        "Studio Reference Headphones",
+        "Podcast Headphones",
+        "Home Studio Gear",
+        "Professional Audio Equipment",
+        "Closed Back Headphones",
+        "Austrian Audio Headphones"
+        ]
+    }
+    },
+    {
+    id: "67",
+    slug: "austrian-audio-hi-x55-professional-over-ear-headphones",
+    name: "Austrian Audio Hi-X55 Professional Over-Ear Headphones",
+    price: "42,080",
+    offPrice: "39,999",
+    brand: "Austrian",
+    category: "Studio Headphones",
+    subCategory: "Headphones",
+    image: "/Products/67.webp",
+    seo: {
+        metaTitle:
+        "Austrian Audio Hi-X55 Professional Over-Ear Studio Headphones",
+
+        metaDescription:
+        "Shop Austrian Audio Hi-X55 Professional Over-Ear Headphones engineered for critical listening, mixing, mastering, recording, and professional studio monitoring.",
+
+        keywords: [
+        "Austrian Audio Hi-X55",
+        "Hi-X55 Studio Headphones",
+        "Professional Monitoring Headphones",
+        "Mixing Headphones",
+        "Mastering Headphones",
+        "Recording Headphones",
+        "Studio Reference Headphones",
+        "Over Ear Studio Headphones",
+        "Audio Monitoring Headphones",
+        "Music Production Headphones",
+        "Professional Audio Gear",
+        "High Resolution Headphones",
+        "Closed Back Headphones",
+        "Studio Monitoring",
+        "Austrian Audio"
+        ]
+    }
+    },
+    {
+    id: "68",
+    slug: "gibraltar-ghpm-r-studio-monitor-headphone",
+    name: "Gibraltar GHPM-R Studio Monitor Headphone",
+    price: "13,948",
+    offPrice: "13,351",
+    brand: "Gibraltar",
+    category: "Studio Headphones",
+    subCategory: "Headphones",
+    image: "/Products/68.webp",
+    seo: {
+        metaTitle:
+        "Gibraltar GHPM-R Studio Monitor Headphone for Recording & Mixing",
+
+        metaDescription:
+        "Buy the Gibraltar GHPM-R Studio Monitor Headphone designed for accurate monitoring, recording, podcasting, music production, and studio mixing applications.",
+
+        keywords: [
+        "Gibraltar GHPM-R",
+        "Studio Monitor Headphone",
+        "Gibraltar Headphones",
+        "Recording Headphones",
+        "Mixing Headphones",
+        "Monitoring Headphones",
+        "Professional Studio Headphones",
+        "Music Production Headphones",
+        "Audio Monitoring",
+        "Podcast Headphones",
+        "Studio Recording Gear",
+        "Reference Headphones",
+        "Home Studio Headphones",
+        "Closed Back Headphones",
+        "Studio Audio Equipment"
+        ]
+    }
+    },
+    {
+    id: "69",
+    slug: "cad-audio-mh100-closed-back-studio-headphones",
+    name: "CAD Audio MH100 Closed-Back Studio Headphones",
+    price: "3,560",
+    offPrice: "3,482",
+    brand: "CAD",
+    category: "Studio Headphones",
+    subCategory: "Headphones",
+    image: "/Products/69.webp",
+    seo: {
+        metaTitle:
+        "CAD Audio MH100 Closed-Back Studio Headphones",
+
+        metaDescription:
+        "Shop CAD Audio MH100 Closed-Back Studio Headphones for recording, monitoring, podcasting, content creation, mixing, and home studio audio production.",
+
+        keywords: [
+        "CAD Audio MH100",
+        "MH100 Studio Headphones",
+        "CAD Studio Headphones",
+        "Closed Back Headphones",
+        "Recording Headphones",
+        "Monitoring Headphones",
+        "Mixing Headphones",
+        "Podcast Headphones",
+        "Music Production Headphones",
+        "Audio Monitoring",
+        "Home Studio Headphones",
+        "Reference Headphones",
+        "Studio Recording Equipment",
+        "Professional Audio Headphones",
+        "CAD Audio"
+        ]
+    }
+    },
+    {
+    id: "70",
+    slug: "austrian-audio-hi-x60-professional-closed-back-over-ear-headphones",
+    name: "Austrian Audio Hi-X60 Professional Closed-Back Over-Ear Headphones",
+    price: "49,095",
+    offPrice: "46,740",
+    brand: "Austrian",
+    category: "Studio Headphones",
+    subCategory: "Headphones",
+    image: "/Products/70.webp",
+    seo: {
+        metaTitle:
+        "Austrian Audio Hi-X60 Professional Closed-Back Studio Headphones",
+
+        metaDescription:
+        "Buy Austrian Audio Hi-X60 Professional Closed-Back Over-Ear Headphones for critical listening, mixing, mastering, recording, broadcasting, and professional studio monitoring.",
+
+        keywords: [
+        "Austrian Audio Hi-X60",
+        "Hi-X60 Headphones",
+        "Professional Studio Headphones",
+        "Closed Back Headphones",
+        "Mixing Headphones",
+        "Mastering Headphones",
+        "Recording Headphones",
+        "Studio Monitoring Headphones",
+        "Reference Headphones",
+        "Audio Monitoring",
+        "Music Production Headphones",
+        "Professional Audio Equipment",
+        "Over Ear Studio Headphones",
+        "Broadcast Headphones",
+        "Austrian Audio Studio Headphones"
+        ]
+    }
+    },
+
+    // Pre Amps 
+    {
+    id: "71",
+    slug: "ik-multimedia-irig-stomp-stompbox-guitar-preamp",
+    name: "IK Multimedia iRig Stomp Stompbox Guitar Preamp",
+    price: "36,000",
+    offPrice: "34,300",
+    brand: "IK Multimedia",
+    category: "Pre Amps",
+    subCategory: "Pre Amps",
+    image: "/Products/71.webp",
+    seo: {
+        metaTitle:
+        "IK Multimedia iRig Stomp Guitar Preamp & Stompbox Interface",
+
+        metaDescription:
+        "Buy the IK Multimedia iRig Stomp Guitar Preamp and Stompbox Interface for electric guitar recording, amp simulation, live performance, mobile music production, and professional audio applications.",
+
+        keywords: [
+        "IK Multimedia iRig Stomp",
+        "iRig Stomp Guitar Preamp",
+        "Guitar Preamp Pedal",
+        "Mobile Guitar Interface",
+        "Guitar Recording Interface",
+        "Amp Simulation Pedal",
+        "Electric Guitar Preamp",
+        "Live Performance Guitar Pedal",
+        "Guitar Effects Interface",
+        "IK Multimedia Guitar Gear",
+        "Recording Guitar Pedal",
+        "Stompbox Guitar Interface",
+        "Music Production Equipment",
+        "Portable Guitar Preamp",
+        "Guitar Audio Interface"
+        ]
+    }
+    },
+    {
+    id: "72",
+    slug: "se-electronics-dm2-tnt-active-inline-microphone-preamp",
+    name: "sE Electronics DM2 TNT Active Inline Microphone Preamp",
+    price: "14,400",
+    offPrice: "13,000",
+    brand: "sE Electronics",
+    category: "Pre Amps",
+    subCategory: "Pre Amps",
+    image: "/Products/72.webp",
+    seo: {
+        metaTitle:
+        "sE Electronics DM2 TNT Active Inline Microphone Preamp",
+
+        metaDescription:
+        "Shop the sE Electronics DM2 TNT Active Inline Microphone Preamp for dynamic and ribbon microphones. Provides clean gain boost for recording, podcasting, broadcasting, and studio applications.",
+
+        keywords: [
+        "sE Electronics DM2 TNT",
+        "DM2 TNT Preamp",
+        "Inline Microphone Preamp",
+        "Active Mic Preamp",
+        "Dynamic Microphone Booster",
+        "Ribbon Microphone Preamp",
+        "Podcast Microphone Preamp",
+        "Studio Recording Preamp",
+        "Broadcast Audio Equipment",
+        "Clean Gain Booster",
+        "Microphone Signal Booster",
+        "Professional Audio Gear",
+        "Recording Studio Equipment",
+        "Mic Gain Amplifier",
+        "sE Electronics Preamp"
+        ]
+    }
+    },
+    {
+    id: "73",
+    slug: "mooer-001-gas-station-delay-reverb-effects-pre-amp",
+    name: "Mooer 001-Gas Station Guitar Preamp Pedal",
+    price: "10,074",
+    offPrice: "9,699",
+    brand: "Mooer",
+    category: "Pre Amps",
+    subCategory: "Pre Amps",
+    image: "/Products/73.webp",
+    seo: {
+    metaTitle:
+        "Mooer 001 Gas Station Guitar Preamp Pedal",
+
+        metaDescription:
+        "Buy the Mooer 001 Gas Station Guitar Preamp Pedal featuring authentic amp-style tones for electric guitar recording, live performance, practice, and pedalboard setups.",
+
+        keywords: [
+        "Mooer 001 Gas Station",
+        "Mooer Guitar Preamp",
+        "Gas Station Preamp Pedal",
+        "Guitar Amp Simulator",
+        "Electric Guitar Preamp",
+        "Micro Preamp Pedal",
+        "Guitar Effects Pedal",
+        "Pedalboard Preamp",
+        "Recording Guitar Equipment",
+        "Live Guitar Rig",
+        "Guitar Tone Shaping",
+        "Amp Modeling Pedal",
+        "Mooer Effects",
+        "Guitar Recording Gear",
+        "Preamp Pedal"
+        ]
+    }
+    },
+    {
+    id: "74",
+    slug: "mooer-001-gas-station-delay-reverb-effects-pre-amp",
+    name: "Mooer 002-UK Gold 900 Guitar Preamp Pedal",
+    price: "10,074",
+    offPrice: "9,770",
+    brand: "Mooer",
+    category: "Pre Amps",
+    subCategory: "Pre Amps",
+    image: "/Products/74.webp",
+    seo: {
+        metaTitle:
+        "Mooer 002 UK Gold 900 Guitar Preamp Pedal",
+
+        metaDescription:
+        "Shop the Mooer 002 UK Gold 900 Guitar Preamp Pedal delivering classic British amp-inspired tones for recording, rehearsals, live gigs, and pedalboard setups.",
+
+        keywords: [
+        "Mooer 002 UK Gold 900",
+        "UK Gold 900 Preamp",
+        "British Amp Preamp",
+        "Guitar Preamp Pedal",
+        "Electric Guitar Effects",
+        "Amp Simulation Pedal",
+        "Mooer Micro Preamp",
+        "Pedalboard Guitar Preamp",
+        "Guitar Recording Equipment",
+        "Live Performance Pedal",
+        "Rock Guitar Tone",
+        "Studio Guitar Gear",
+        "Mooer Effects Pedal",
+        "Guitar Tone Pedal",
+        "Preamp Amplifier Pedal"
+        ]
+    }
+    },
+    {
+    id: "75",
+    slug: "mooer-009-blacknight-delay-reverb-effects-pre-amp",
+    name: "Mooer 009-Blacknight Guitar Preamp Pedal",
+    price: "10,074",
+    offPrice: "9,670",
+    brand: "Mooer",
+    category: "Pre Amps",
+    subCategory: "Pre Amps",
+    image: "/Products/75.webp",
+    seo: {
+        metaTitle:
+        "Mooer 009 Blacknight Guitar Preamp Pedal",
+
+        metaDescription:
+        "Buy the Mooer 009 Blacknight Guitar Preamp Pedal for powerful amp-inspired tones, studio recording, live performance, practice sessions, and professional guitar setups.",
+
+        keywords: [
+        "Mooer 009 Blacknight",
+        "Blacknight Preamp Pedal",
+        "Guitar Preamp Pedal",
+        "Amp Simulator Pedal",
+        "Electric Guitar Effects",
+        "Mooer Guitar Pedal",
+        "Recording Guitar Equipment",
+        "Live Guitar Performance",
+        "Guitar Tone Shaping",
+        "Pedalboard Preamp",
+        "Micro Preamp Pedal",
+        "Rock Guitar Sound",
+        "Studio Guitar Recording",
+        "Professional Guitar Pedal",
+        "Mooer Effects"
+        ]
+    }
+    },
+    {
+    id: "76",
+    slug: "mooer-006-us-classic-deluxe-delay-reverb-effects-pre-amp",
+    name: "Mooer 006-US Classic Deluxe Guitar Preamp Pedal",
+    price: "10,074",
+    offPrice: "9,670",
+    brand: "Mooer",
+    category: "Pre Amps",
+    subCategory: "Pre Amps",
+    image: "/Products/76.webp",
+    seo: {
+    metaTitle:
+        "Mooer 006 US Classic Deluxe Guitar Preamp Pedal",
+
+        metaDescription:
+        "Shop the Mooer 006 US Classic Deluxe Guitar Preamp Pedal featuring classic American amp-style tones for recording, practice, live gigs, and pedalboard integration.",
+
+        keywords: [
+        "Mooer 006 US Classic Deluxe",
+        "US Classic Deluxe Preamp",
+        "Guitar Preamp Pedal",
+        "American Amp Tone",
+        "Electric Guitar Effects",
+        "Amp Modeling Pedal",
+        "Mooer Micro Preamp",
+        "Pedalboard Guitar Preamp",
+        "Recording Guitar Gear",
+        "Live Performance Pedal",
+        "Studio Guitar Equipment",
+        "Classic Guitar Tone",
+        "Guitar Effects Processor",
+        "Mooer Guitar Pedal",
+        "Preamp Pedal"
+        ]
+    }
+    },
+    {
+    id: "77",
+    slug: "mooer-013-matchbox-micro-preamp",
+    name: "Mooer 013 Matchbox Micro Preamp",
+    price: "10,074",
+    offPrice: "9,770",
+    brand: "Mooer",
+    category: "Pre Amps",
+    subCategory: "Pre Amps",
+    image: "/Products/77.webp",
+    seo: {
+        metaTitle:
+        "Mooer 013 Matchbox Micro Guitar Preamp Pedal",
+
+        metaDescription:
+        "Buy the Mooer 013 Matchbox Micro Preamp delivering amp-style guitar tones for recording, live performance, rehearsal, and compact pedalboard applications.",
+
+        keywords: [
+        "Mooer 013 Matchbox",
+        "Matchbox Micro Preamp",
+        "Guitar Preamp Pedal",
+        "Micro Preamp Pedal",
+        "Electric Guitar Effects",
+        "Amp Simulation Pedal",
+        "Pedalboard Guitar Preamp",
+        "Mooer Guitar Effects",
+        "Recording Guitar Equipment",
+        "Studio Guitar Tone",
+        "Live Performance Gear",
+        "Guitar Signal Processor",
+        "Compact Guitar Preamp",
+        "Guitar Effects Unit",
+        "Mooer Matchbox"
+        ]
+    }
+    },
+    {
+    id: "78",
+    slug: "warm-audio-wa-273eq-dual-channel-british-microphone-preamp-and-eq",
+    name: "Warm Audio WA-273EQ Dual Channel British Microphone Preamp and EQ",
+    price: "10,074",
+    offPrice: "215,487",
+    brand: "Warm",
+    category: "Pre Amps",
+    subCategory: "Pre Amps",
+    image: "/Products/78.webp",
+    seo: {
+        metaTitle:
+        "Warm Audio WA-273EQ Dual Channel Microphone Preamp & EQ",
+
+        metaDescription:
+        "Shop the Warm Audio WA-273EQ Dual Channel British Microphone Preamp and EQ for professional recording studios, vocals, instruments, mixing, and analog sound shaping.",
+
+        keywords: [
+        "Warm Audio WA-273EQ",
+        "WA273EQ Preamp",
+        "Dual Channel Mic Preamp",
+        "British Style Preamp",
+        "Microphone Preamp and EQ",
+        "Studio Recording Preamp",
+        "Professional Audio Equipment",
+        "Analog Recording Gear",
+        "Recording Studio Hardware",
+        "Vocal Recording Preamp",
+        "Instrument Recording Preamp",
+        "Audio Signal Processing",
+        "Warm Audio Equipment",
+        "Studio Microphone Preamp",
+        "Recording Console Preamp"
+        ]
+    }
+    },
+    {
+    id: "79",
+    slug: "focusrite-scarlett-octapre-dynamic-eight-channel-microphone-preamp-with-adat-outputs",
+    name: "Focusrite Scarlett Octapre Dynamic Eight-Channel Microphone Preamp with ADAT Outputs",
+    price: "100,375",
+    offPrice: "295,456",
+    brand: "Focusrite",
+    category: "Pre Amps",
+    subCategory: "Pre Amps",
+    image: "/Products/79.webp",
+    seo: {
+    metaTitle:
+        "Focusrite Scarlett OctoPre Dynamic 8-Channel Mic Preamp",
+
+        metaDescription:
+        "Buy the Focusrite Scarlett OctoPre Dynamic Eight-Channel Microphone Preamp with ADAT outputs for studio expansion, drum recording, vocals, instruments, and professional audio production.",
+
+        keywords: [
+        "Focusrite Scarlett OctoPre Dynamic",
+        "8 Channel Microphone Preamp",
+        "ADAT Mic Preamp",
+        "Focusrite OctoPre",
+        "Studio Expansion Preamp",
+        "Multi Channel Recording",
+        "Professional Audio Interface Expansion",
+        "Microphone Preamp",
+        "Drum Recording Equipment",
+        "Vocal Recording Gear",
+        "Focusrite Recording Hardware",
+        "Studio Recording System",
+        "ADAT Expansion Unit",
+        "Audio Production Equipment",
+        "Recording Studio Preamp"
+        ]
+    }
+    },
+    {
+    id: "80",
+    slug: "dsm-humboldt-simplifier-classic-zero-watt-stereo-pedal",
+    name: "DSM & Humboldt Simplifier Classic Zero-watt Stereo Pedal",
+    price: "36,142",
+    offPrice: "34,435",
+    brand: "DSM",
+    category: "Pre Amps",
+    subCategory: "Pre Amps",
+    image: "/Products/80.webp",
+    seo: {
+    metaTitle:
+        "DSM & Humboldt Simplifier Classic Zero-Watt Stereo Pedal",
+
+        metaDescription:
+        "Shop the DSM & Humboldt Simplifier Classic Zero-Watt Stereo Pedal featuring analog amp simulation, stereo outputs, cabinet emulation, recording capabilities, and live performance flexibility.",
+
+        keywords: [
+        "DSM Humboldt Simplifier Classic",
+        "Simplifier Zero Watt Stereo",
+        "Analog Amp Simulator",
+        "Stereo Guitar Preamp",
+        "Cabinet Simulation Pedal",
+        "Direct Recording Guitar Pedal",
+        "Guitar Recording Equipment",
+        "Live Performance Guitar Rig",
+        "Zero Watt Amplifier Pedal",
+        "Amp and Cab Simulator",
+        "Professional Guitar Pedal",
+        "Stereo Guitar Effects",
+        "Pedalboard Solution",
+        "DSM Humboldt Pedal",
+        "Guitar Tone Processor"
+        ]
+    }
+    },
+
+    // Groove production
+    {
+    id: "81",
+    slug: "akai-apc-mini-ableton-performance-controller-with-mpc-beats-software-pack",
+    name: "Akai APC Mini MK2 Ableton Performance Controller With MPC Beats Software Pack",
+    price: "12,249",
+    offPrice: "10,300",
+    brand: "Akai",
+    category: "Groove Production",
+    subCategory: "Groove Production",
+    image: "/Products/81.webp",
+    seo: {
+    metaTitle: "Akai APC Mini MK2 Ableton Performance Controller | MPC Beats Included",
+    metaDescription: "Buy the Akai APC Mini MK2 Ableton Performance Controller with MPC Beats software. Features RGB pads, assignable faders, clip launching, and seamless Ableton Live integration.",
+    keywords: [
+    "Akai APC Mini MK2",
+    "Ableton Performance Controller",
+    "MPC Beats Software",
+    "Akai MIDI Controller",
+    "Ableton Live Controller",
+    "Clip Launch Controller",
+    "RGB Pad Controller",
+    "Music Production Controller",
+    "Akai APC Mini",
+    "Compact MIDI Controller"
+    ]
+    }
+    },
+    {
+    id: "82",
+    slug: "native-instruments-maschine-mikro-mk3-groove-production-interface",
+    name: "Native Instruments Maschine Mikro MK3 Groove Production Interface",
+    price: "37,570",
+    offPrice: "35,791",
+    brand: "Native",
+    category: "Groove Production",
+    subCategory: "Groove Production",
+    image: "/Products/82.webp",
+    seo: {
+    metaTitle: "Native Instruments Maschine Mikro MK3 Groove Production Interface",
+    metaDescription: "Shop the Native Instruments Maschine Mikro MK3 featuring responsive pads, powerful beat making tools, sampling capabilities, and seamless software integration.",
+    keywords: [
+    "Maschine Mikro MK3",
+    "Native Instruments Maschine",
+    "Beat Making Controller",
+    "Groove Production Interface",
+    "Sampling Controller",
+    "Music Production Hardware",
+    "Pad Controller",
+    "Maschine Software",
+    "Studio Production Tool",
+    "MIDI Groove Controller"
+    ]
+    }
+    },
+    {
+    id: "83",
+    slug: "native-instrument-maschine-standalone-production-midi-controller",
+    name: "Native Instrument Maschine+ Standalone Production MIDI Controller",
+    price: "139,535",
+    offPrice: "132,658",
+    brand: "Native",
+    category: "Groove Production",
+    subCategory: "Groove Production",
+    image: "/Products/83.webp",
+    seo: {
+    metaTitle: "Native Instruments Maschine+ Standalone Production MIDI Controller",
+    metaDescription: "Discover the Native Instruments Maschine+ standalone production system with built-in instruments, effects, sampling tools, and DAW-free workflow.",
+    keywords: [
+    "Maschine Plus",
+    "Maschine+",
+    "Standalone Production Controller",
+    "Native Instruments Controller",
+    "Music Production System",
+    "Sampling Workstation",
+    "Beat Production Hardware",
+    "Standalone Groovebox",
+    "Professional MIDI Controller",
+    "Electronic Music Production"
+    ]
+    }
+    },
+    {
+    id: "84",
+    slug: "native-instruments-maschine-mk2-groove-production-studio",
+    name: "Native Instruments Maschine MK2 Groove Production Studio",
+    price: "61,899",
+    offPrice: "58,900",
+    brand: "Native",
+    category: "Groove Production",
+    subCategory: "Groove Production",
+    image: "/Products/84.webp",
+    seo: {
+    metaTitle: "Native Instruments Maschine MK2 Groove Production Studio",
+    metaDescription: "Buy the Native Instruments Maschine MK2 Groove Production Studio with advanced sampling, sequencing, drum programming, and music production software.",
+    keywords: [
+    "Maschine MK2",
+    "Groove Production Studio",
+    "Native Instruments Hardware",
+    "Beat Production Controller",
+    "Sampling Workstation",
+    "Music Creation Tool",
+    "Studio Controller",
+    "MIDI Production System",
+    "Electronic Music Controller",
+    "Maschine Studio"
+    ]
+    }
+    },
+    {
+    id: "85",
+    slug: "novation-launchpad-pro-midi-controller",
+    name: "Novation Launchpad Pro MK3 Midi Controller",
+    price: "42,212",
+    offPrice: "40,200",
+    brand: "Novation",
+    category: "Groove Production",
+    subCategory: "Groove Production",
+    image: "/Products/85.webp",
+    seo: {
+    metaTitle: "Novation Launchpad Pro MK3 MIDI Controller for Music Production",
+    metaDescription: "Shop the Novation Launchpad Pro MK3 featuring velocity-sensitive RGB pads, MIDI sequencing, Ableton Live integration, and creative performance workflows.",
+    keywords: [
+    "Launchpad Pro MK3",
+    "Novation Launchpad",
+    "MIDI Controller",
+    "Ableton Live Controller",
+    "Performance Pad Controller",
+    "Music Production Controller",
+    "Grid Controller",
+    "Sequencer Controller",
+    "Studio Performance Gear",
+    "Novation MIDI Controller"
+    ]
+    }
+    },
+    {
+    id: "86",
+    slug: "roli-touch-block-expression-midi-controller",
+    name: "Roli Touch Block Expression Midi Controller",
+    price: "14,222",
+    offPrice: "13,600",
+    brand: "Roli",
+    category: "Groove Production",
+    subCategory: "Groove Production",
+    image: "/Products/86.webp",
+    seo: {
+    metaTitle: "ROLI Touch Block Expression MIDI Controller",
+    metaDescription: "Experience expressive music creation with the ROLI Touch Block featuring touch-sensitive controls, gesture-based performance, and seamless integration.",
+    keywords: [
+    "ROLI Touch Block",
+    "Expression MIDI Controller",
+    "Touch Sensitive Controller",
+    "ROLI Music Controller",
+    "Gesture Controller",
+    "Expressive MIDI Device",
+    "Music Production Controller",
+    "Performance Controller",
+    "Creative MIDI Interface",
+    "ROLI Block"
+    ]
+    }
+    },
+    {
+    id: "87",
+    slug: "akai-mpc-live-iii-standalone-music-production-center",
+    name: "Akai MPC Live III Standalone Music Production Center",
+    price: "196,834",
+    offPrice: "187,099",
+    brand: "Akai",
+    category: "Groove Production",
+    subCategory: "Groove Production",
+    image: "/Products/87.webp",
+    seo: {
+    metaTitle: "Akai MPC Live III Standalone Music Production Center",
+    metaDescription: "Buy the Akai MPC Live III standalone music production center with advanced sampling, sequencing, touchscreen workflow, and professional production tools.",
+    keywords: [
+    "Akai MPC Live III",
+    "Music Production Center",
+    "Standalone MPC",
+    "Sampling Workstation",
+    "Beat Production Hardware",
+    "Touchscreen Production System",
+    "Professional Groovebox",
+    "Akai Production Controller",
+    "MPC Live",
+    "Music Creation Workstation"
+    ]
+    }
+    },
+    {
+    id: "88",
+    slug: "roland-tr-09-drum-machine-midi-controller",
+    name: "Roland TR-09 Drum Machine MIDI Controller",
+    price: "60,820",
+    offPrice: "57,879",
+    brand: "Roland",
+    category: "Groove Production",
+    subCategory: "Groove Production",
+    image: "/Products/88.webp",
+    seo: {
+    metaTitle: "Roland TR-09 Drum Machine MIDI Controller",
+    metaDescription: "Shop the Roland TR-09 Drum Machine featuring authentic TR-909 sounds, MIDI connectivity, compact design, and classic electronic rhythm programming.",
+    keywords: [
+    "Roland TR-09",
+    "TR-909 Drum Machine",
+    "Roland Drum Machine",
+    "Electronic Drum Controller",
+    "MIDI Drum Machine",
+    "Dance Music Production",
+    "Rhythm Programmer",
+    "Drum Sequencer",
+    "Classic Roland Sounds",
+    "Music Production Hardware"
+    ]
+    }
+    },
+    {
+    id: "89",
+    slug: "roland-mv8800-production-studio",
+    name: "Roland MV8800 Production Studio",
+    price: "235,194",
+    offPrice: "223,534",
+    brand: "Roland",
+    category: "Groove Production",
+    subCategory: "Groove Production",
+    image: "/Products/89.webp",
+    seo: {
+    metaTitle: "Roland MV8800 Production Studio Workstation",
+    metaDescription: "Discover the Roland MV8800 Production Studio featuring integrated sampling, sequencing, recording, editing, and professional music production tools.",
+    keywords: [
+    "Roland MV8800",
+    "Production Studio",
+    "Music Workstation",
+    "Sampling Workstation",
+    "Roland Production System",
+    "Beat Production Studio",
+    "Music Creation Hardware",
+    "Professional Sequencer",
+    "Recording Workstation",
+    "Groove Production Tool"
+    ]
+    }
+    },
+    {
+    id: "90",
+    slug: "novation-launchpad-mkii-control-surface-for-ableton-live",
+    name: "Novation Launchpad MKII Control Surface for Ableton Live",
+    price: "17,890",
+    offPrice: "17,100",
+    brand: "Novation",
+    category: "Groove Production",
+    subCategory: "Groove Production",
+    image: "/Products/90.jpg",
+    seo: {
+    metaTitle: "Novation Launchpad MKII Control Surface for Ableton Live",
+    metaDescription: "Buy the Novation Launchpad MKII control surface for Ableton Live featuring RGB pads, clip launching, performance control, and creative music production.",
+    keywords: [
+    "Novation Launchpad MKII",
+    "Ableton Live Controller",
+    "Launchpad Controller",
+    "MIDI Grid Controller",
+    "Performance Controller",
+    "RGB Pad Controller",
+    "Music Production Hardware",
+    "Novation Controller",
+    "Clip Launch Controller",
+    "Ableton Performance Tool"
+    ]
+    }
+    },
+
+    // Sound Proofing
+    {
+    id: "91",
+    slug: "primacoustic-rx5-recoil-professional-studio-monitor-isolator-mount",
+    name: "Primacoustic RX5 Recoil Professional Studio Monitor Isolator Mount",
+    price: "12,405",
+    offPrice: "11,884",
+    brand: "Primacoustic",
+    category: "Sound Proofing",
+    subCategory: "Sound Proofing",
+    image: "/Products/91.webp",
+    seo: {
+    metaTitle: "Primacoustic RX5 Recoil Studio Monitor Isolator Mount",
+    metaDescription: "Buy the Primacoustic RX5 Recoil Studio Monitor Isolator Mount designed to reduce resonance, improve monitor accuracy, and enhance studio sound performance.",
+    keywords: [
+    "Primacoustic RX5 Recoil",
+    "Studio Monitor Isolator",
+    "Monitor Isolation Mount",
+    "Speaker Isolation Pad",
+    "Studio Monitor Stand",
+    "Acoustic Isolation System",
+    "Recording Studio Accessories",
+    "Monitor Decoupling Mount",
+    "Professional Studio Setup",
+    "Sound Isolation Equipment"
+    ]
+    }
+    },
+    {
+    id: "92",
+    slug: "primacoustic-voxguard-nearfield-absorber",
+    name: "Primacoustic VoxGuard Nearfield Absorber",
+    price: "12,405",
+    offPrice: "11,799",
+    brand: "Primacoustic",
+    category: "Sound Proofing",
+    subCategory: "Sound Proofing",
+    image: "/Products/92.jpg",
+    seo: {
+    metaTitle: "Primacoustic VoxGuard Nearfield Absorber for Vocal Recording",
+    metaDescription: "Shop the Primacoustic VoxGuard Nearfield Absorber featuring portable acoustic treatment for cleaner vocal recordings and reduced room reflections.",
+    keywords: [
+    "Primacoustic VoxGuard",
+    "Nearfield Absorber",
+    "Vocal Recording Shield",
+    "Portable Acoustic Treatment",
+    "Microphone Isolation Shield",
+    "Studio Recording Accessory",
+    "Reflection Filter",
+    "Vocal Booth Alternative",
+    "Acoustic Recording Solution",
+    "Sound Absorption Panel"
+    ]
+    }
+    },
+    {
+    id: "93",
+    slug: "gator-gfw-isopad-isolation-pads-for-studio-monitor",
+    name: "Gator GFW ISOPAD Isolation Pads for Studio Monitor",
+    price: "1,405",
+    offPrice: "1,435",
+    brand: "Gator",
+    category: "Sound Proofing",
+    subCategory: "Sound Proofing",
+    image: "/Products/93.jpg",
+    seo: {
+    metaTitle: "Gator GFW ISOPAD Studio Monitor Isolation Pads",
+    metaDescription: "Buy Gator GFW ISOPAD Isolation Pads designed to reduce vibration, improve speaker clarity, and optimize studio monitor performance.",
+    keywords: [
+    "Gator ISOPAD",
+    "Studio Monitor Isolation Pads",
+    "Speaker Isolation Pads",
+    "Monitor Vibration Reduction",
+    "Acoustic Isolation Pads",
+    "Recording Studio Accessories",
+    "Monitor Speaker Support",
+    "Studio Sound Optimization",
+    "Speaker Decoupling Pads",
+    "Professional Audio Setup"
+    ]
+    }
+    },
+    {
+    id: "94",
+    slug: "aurica-anechoic-self-adhesive-foam-1-x-1-x-2-single",
+    name: "Aurica Anechoic Self-Adhesive Foam - 1' x 1' x 2 - Single",
+    price: "990",
+    offPrice: "599",
+    brand: "Aurica",
+    category: "Sound Proofing",
+    subCategory: "Sound Proofing",
+    image: "/Products/94.webp",
+    seo: {
+    metaTitle: "Aurica Anechoic Self-Adhesive Acoustic Foam Panel",
+    metaDescription: "Shop Aurica Anechoic Self-Adhesive Acoustic Foam for reducing echoes, controlling reflections, and improving room acoustics in studios and home theaters.",
+    keywords: [
+    "Aurica Acoustic Foam",
+    "Anechoic Foam Panel",
+    "Self Adhesive Acoustic Foam",
+    "Soundproof Foam",
+    "Acoustic Treatment Panel",
+    "Echo Reduction Foam",
+    "Studio Acoustic Solution",
+    "Wall Sound Absorption",
+    "Recording Studio Foam",
+    "Room Acoustic Treatment"
+    ]
+    }
+    },
+    {
+    id: "95",
+    slug: "primacoustic-london-bass-trap-kit-2-panels",
+    name: "PrimAcoustic London BASS TRAP Acoustic Room Treatment Kit - 2 Panels",
+    price: "40,545",
+    offPrice: "38,717",
+    brand: "PrimAcoustic",
+    category: "Sound Proofing",
+    subCategory: "Sound Proofing",
+    image: "/Products/95.webp",
+    seo: {
+    metaTitle: "PrimAcoustic London Bass Trap Acoustic Treatment Kit",
+    metaDescription: "Buy the PrimAcoustic London Bass Trap Kit featuring high-performance acoustic panels designed to control low frequencies and improve room acoustics.",
+    keywords: [
+    "PrimAcoustic Bass Trap",
+    "London Bass Trap Kit",
+    "Acoustic Room Treatment",
+    "Bass Absorption Panels",
+    "Studio Acoustic Panels",
+    "Low Frequency Control",
+    "Recording Studio Treatment",
+    "Professional Acoustic Solution",
+    "Sound Absorption Kit",
+    "Room Acoustic Improvement"
+    ]
+    }
+    },
+
+    // Studio Accessories
+    {
+    id: "96",
+    slug: "rode-sc8-6m-20-dual-male-trs-cable",
+    name: "Rode SC8 6m/20' dual-male TRS cable",
+    price: "5,000",
+    offPrice: "4,850",
+    brand: "Rode",
+    category: "Studio Accessories",
+    subCategory: "TRS cable",
+    image: "/Products/96.webp",
+    seo: {
+    metaTitle: "Primacoustic RX5 Recoil Studio Monitor Isolator Mount",
+    metaDescription: "Buy the Primacoustic RX5 Recoil Studio Monitor Isolator Mount designed to reduce resonance, improve monitor accuracy, and enhance studio sound performance.",
+    keywords: [
+    "Primacoustic RX5 Recoil",
+    "Studio Monitor Isolator",
+    "Monitor Isolation Mount",
+    "Speaker Isolation Pad",
+    "Studio Monitor Stand",
+    "Acoustic Isolation System",
+    "Recording Studio Accessories",
+    "Monitor Decoupling Mount",
+    "Professional Studio Setup",
+    "Sound Isolation Equipment"
+    ]
+    }
+    },
+    {
+    id: "97",
+    slug: "ultimate-support-hyp-1010-ergonomic-compact-laptop-stand",
+    name: "Ultimate Support HYP-1010 Ergonomic Compact Laptop Stand",
+    price: "9,300",
+    offPrice: "8,500",
+    brand: "Ultimate Support",
+    category: "Studio Accessories",
+    subCategory: "SLaptop Stand",
+    image: "/Products/97.webp",
+    seo: {
+    metaTitle: "Primacoustic RX5 Recoil Studio Monitor Isolator Mount",
+    metaDescription: "Buy the Primacoustic RX5 Recoil Studio Monitor Isolator Mount designed to reduce resonance, improve monitor accuracy, and enhance studio sound performance.",
+    keywords: [
+    "Primacoustic RX5 Recoil",
+    "Studio Monitor Isolator",
+    "Monitor Isolation Mount",
+    "Speaker Isolation Pad",
+    "Studio Monitor Stand",
+    "Acoustic Isolation System",
+    "Recording Studio Accessories",
+    "Monitor Decoupling Mount",
+    "Professional Studio Setup",
+    "Sound Isolation Equipment"
+    ]
+    }
+    },
+    {
+    id: "98",
+    slug: "ik-multimedia-i-line-mono-output-adapter-cable-black",
+    name: "IK Multimedia I Line Mono Output Adapter Cable - Black",
+    price: "1,849",
+    offPrice: "1,099",
+    brand: "IK Multimedia",
+    category: "Adapter Cable",
+    subCategory: "Studio Accessories",
+    image: "/Products/98.webp",
+    seo: {
+    metaTitle: "Primacoustic RX5 Recoil Studio Monitor Isolator Mount",
+    metaDescription: "Buy the Primacoustic RX5 Recoil Studio Monitor Isolator Mount designed to reduce resonance, improve monitor accuracy, and enhance studio sound performance.",
+    keywords: [
+    "Primacoustic RX5 Recoil",
+    "Studio Monitor Isolator",
+    "Monitor Isolation Mount",
+    "Speaker Isolation Pad",
+    "Studio Monitor Stand",
+    "Acoustic Isolation System",
+    "Recording Studio Accessories",
+    "Monitor Decoupling Mount",
+    "Professional Studio Setup",
+    "Sound Isolation Equipment"
+    ]
+    }
+    },
+    {
+    id: "99",
+    slug: "ik-multimedia-23-6-inch-input-output-extension-1-8-inch-male-trrs-to-1-8-inch-female-trrs-cable",
+    name: "IK Multimedia 23.6 Inch Input Output Extension 1/8 Inch Male TRRS to 1/8 Inch Female TRRS Cable",
+    price: "1,849",
+    offPrice: "1,857",
+    brand: "IK Multimedia",
+    category: "Studio Accessories",
+    subCategory: "TRS cabel",
+    image: "/Products/99.webp",
+    seo: {
+    metaTitle: "Primacoustic RX5 Recoil Studio Monitor Isolator Mount",
+    metaDescription: "Buy the Primacoustic RX5 Recoil Studio Monitor Isolator Mount designed to reduce resonance, improve monitor accuracy, and enhance studio sound performance.",
+    keywords: [
+    "Primacoustic RX5 Recoil",
+    "Studio Monitor Isolator",
+    "Monitor Isolation Mount",
+    "Speaker Isolation Pad",
+    "Studio Monitor Stand",
+    "Acoustic Isolation System",
+    "Recording Studio Accessories",
+    "Monitor Decoupling Mount",
+    "Professional Studio Setup",
+    "Sound Isolation Equipment"
+    ]
+    }
+    },
+    {
+    id: "100",
+    slug: "isoacoustics-iso-155-adjustable-monitor-stand",
+    name: "IsoAcoustics ISO-155 Adjustable Monitor Stand - Pair",
+    price: "12,200",
+    offPrice: "11,000",
+    brand: "IsoAcoustics",
+    category: "Studio Accessories",
+    subCategory: "Monitor stand",
+    image: "/Products/100.webp",
+    seo: {
+    metaTitle: "Primacoustic RX5 Recoil Studio Monitor Isolator Mount",
+    metaDescription: "Buy the Primacoustic RX5 Recoil Studio Monitor Isolator Mount designed to reduce resonance, improve monitor accuracy, and enhance studio sound performance.",
+    keywords: [
+    "Primacoustic RX5 Recoil",
+    "Studio Monitor Isolator",
+    "Monitor Isolation Mount",
+    "Speaker Isolation Pad",
+    "Studio Monitor Stand",
+    "Acoustic Isolation System",
+    "Recording Studio Accessories",
+    "Monitor Decoupling Mount",
+    "Professional Studio Setup",
+    "Sound Isolation Equipment"
+    ]
+    }
+    },
+
+];  
 
 export default products;

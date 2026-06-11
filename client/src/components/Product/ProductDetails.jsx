@@ -205,9 +205,8 @@ const ProductDetails = () => {
           <span className="font-medium text-[#232466]">
             {product.name}
           </span>
-
         </div>
-
+        
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
           {/* Product Image */}
@@ -264,7 +263,7 @@ const ProductDetails = () => {
             <div className="mt-10 border-t border-slate-200 pt-8">
 
               <h2 className="text-2xl font-bold text-[#232466] mb-4">
-                Product Description
+                Description
               </h2>
 
               <p className="text-slate-600 leading-relaxed text-base md:text-lg">

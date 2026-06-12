@@ -69,6 +69,13 @@ const services = [
     description:
       "Smart Audio for Modern Spaces Advanced ceiling array speaker solutions for offices and meeting rooms. Providing uniform audio coverage with a clean architectural appearance. Ideal for collaborative and professional environments.",
   },
+   {
+    id: 11,
+    Image: '../Services/11.jpg',
+    title: "Broadcasting Studio Solutions",
+    description:
+      "A professional broadcasting studio is designed to deliver crystal-clear audio and high-quality video production. Equipped with advanced audio mixers, broadcast microphones, studio monitors, and digital control systems, it ensures seamless live and recorded broadcasts. Modern studios support podcasts, radio shows, news production, and live streaming applications. Integrated audio processing and monitoring systems provide precise sound control for every production. Reliable, scalable, and future-ready solutions make broadcasting studios efficient and professional.",
+  },
 ];
 
 export default services

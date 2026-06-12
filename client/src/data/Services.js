@@ -58,7 +58,7 @@ const services = [
   {
     id: 9,
     Image: '../Services/09.jpg',
-    title: "Horn Speaker Solutions",
+    title: "DJ Equipment",
     description:
       "Professional DJ & Event Audio Solutions Premium DJ equipment for events, clubs, and entertainment venues. Delivering powerful sound and seamless performance. Designed for professionals who demand reliability.",
   },

@@ -9,7 +9,7 @@ const ServiceSection = () => {
       {/* Background Effects */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <h1 className="absolute left-1/2 top-10 -translate-x-1/2 text-[14vw] font-black text-[#232466]/5 whitespace-nowrap">
-          AUDIO SOLUTIONS
+          AUDIO SERVICES
         </h1>
 
         <div className="absolute top-20 left-20 h-5 w-5 rounded-full bg-[#EF5622] animate-bounce" />
@@ -35,7 +35,7 @@ const ServiceSection = () => {
           </span>
 
           <h2 className="mt-6 text-4xl font-bold text-[#232466] md:text-6xl">
-            Professional Audio Solutions
+            Professional Audio Services
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg text-slate-600">

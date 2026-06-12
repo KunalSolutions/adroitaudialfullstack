@@ -1,0 +1,47 @@
+import React from "react";
+import { Canvas } from "@react-three/fiber";
+import { Float, Environment, OrbitControls, useGLTF } from "@react-three/drei";
+
+function Speaker() {
+  const { scene } = useGLTF("/models/speaker.glb");
+
+  return (
+    <Float
+      speed={2}
+      rotationIntensity={1}
+      floatIntensity={2}
+    >
+      <primitive
+        object={scene}
+        scale={2.5}
+        position={[0, -1, 0]}
+      />
+    </Float>
+  );
+}
+
+export default function Speaker3D() {
+  return (
+    <div className="absolute inset-0 z-0">
+      <Canvas camera={{ position: [0, 0, 8], fov: 45 }}>
+        <ambientLight intensity={2} />
+
+        <directionalLight
+          position={[5, 5, 5]}
+          intensity={4}
+        />
+
+        <Environment preset="city" />
+
+        <Speaker />
+
+        <OrbitControls
+          enableZoom={false}
+          enablePan={false}
+          autoRotate
+          autoRotateSpeed={1}
+        />
+      </Canvas>
+    </div>
+  );
+}

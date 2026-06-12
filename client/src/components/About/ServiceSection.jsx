@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 
 const services = [
   {
@@ -83,33 +84,70 @@ const ServiceSection = () => {
         </div>
 
         {/* Services */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-          {services.map((service, index) => (
-            <div
-              key={index}
-              className="group bg-white border border-slate-200 p-8 transition-all duration-300 hover:border-[#EF5622] hover:shadow-xl"
-            >
-              <div className="mb-5">
+  {services.map((service, index) => (
+    <div
+      key={index}
+      className="
+        group
+        relative
+        bg-white
+        border
+        border-slate-200
+        p-8
+        overflow-hidden
+        transition-all
+        duration-500
+        transform-gpu
+        hover:-translate-y-4
+        hover:rotate-x-6
+        hover:rotate-y-6
+        hover:border-[#EF5622]
+        hover:shadow-[0_25px_50px_rgba(239,86,34,0.25)]
+      "
+      style={{
+        transformStyle: "preserve-3d",
+      }}
+    >
+      {/* Animated Background Glow */}
+      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition duration-500">
+        <div className="absolute -top-20 -right-20 w-40 h-40 bg-[#EF5622]/10 blur-3xl rounded-full"></div>
+        <div className="absolute -bottom-20 -left-20 w-40 h-40 bg-[#232466]/10 blur-3xl rounded-full"></div>
+      </div>
 
-                <span className="text-5xl font-bold text-[#232466]/10 group-hover:text-[#EF5622]/20 transition">
-                  {String(index + 1).padStart(2, "0")}
-                </span>
+      {/* Number */}
+      <div
+        className="mb-5 relative z-10 transition-transform duration-500 group-hover:-translate-y-2"
+        style={{ transform: "translateZ(40px)" }}
+      >
+        <span className="text-5xl font-bold text-[#232466]/10 group-hover:text-[#EF5622]/20 transition">
+          {String(index + 1).padStart(2, "0")}
+        </span>
+      </div>
 
-              </div>
+      {/* Title */}
+      <h3
+        className="text-xl font-bold text-[#232466] mb-4 relative z-10 transition-all duration-500 group-hover:text-[#EF5622]"
+        style={{ transform: "translateZ(60px)" }}
+      >
+        {service.title}
+      </h3>
 
-              <h3 className="text-xl font-bold text-[#232466] mb-4">
-                {service.title}
-              </h3>
+      {/* Description */}
+      <p
+        className="text-slate-600 leading-relaxed relative z-10"
+        style={{ transform: "translateZ(30px)" }}
+      >
+        {service.description}
+      </p>
 
-              <p className="text-slate-600 leading-relaxed">
-                {service.description}
-              </p>
+      {/* 3D Corner Element */}
+      <div className="absolute top-0 right-0 w-16 h-16 bg-[#EF5622] opacity-0 group-hover:opacity-100 transition-all duration-500 transform rotate-45 translate-x-8 -translate-y-8"></div>
+    </div>
+  ))}
 
-            </div>
-          ))}
-
-        </div>
+</div>
 
         {/* CTA */}
         <div className="mt-24 bg-[#232466] p-12 md:p-16 text-center">

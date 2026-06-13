@@ -8,3 +8,51 @@ body{
 /* White     #FFFFFF  (60%)
 Navy Blue #232466  (30%)
 Orange    #EF5622  (10%) */
+
+@keyframes float {
+  0%,100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes rotateSlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulseGlow {
+  0%,100% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.float-animation {
+  animation: float 6s ease-in-out infinite;
+}
+
+.rotate-animation {
+  animation: rotateSlow 20s linear infinite;
+}
+
+.glow-animation {
+  animation: pulseGlow 4s ease-in-out infinite;
+}
+
+.perspective-card {
+  transform-style: preserve-3d;
+  perspective: 1200px;
+}
+
+.perspective-card:hover .card-3d {
+  transform: rotateY(-8deg) rotateX(5deg) translateY(-12px);
+}

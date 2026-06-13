@@ -27,8 +27,8 @@ const HomeScreen = () => {
         {/* <ProductSection /> */}
         {/* <Features />   */}
 
-        {/* <BigSaving /> */}
-        {/* <Offers />
+        {/* <BigSaving />
+        <Offers />
         <UpComing /> */}
     </div>
   );

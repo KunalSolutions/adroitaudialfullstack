@@ -4,6 +4,7 @@ import CTA from './CTA'
 import AboutSection from './AboutSection'
 import ServiceSection from './ServiceSection'
 import CompanyValues from './CompanyValues'
+import FAQ from '@components/FAQ'
 
 const About = () => {
   return (
@@ -11,6 +12,7 @@ const About = () => {
       <>
       <AboutSection />
       <CompanyValues />
+      <FAQ />
       {/* <ServiceSection /> */}
         {/* <Testimonial /> */}
         {/* <CTA /> */}

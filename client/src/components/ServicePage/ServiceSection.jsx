@@ -10,7 +10,6 @@ const ServiceSection = () => {
 
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
 
-    ```
     <h1 className="absolute left-1/2 top-4 sm:top-6 md:top-8 lg:top-10 -translate-x-1/2 text-[16vw] sm:text-[14vw] md:text-[12vw] lg:text-[10vw] font-black text-[#232466]/5 whitespace-nowrap">
       AUDIO SERVICES
     </h1>
@@ -24,13 +23,11 @@ const ServiceSection = () => {
     <div className="absolute -left-20 sm:-left-28 md:-left-32 lg:-left-40 top-0 h-[250px] w-[250px] sm:h-[350px] sm:w-[350px] lg:h-[500px] lg:w-[500px] rounded-full bg-[#232466]/10 blur-3xl" />
 
     <div className="absolute -right-20 sm:-right-28 md:-right-32 lg:-right-40 bottom-0 h-[250px] w-[250px] sm:h-[350px] sm:w-[350px] lg:h-[500px] lg:w-[500px] rounded-full bg-[#EF5622]/10 blur-3xl" />
-    ```
 
       </div>
 
       <div className="relative mx-auto max-w-7xl">
 
-    ```
     {/* Heading */}
     <motion.div
       initial={{ opacity: 0, y: 60 }}

@@ -15,17 +15,17 @@ const services = [
   },
   {
     id: 3,
-    Image: '../Services/03.jpg',
-    title: "Dante Audio Solutions",
-    description:
-      "Next-Generation Network Audio Advanced Dante-based audio networking for professional environments. Simplifies audio distribution with exceptional sound quality and flexibility. Perfect for auditoriums, campuses, and enterprise facilities.",
-  },
-  {
-    id: 4,
     Image: '../Services/04.jpg',
     title: "Conference Room Audio Solutions",
     description:
       "Enhancing Collaboration Through Clear Communication Professional audio solutions for modern meeting and conference rooms. Ensures every participant is heard with clarity. Optimized for hybrid meetings and video conferencing.",
+  },
+  {
+    id: 4,
+     Image: '../Services/03.jpg',
+    title: "Dante Audio Solutions",
+    description:
+      "Next-Generation Network Audio Advanced Dante-based audio networking for professional environments. Simplifies audio distribution with exceptional sound quality and flexibility. Perfect for auditoriums, campuses, and enterprise facilities.",
   },
   {
     id: 5,

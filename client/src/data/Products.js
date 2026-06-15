@@ -3422,6 +3422,687 @@ const products = [
     }
     },
 
+    // SOFTWARE & PLUGINS 
+    {
+    id: "101",
+    slug: "eastwest-composercloud-plus-subscription-service",
+    name: "EastWest ComposerCloud+ Annual Subscription – Professional Audio Software & Plugin",
+    price: "17,076",
+    offPrice: "11,346",
+    brand: "EastWest",
+    category: "Software and Plugins",
+    subCategory: "Virtual Instruments",
+    image: "/Software/01.webp",
+    seo: {
+        metaTitle:
+        "EastWest ComposerCloud+ Annual Subscription | Professional Virtual Instruments & Audio Plugins",
+        metaDescription:
+        "Buy EastWest ComposerCloud+ Annual Subscription and get access to a comprehensive collection of award-winning virtual instruments, orchestral libraries, sound effects, and professional audio production tools for music composers, producers, and studios.",
+        keywords: [
+        "EastWest ComposerCloud+",
+        "ComposerCloud Plus Subscription",
+        "EastWest Virtual Instruments",
+        "Music Production Software",
+        "Audio Plugins",
+        "Orchestral Sample Library",
+        "Film Scoring Software",
+        "Professional VST Plugins",
+        "Virtual Instrument Collection",
+        "Music Composer Tools",
+        "EastWest Sounds",
+        "Studio Production Software",
+        "Digital Audio Workstation Plugins",
+        "Subscription Audio Software",
+        "Professional Sound Libraries"
+        ]
+    }
+    },
+    {
+    id: "102",
+    slug: "pro-tools-artist-perpetual-license-pro-tools-artist-perpetual-license",
+    name: "Avid Pro Tools Artist Perpetual License – Professional Audio Software & Plugin",
+    price: "23,999",
+    offPrice: "22,806",
+    brand: "Avid Pro Tools",
+    category: "Software and Plugins",
+    subCategory: "DAW Software",
+    image: "/Software/02.webp",
+    seo: {
+        metaTitle:
+        "Avid Pro Tools Artist Perpetual License | Professional DAW Software for Music Production",
+        metaDescription:
+        "Buy Avid Pro Tools Artist Perpetual License and create professional-quality music, podcasts, recordings, and audio projects with industry-leading DAW software. Ideal for musicians, producers, content creators, and home studios.",
+        keywords: [
+        "Avid Pro Tools Artist",
+        "Pro Tools Artist Perpetual License",
+        "Avid DAW Software",
+        "Professional Audio Software",
+        "Music Production Software",
+        "Recording Software",
+        "Audio Editing Software",
+        "Podcast Production Software",
+        "Digital Audio Workstation",
+        "Pro Tools License",
+        "Audio Mixing Software",
+        "Music Recording Software",
+        "Professional DAW",
+        "Home Studio Software",
+        "Avid Pro Tools"
+        ]
+    }
+    },
+    {
+    id: "103",
+    slug: "kuassa-efektor-gainia-xt-extreme-distortion-pedal",
+    name: "Kuassa Efektor Gainia XT Preamp Plug-In",
+    price: "2,999",
+    offPrice: "2,277",
+    brand: "Kuassa",
+    category: "Software and Plugins",
+    subCategory: "Virtual Instruments",
+    image: "/Software/03.webp",
+    seo: {
+        metaTitle:
+        "Kuassa Efektor Gainia XT Preamp Plug-In | High-Gain Guitar Amp & Distortion Software",
+        metaDescription:
+        "Buy Kuassa Efektor Gainia XT Preamp Plug-In, a powerful high-gain guitar preamp and distortion plugin designed for modern rock and metal tones. Achieve aggressive amp sounds, rich harmonics, and professional-quality guitar recordings in your DAW.",
+        keywords: [
+        "Kuassa Efektor Gainia XT",
+        "Gainia XT Preamp Plugin",
+        "Kuassa Guitar Plugin",
+        "Guitar Amp Simulator",
+        "Distortion Plugin",
+        "High Gain Guitar Plugin",
+        "Metal Guitar Software",
+        "Rock Guitar Plugin",
+        "VST Guitar Plugin",
+        "Audio Production Plugin",
+        "Guitar Effects Software",
+        "Amp Modeling Plugin",
+        "Professional Guitar Tone",
+        "Music Production Software",
+        "Kuassa Audio Plugin"
+        ]
+    }
+    },
+    {
+    id: "104",
+    slug: "melodyne-5-essential-pitch-correction",
+    name: "Melodyne 5 Essential Pitch Correction",
+    price: "12,999",
+    offPrice: "11,499",
+    brand: "Melodyne",
+    category: "Software and Plugins",
+    subCategory: "Virtual Processors",
+    image: "/Software/04.webp",
+    seo: {
+        metaTitle:
+        "Melodyne 5 Essential Pitch Correction | Professional Vocal Tuning & Audio Editing Software",
+        metaDescription:
+        "Buy Melodyne 5 Essential Pitch Correction software for accurate vocal tuning, pitch correction, timing adjustment, and audio editing. Perfect for singers, producers, recording studios, podcasters, and music creators seeking professional-quality sound.",
+        keywords: [
+        "Melodyne 5 Essential",
+        "Pitch Correction Software",
+        "Vocal Tuning Plugin",
+        "Melodyne Vocal Editor",
+        "Audio Editing Software",
+        "Professional Pitch Correction",
+        "Music Production Plugin",
+        "Vocal Processing Software",
+        "Recording Studio Software",
+        "Audio Restoration Tool",
+        "VST Pitch Correction",
+        "Vocal Enhancement Plugin",
+        "Music Mixing Software",
+        "Celemony Melodyne",
+        "Professional Audio Plugin"
+        ]
+    }
+    },
+    {
+    id: "105",
+    slug: "uad-manley-voxbox-channel-strip-channel-strip-plugin",
+    name: "UAD Manley VOXBOX Channel Strip Plugin",
+    price: "17,076",
+    offPrice: "4,569",
+    brand: "UAD",
+    category: "Software and Plugins",
+    subCategory: "Virtual Processors",
+    image: "/Software/05.avif",
+    seo: {
+        metaTitle:
+        "UAD Manley VOXBOX Channel Strip Plugin | Professional Vocal Processing & Channel Strip Software",
+        metaDescription:
+        "Buy the UAD Manley VOXBOX Channel Strip Plugin and experience legendary Manley vocal processing with premium preamp, compressor, de-esser, EQ, and limiter controls. Perfect for recording, mixing, podcasting, voiceovers, and professional music production.",
+        keywords: [
+        "UAD Manley VOXBOX",
+        "Manley VOXBOX Plugin",
+        "Channel Strip Plugin",
+        "Vocal Processing Plugin",
+        "Universal Audio Plugin",
+        "Studio Vocal Plugin",
+        "Audio Mixing Software",
+        "Recording Studio Plugin",
+        "Professional Vocal Chain",
+        "Compressor EQ Plugin",
+        "Voice Processing Software",
+        "Music Production Plugin",
+        "UAD Audio Plugin",
+        "Vocal Recording Software",
+        "Professional Channel Strip"
+        ]
+    }
+    },
+    {
+    id: "106",
+    slug: "protools-studio-1-year-educational-subscription",
+    name: "Avid Pro Tools Studio 1 Year Subscription for Educational Students & Teachers – Professional Audio Software & Plugin",
+    price: "14,099",
+    offPrice: "11,446",
+    brand: "Avid",
+    category: "Software and Plugins",
+    subCategory: "DAW Software",
+    image: "/Software/06.webp",
+    seo: {
+        metaTitle:
+        "Avid Pro Tools Studio 1 Year Educational Subscription | Professional DAW for Students & Teachers",
+        metaDescription:
+        "Buy Avid Pro Tools Studio 1 Year Educational Subscription for students and teachers. Access industry-standard music production, recording, editing, mixing, and audio post-production tools at a special academic price.",
+        keywords: [
+        "Avid Pro Tools Studio",
+        "Pro Tools Educational Subscription",
+        "Pro Tools for Students",
+        "Pro Tools for Teachers",
+        "Academic DAW Software",
+        "Music Production Software",
+        "Audio Recording Software",
+        "Professional DAW",
+        "Audio Editing Software",
+        "Music Mixing Software",
+        "Avid Educational License",
+        "Recording Studio Software",
+        "Digital Audio Workstation",
+        "Student Music Production Tools",
+        "Professional Audio Software"
+        ]
+    }
+    },
+    {
+    id: "107",
+    slug: "avid-pro-tools-studio-perpetual-upgrade",
+    name: "Avid Pro Tools Studio Perpetual License Upgrade – Professional Audio Software & Plugin",
+    price: "25,099",
+    offPrice: "22,999",
+    brand: "Avid",
+    category: "Software and Plugins",
+    subCategory: "DAW Software",
+    image: "/Software/07.webp",
+    seo: {
+        metaTitle:
+        "Avid Pro Tools Studio Perpetual License Upgrade | Professional DAW Software Upgrade",
+        metaDescription:
+        "Upgrade to Avid Pro Tools Studio Perpetual License and unlock advanced music production, recording, editing, mixing, and post-production capabilities. Ideal for professional musicians, producers, engineers, and studio environments.",
+        keywords: [
+        "Avid Pro Tools Studio Upgrade",
+        "Pro Tools Studio Perpetual License",
+        "Pro Tools License Upgrade",
+        "Avid DAW Software",
+        "Professional Audio Software",
+        "Music Production Software",
+        "Audio Editing Software",
+        "Recording Studio Software",
+        "Digital Audio Workstation",
+        "Audio Mixing Software",
+        "Professional DAW Upgrade",
+        "Music Recording Software",
+        "Avid Pro Tools",
+        "Studio Production Software",
+        "Professional Audio Production"
+        ]
+    }
+    },
+    {
+    id: "108",
+    slug: "melda-meldway-grand-grand-piano",
+    name: "Melda Meldway Grand Piano – Professional Audio Software & Plugin",
+    price: "13,099",
+    offPrice: "12,199",
+    brand: "Melda",
+    category: "Software and Plugins",
+    subCategory: "Virtual Instruments",
+    image: "/Software/08.webp",
+    seo: {
+        metaTitle:
+        "Melda Meldway Grand Piano | Professional Virtual Grand Piano Plugin & Instrument",
+        metaDescription:
+        "Buy Melda Meldway Grand Piano and experience rich, realistic grand piano sounds for music production, composition, recording, and live performance. A premium virtual piano instrument designed for producers, composers, and professional musicians.",
+        keywords: [
+        "Melda Meldway Grand Piano",
+        "Virtual Grand Piano",
+        "Piano VST Plugin",
+        "Grand Piano Software",
+        "Virtual Instrument Plugin",
+        "Professional Piano Plugin",
+        "Music Production Software",
+        "Piano Sample Library",
+        "Composer Piano Instrument",
+        "Studio Piano Plugin",
+        "Realistic Piano Sounds",
+        "DAW Piano Plugin",
+        "Digital Grand Piano",
+        "Melda Audio Plugin",
+        "Professional Virtual Instrument"
+        ]
+    }
+    },
+    {
+    id: "109",
+    slug: "ableton-live-12-suite-software-download-only",
+    name: "Ableton Live 12 Suite Software (Download Only)",
+    price: "44,499",
+    offPrice: "40,199", 
+    brand: "Ableton",
+    category: "Software and Plugins",
+    subCategory: "DAW Software",
+    image: "/Software/09.webp",
+    seo: {
+        metaTitle:
+        "Ableton Live 12 Suite Software Download | Professional Music Production DAW",
+        metaDescription:
+        "Buy Ableton Live 12 Suite Software Download and unlock advanced music production, recording, beat making, mixing, mastering, and live performance tools. Includes premium instruments, effects, sound libraries, and creative workflow features for producers and musicians.",
+        keywords: [
+        "Ableton Live 12 Suite",
+        "Ableton Live 12",
+        "Ableton DAW Software",
+        "Music Production Software",
+        "Professional Audio Software",
+        "Beat Making Software",
+        "Electronic Music Production",
+        "Recording Software",
+        "Audio Editing Software",
+        "Live Performance Software",
+        "Music Mixing Software",
+        "Virtual Instruments",
+        "DAW Download",
+        "Ableton Software Download",
+        "Professional Music Production"
+        ]
+    }
+    },
+    {
+    id: "110",
+    slug: "antares-choir-vocal-production-plugin",
+    name: "Antares Choir Vocal Production Plugin",
+    price: "10,099",
+    offPrice: "9,268", 
+    brand: "Antares",
+    category: "Software and Plugins",
+    subCategory: "Virtual Processors",
+    image: "/Software/10.webp",
+    seo: {
+        metaTitle:
+        "Antares Choir Vocal Production Plugin | Professional Vocal Harmony & Choir Effect Software",
+        metaDescription:
+        "Buy Antares Choir Vocal Production Plugin and instantly transform a single vocal track into realistic multi-voice harmonies and choir arrangements. Perfect for music producers, singers, composers, and recording studios seeking rich vocal textures and creative vocal effects.",
+        keywords: [
+        "Antares Choir",
+        "Choir Vocal Production Plugin",
+        "Vocal Harmony Plugin",
+        "Choir Effect Software",
+        "Antares Audio Plugin",
+        "Vocal Processing Plugin",
+        "Music Production Software",
+        "Vocal Effects Plugin",
+        "Professional Audio Plugin",
+        "Recording Studio Software",
+        "Vocal Enhancement Tool",
+        "Harmony Generator Plugin",
+        "DAW Vocal Plugin",
+        "Creative Vocal Effects",
+        "Professional Vocal Production"
+        ]
+    }
+    },
+    {
+    id: "111",
+    slug: "boom-cars-v8-fully-rigged-sound-effects-library",
+    name: "Boom Cars V8 Fully Rigged Sound Effects Library – Professional Audio Software & Plugin",
+    price: "223,999",
+    offPrice: "210,999", 
+    brand: "Boom",
+    category: "Software and Plugins",
+    subCategory: "Virtual Instruments",
+    image: "/Software/11.webp",
+    seo: {
+        metaTitle:
+        "BOOM Cars V8 Fully Rigged Sound Effects Library | Professional Automotive Sound Design Collection",
+        metaDescription:
+        "Buy BOOM Cars V8 Fully Rigged Sound Effects Library and access an extensive collection of high-resolution V8 engine recordings, driving sounds, accelerations, decelerations, interior perspectives, and automotive sound effects for film, games, broadcast, and post-production.",
+        keywords: [
+        "BOOM Cars V8",
+        "Cars V8 Sound Effects Library",
+        "Automotive Sound Effects",
+        "V8 Engine Sound Library",
+        "Vehicle Sound Design",
+        "Car Sound Effects",
+        "Professional Sound Library",
+        "Game Audio Assets",
+        "Film Sound Effects",
+        "Post Production Audio",
+        "Engine Recording Library",
+        "Broadcast Audio Effects",
+        "Sound Design Collection",
+        "BOOM Library",
+        "Automotive Audio Software"
+        ]
+    }
+    },
+    {
+    id: "112",
+    slug: "boom-cars-suvs-vans-sound-effects-library",
+    name: "Boom Cars SUVs & Vans Sound Effects Library – Professional Audio Software & Plugin",
+    price: "38,799",
+    offPrice: "37,346", 
+    brand: "Boom",
+    category: "Software and Plugins",
+    subCategory: "Virtual Instruments",
+    image: "/Software/12.webp",
+    seo: {
+        metaTitle:
+        "BOOM Cars SUVs & Vans Sound Effects Library | Professional Vehicle Sound Design Collection",
+        metaDescription:
+        "Buy BOOM Cars SUVs & Vans Sound Effects Library and access professionally recorded SUV and van sound effects, including engine starts, driving passes, accelerations, braking, interiors, exteriors, and vehicle movements for film, television, games, and post-production projects.",
+        keywords: [
+        "BOOM Cars SUVs & Vans",
+        "SUV Sound Effects Library",
+        "Van Sound Effects Library",
+        "Vehicle Sound Design",
+        "Automotive Sound Effects",
+        "Car Audio Library",
+        "Professional Sound Effects",
+        "Game Audio Assets",
+        "Film Sound Effects",
+        "Post Production Audio",
+        "Vehicle Recording Library",
+        "Broadcast Audio Effects",
+        "Sound Design Collection",
+        "BOOM Library",
+        "Automotive Audio Software"
+        ]
+    }
+    },
+    {
+    id: "113",
+    slug: "boom-liftfx-sound-effects-library",
+    name: "Boom LiftFX Sound Effects Library – Professional Audio Software & Plugin",
+    price: "18,179",
+    offPrice: "13,379", 
+    brand: "Boom",
+    category: "Software and Plugins",
+    subCategory: "Virtual Instruments",
+    image: "/Software/13.webp",
+    seo: {
+        metaTitle:
+        "BOOM LiftFX Sound Effects Library | Professional Cinematic Rise & Transition Sound Design Collection",
+        metaDescription:
+        "Buy BOOM LiftFX Sound Effects Library and create powerful cinematic transitions, risers, uplifters, impacts, sweeps, and motion effects for film, trailers, games, broadcast, and music production. Designed for professional sound designers and content creators.",
+        keywords: [
+        "BOOM LiftFX",
+        "LiftFX Sound Effects Library",
+        "Cinematic Sound Effects",
+        "Transition Sound Effects",
+        "Riser Sound Effects",
+        "Uplifter Sound Library",
+        "Trailer Sound Design",
+        "Film Sound Effects",
+        "Game Audio Assets",
+        "Motion Sound Effects",
+        "Professional Sound Library",
+        "Post Production Audio",
+        "Broadcast Sound Effects",
+        "BOOM Library",
+        "Sound Design Collection"
+        ]
+    }   
+    },
+    {
+    id: "114",
+    slug: "boom-jet-fly-bys-sound-effects-library",
+    name: "Boom Jet Fly Bys Sound Effects Library – Professional Audio Software & Plugin",
+    price: "10,000",
+    offPrice: "8,000", 
+    brand: "Boom",
+    category: "Software and Plugins",
+    subCategory: "Virtual Instruments",
+    image: "/Software/14.webp",
+    seo: {
+        metaTitle:
+        "BOOM Jet Fly Bys Sound Effects Library | Professional Aircraft & Aviation Sound Design Collection",
+        metaDescription:
+        "Buy BOOM Jet Fly Bys Sound Effects Library and access professionally recorded jet aircraft fly-by sounds, engine passes, aerial movements, and high-speed aviation effects for films, games, trailers, broadcast, and post-production projects.",
+        keywords: [
+        "BOOM Jet Fly Bys",
+        "Jet Fly Bys Sound Effects Library",
+        "Aircraft Sound Effects",
+        "Jet Engine Sound Library",
+        "Aviation Sound Effects",
+        "Flyby Sound Effects",
+        "Professional Sound Library",
+        "Film Sound Effects",
+        "Game Audio Assets",
+        "Aircraft Audio Collection",
+        "Post Production Audio",
+        "Broadcast Sound Effects",
+        "Sound Design Collection",
+        "BOOM Library",
+        "Aviation Audio Software"
+        ]
+    } 
+    },
+    {
+    id: "115",
+    slug: "boom-dirt-bikes-sound-effects-library",
+    name: "Boom Dirt Bikes Sound Effects Library – Professional Audio Software & Plugin",
+    price: "27,000",
+    offPrice: "21,000", 
+    brand: "Boom",
+    category: "Software and Plugins",
+    subCategory: "Virtual Instruments",
+    image: "/Software/15.webp",
+    seo: {
+        metaTitle:
+        "BOOM Dirt Bikes Sound Effects Library | Professional Motorcycle & Off-Road Audio Collection",
+        metaDescription:
+        "Buy BOOM Dirt Bikes Sound Effects Library and access professionally recorded dirt bike engine sounds, accelerations, jumps, skids, passes, idle recordings, and off-road riding effects for films, games, trailers, and post-production projects.",
+        keywords: [
+        "BOOM Dirt Bikes",
+        "Dirt Bikes Sound Effects Library",
+        "Motorcycle Sound Effects",
+        "Off Road Audio Library",
+        "Dirt Bike Engine Sounds",
+        "Motorbike Sound Design",
+        "Vehicle Sound Effects",
+        "Game Audio Assets",
+        "Film Sound Effects",
+        "Professional Sound Library",
+        "Post Production Audio",
+        "Motorcycle Audio Collection",
+        "Broadcast Sound Effects",
+        "BOOM Library",
+        "Sound Design Collection"
+        ]
+    } 
+    },
+    {
+    id: "116",
+    slug: "boom-everyday-cars-sound-effects-library",
+    name: "Boom Everyday Cars Sound Effects Library – Professional Audio Software & Plugin",
+    price: "39,999",
+    offPrice: "37,546", 
+    brand: "Boom",
+    category: "Software and Plugins",
+    subCategory: "Virtual Instruments",
+    image: "/Software/16.webp",
+    seo: {
+        metaTitle:
+        "BOOM Everyday Cars Sound Effects Library | Professional Automotive Sound Design Collection",
+        metaDescription:
+        "Buy BOOM Everyday Cars Sound Effects Library and access authentic recordings of everyday vehicles, including engine starts, idling, driving, braking, door operations, interior perspectives, and pass-bys for film, games, broadcast, and post-production projects.",
+        keywords: [
+        "BOOM Everyday Cars",
+        "Everyday Cars Sound Effects Library",
+        "Car Sound Effects",
+        "Automotive Sound Library",
+        "Vehicle Audio Collection",
+        "Engine Sound Effects",
+        "Driving Sound Effects",
+        "Professional Sound Library",
+        "Game Audio Assets",
+        "Film Sound Effects",
+        "Post Production Audio",
+        "Vehicle Sound Design",
+        "Broadcast Audio Effects",
+        "BOOM Library",
+        "Automotive Audio Software"
+        ]
+    }
+    },
+    {
+    id: "117",
+    slug: "boom-cars-v8-sound-effects-library",
+    name: "Boom Cars V8 Sound Effects Library – Professional Audio Software & Plugin",
+    price: "39,999",
+    offPrice: "37,446", 
+    brand: "Boom",
+    category: "Software and Plugins",
+    subCategory: "Virtual Instruments",
+    image: "/Software/17.webp",
+    seo: {
+        metaTitle:
+        "BOOM Cars V8 Sound Effects Library | Professional V8 Engine & Automotive Audio Collection",
+        metaDescription:
+        "Buy BOOM Cars V8 Sound Effects Library and access powerful V8 engine recordings, accelerations, decelerations, drive-bys, idling, interior and exterior vehicle perspectives for film, gaming, broadcast, trailers, and professional sound design projects.",
+        keywords: [
+        "BOOM Cars V8",
+        "Cars V8 Sound Effects Library",
+        "V8 Engine Sound Effects",
+        "Automotive Sound Library",
+        "Vehicle Audio Collection",
+        "Car Engine Sounds",
+        "Professional Sound Effects",
+        "Vehicle Sound Design",
+        "Game Audio Assets",
+        "Film Sound Effects",
+        "Post Production Audio",
+        "Broadcast Audio Effects",
+        "Automotive Audio Software",
+        "BOOM Library",
+        "Sound Design Collection"
+        ]
+    }
+    },
+    {
+    id: "118",
+    slug: "boom-wildcats-sound-effects-library",
+    name: "Boom Wildcats Sound Effects Library – Professional Audio Software & Plugin",
+    price: "29,999",
+    offPrice: "24,499", 
+    brand: "Boom",
+    category: "Software and Plugins",
+    subCategory: "Virtual Instruments",
+    image: "/Software/18.webp",
+    seo: {
+        metaTitle:
+        "BOOM Wildcats Sound Effects Library | Professional Big Cat & Wildlife Audio Collection",
+        metaDescription:
+        "Buy BOOM Wildcats Sound Effects Library and access professionally recorded wildcat sounds, including growls, roars, snarls, hisses, purrs, movements, and natural animal behaviors. Ideal for film, television, gaming, documentaries, broadcast, and professional sound design projects.",
+        keywords: [
+        "BOOM Wildcats",
+        "Wildcats Sound Effects Library",
+        "Big Cat Sound Effects",
+        "Wild Animal Sound Library",
+        "Feline Sound Effects",
+        "Animal Audio Collection",
+        "Wildlife Sound Design",
+        "Professional Sound Effects",
+        "Game Audio Assets",
+        "Film Sound Effects",
+        "Documentary Audio Library",
+        "Post Production Audio",
+        "Broadcast Sound Effects",
+        "BOOM Library",
+        "Wildlife Audio Software"
+        ]
+    }
+    },
+    {
+    id: "119",
+    slug: "boom-room-tones-usa-stereo-sound-effects-library",
+    name: "Boom Room Tones USA Stereo Sound Effects Library – Professional Audio Software & Plugin",
+    price: "18,999",
+    offPrice: "16,498", 
+    brand: "Boom",
+    category: "Software and Plugins",
+    subCategory: "Virtual Instruments",
+    image: "/Software/19.webp",
+    seo: {
+        metaTitle:
+        "BOOM Room Tones USA Stereo Sound Effects Library | Professional Ambient & Interior Audio Collection",
+        metaDescription:
+        "Buy BOOM Room Tones USA Stereo Sound Effects Library and access authentic stereo room ambience recordings from a variety of American indoor environments. Perfect for film, television, podcasts, games, broadcast, and professional post-production sound design.",
+        keywords: [
+        "BOOM Room Tones USA Stereo",
+        "Room Tones Sound Effects Library",
+        "Ambient Sound Effects",
+        "Room Ambience Library",
+        "Interior Sound Effects",
+        "Stereo Atmosphere Recordings",
+        "Professional Sound Library",
+        "Film Sound Effects",
+        "Game Audio Assets",
+        "Post Production Audio",
+        "Broadcast Sound Effects",
+        "Podcast Audio Library",
+        "Environmental Sound Design",
+        "BOOM Library",
+        "Ambient Audio Collection"
+        ]
+    }
+    },
+    {
+    id: "120",
+    slug: "boom-horses-sound-effects-library",
+    name: "Boom Horses Sound Effects Library – Professional Audio Software & Plugin",
+    price: "27,939",
+    offPrice: "22,198", 
+    brand: "Boom",
+    category: "Software and Plugins",
+    subCategory: "Virtual Instruments",
+    image: "/Software/20.webp",
+    seo: {
+        metaTitle:
+        "BOOM Horses Sound Effects Library | Professional Equine & Animal Audio Collection",
+        metaDescription:
+        "Buy BOOM Horses Sound Effects Library and access professionally recorded horse sounds including gallops, trots, neighs, snorts, breathing, hoof impacts, stable ambience, and natural equine behaviors. Ideal for film, television, games, documentaries, and professional sound design projects.",
+        keywords: [
+        "BOOM Horses",
+        "Horses Sound Effects Library",
+        "Horse Sound Effects",
+        "Equine Audio Collection",
+        "Animal Sound Library",
+        "Horse Gallop Sounds",
+        "Hoof Impact Sound Effects",
+        "Wildlife Audio Library",
+        "Professional Sound Effects",
+        "Film Sound Effects",
+        "Game Audio Assets",
+        "Documentary Sound Design",
+        "Post Production Audio",
+        "BOOM Library",
+        "Animal Audio Collection"
+        ]
+    }
+    },
 ];  
 
 export default products;

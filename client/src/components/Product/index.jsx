@@ -7,7 +7,6 @@ import BrandSection from "./BrandSection";
 const Products = () => {
   return (
     <section className="">
-      
       <ProductCategories />
       {/* <BrandSection /> */}
       {/* <Repeet /> */}

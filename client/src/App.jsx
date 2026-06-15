@@ -37,6 +37,7 @@ import SubCategoryProduct from '@components/Product/SubCategoryProduct';
 import ProductDetails from '@components/Product/ProductDetails';
 import Brand from '@components/Brand';
 import ServicePage from '@components/ServicePage';
+import Software from '@components/Software';
 
 const router = createBrowserRouter([
 	{
@@ -104,6 +105,10 @@ const router = createBrowserRouter([
 			{
 				path: '/services',
 				element: <ServicePage />,
+			},
+			{
+				path: '/software',
+				element: <Software />,
 			},
 			{
 				path: '/blog',

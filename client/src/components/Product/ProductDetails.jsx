@@ -154,7 +154,7 @@ const ProductDetails = () => {
           onClick={() => navigate(-1)}
           className="mb-8 inline-flex items-center text-[#232466] font-medium hover:text-[#EF5622] transition-colors"
         >
-          ← Go Back
+          ← Back
         </button>
 
         {/* Breadcrumb */}
@@ -242,19 +242,6 @@ const ProductDetails = () => {
 
               <span className="px-3 py-1 bg-[#232466] text-white text-sm font-semibold rounded-full">
                 {discountPercent}% OFF
-              </span>
-
-            </div>
-
-            {/* Tags */}
-            <div className="mt-8 flex flex-wrap gap-3">
-
-              <span className="px-4 py-2 bg-slate-100 text-slate-700 text-sm">
-                {product.category}
-              </span>
-
-              <span className="px-4 py-2 bg-slate-100 text-slate-700 text-sm">
-                {product.subCategory}
               </span>
 
             </div>

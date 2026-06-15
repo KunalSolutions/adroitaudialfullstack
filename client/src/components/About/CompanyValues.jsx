@@ -135,33 +135,86 @@ export default function CompanyValues() {
 
         </div>
 
-        {/* Process */}
+        {/* Process Journey */}
         <div className="mb-20 lg:mb-28">
 
-          <h3 className="text-3xl md:text-4xl font-bold text-[#232466] mb-12">
-            Our Process
-          </h3>
+          <div className="text-center mb-16">
+            <h3 className="text-3xl md:text-4xl font-bold text-[#232466] mb-4">
+              Our Process
+            </h3>
 
-          <div className="space-y-5">
+            <p className="text-slate-500 max-w-2xl mx-auto">
+              A streamlined journey from consultation to long-term support,
+              ensuring every audio solution is designed and delivered with precision.
+            </p>
+          </div>
 
-            {process.map((step, index) => (
-              <div
-                key={index}
-                className="group flex items-center gap-6 bg-white rounded-2xl p-5 border border-slate-100 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
-              >
-                <div className="min-w-[60px] w-15 h-15 rounded-2xl bg-[#232466] text-white font-bold flex items-center justify-center text-lg group-hover:bg-[#EF5622] transition-all duration-300">
-                  {index + 1}
+          <div className="relative">
+
+            {/* Center Line */}
+            <div className="hidden lg:block absolute left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#EF5622] via-[#232466] to-[#EF5622] -translate-x-1/2 rounded-full" />
+
+            <div className="space-y-12">
+
+              {process.map((step, index) => (
+                <div
+                  key={index}
+                  className={`relative flex items-center ${
+                    index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"
+                  }`}
+                >
+
+                  {/* Content Card */}
+                  <div className="w-full lg:w-1/2">
+
+                    <div
+                      className={`group bg-white rounded-3xl p-6 md:p-8 shadow-xl border border-slate-100 hover:-translate-y-2 hover:shadow-2xl transition-all duration-500 ${
+                        index % 2 === 0 ? "lg:mr-12" : "lg:ml-12"
+                      }`}
+                    >
+
+                      <div className="flex items-center gap-4 mb-4">
+
+                        <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#232466] to-[#3f42b8] flex items-center justify-center text-white font-bold text-lg shadow-lg group-hover:scale-110 transition-all duration-300">
+                          {String(index + 1).padStart(2, "0")}
+                        </div>
+
+                        <div>
+                          <span className="text-xs uppercase tracking-widest text-[#EF5622] font-semibold">
+                            Step {index + 1}
+                          </span>
+
+                          <h4 className="text-xl font-bold text-[#232466]">
+                            {step}
+                          </h4>
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  {/* Timeline Node */}
+                  <div className="hidden lg:flex absolute left-1/2 -translate-x-1/2 z-20">
+
+                    <div className="relative">
+                      <div className="w-7 h-7 rounded-full bg-[#EF5622] border-4 border-white shadow-xl" />
+
+                      <div className="absolute inset-0 rounded-full bg-[#EF5622] animate-ping opacity-30" />
+                    </div>
+
+                  </div>
+
                 </div>
+              ))}
 
-                <h4 className="font-semibold text-[#232466] text-base md:text-lg">
-                  {step}
-                </h4>
-              </div>
-            ))}
+            </div>
 
           </div>
 
         </div>
+
 
         {/* Bottom Cards */}
         <div className="grid lg:grid-cols-2 gap-8">

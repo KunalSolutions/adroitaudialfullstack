@@ -5,12 +5,12 @@ const ProductCategories = () => {
   const categories = [
     {
       name: "Microphones",
-      image: "https://i.pinimg.com/1200x/89/1f/fa/891ffa1c876c683b3e4820333f4d7e02.jpg",
+      image: "https://i.pinimg.com/1200x/87/e0/73/87e0732e48d139dea1f4b9f2b7e6ffe4.jpg",
       slug: "microphone",
     },
     {
       name: "Audio Interfaces",
-      image: "https://i.pinimg.com/736x/5a/dd/38/5add38eeebfde35896bd73165c5fd519.jpg",
+      image: "https://i.pinimg.com/1200x/d4/60/b1/d460b1df8e28aff9103f95fb4558f3a4.jpg",
       slug: "audio-interfaces",
     },
     {
@@ -50,7 +50,7 @@ const ProductCategories = () => {
     },
     {
       name: "Studio Accessories",
-      image: "https://i.pinimg.com/736x/e8/26/5c/e8265c485433ea33c884cd2e8a71e9de.jpg",
+      image: "https://i.pinimg.com/1200x/93/c2/05/93c2056c90d0327554b621519335845e.jpg",
       slug: "studio-accessories",
     }, 
   ];
@@ -88,7 +88,7 @@ const ProductCategories = () => {
             to={`/category/${category.slug}`}
             className="group"
           >
-            <div className="bg-white border border-slate-200 overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
+            <div className="bg-white p-3 shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">
 
               <div className="aspect-square overflow-hidden bg-slate-50">
                 <img

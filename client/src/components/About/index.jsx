@@ -5,6 +5,7 @@ import AboutSection from './AboutSection'
 import ServiceSection from './ServiceSection'
 import CompanyValues from './CompanyValues'
 import FAQ from '@components/FAQ'
+import Team from './Team'
 
 const About = () => {
   return (
@@ -12,6 +13,7 @@ const About = () => {
       <>
       <AboutSection />
       <CompanyValues />
+      {/* <Team /> */}
       <FAQ />
       {/* <ServiceSection /> */}
         {/* <Testimonial /> */}

@@ -9,6 +9,8 @@ import UpComing from "@components/HomePage/UpComing";
 import BigSaving from "@components/HomePage/BigSaving";
 import Features from "@components/HomePage/Features";
 import AboutSection from "./AboutSection";
+import BrandSlider from "./BrandSection";
+import ProductSlider from "./ProductSlider";
 
 const HomeScreen = () => {
   const { pageNumber = 1, keyword = "" } = useParams();
@@ -23,7 +25,9 @@ const HomeScreen = () => {
     <div className="bg-white">
       	<HeroSection id="#products" />
         <AboutSection />
-        {/* <NewArrival />   */}
+        <ProductSlider />
+        <NewArrival />  
+        <BrandSlider />
         {/* <ProductSection /> */}
         {/* <Features />   */}
 

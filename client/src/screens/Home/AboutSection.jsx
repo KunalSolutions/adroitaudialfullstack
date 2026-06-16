@@ -2,7 +2,7 @@ import { ArrowRight } from "lucide-react";
 
 export default function AboutSection() {
   return (
-  <section id="about" className="py-16 md:py-24 bg-white">
+  <section id="about" className="py-16 md:py-24 bg-slate-50">
   <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
     <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -10,7 +10,7 @@ export default function AboutSection() {
       {/* Image */}
       <div className="relative overflow-hidden">
         <img
-          src="/Hero/04.jpeg"
+          src="/Hero/about.jpg"
           alt="About Adroit Audial"
           className="w-full h-[350px] sm:h-[450px] lg:h-[600px] object-cover"
         />

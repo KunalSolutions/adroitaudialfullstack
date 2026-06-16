@@ -2,9 +2,12 @@ import { useEffect, useState } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const slides = [
+  "/Hero/1.jpg",
+  "/Hero/2.jpg",
+  "/Hero/4.jpg",
+  "/Hero/5.jpg",
   "/Hero/01.jpg",
   "/Hero/02.jpg",
-  "/Hero/03.jpeg",
 ];
 
 export default function HeroSection() {
@@ -29,7 +32,7 @@ export default function HeroSection() {
   return (
     <section className="relative w-full overflow-hidden">
       {/* Slider */}
-      <div className="relative h-[35vh] sm:h-[45vh] md:h-[60vh] lg:h-[75vh] xl:h-[85vh]">
+      <div className="relative h-[50vh] sm:h-[65vh] md:h-[70vh] lg:h-[100vh] xl:h-[100vh]">
 
         {slides.map((slide, index) => (
           <div

@@ -38,6 +38,7 @@ import ProductDetails from '@components/Product/ProductDetails';
 import Brand from '@components/Brand';
 import ServicePage from '@components/ServicePage';
 import Software from '@components/Software';
+import TeamDetails from '@components/About/TeamDetails';
 
 const router = createBrowserRouter([
 	{
@@ -78,6 +79,10 @@ const router = createBrowserRouter([
 				path: 'about-us',
 				element: <About />
 			},
+			// {
+			// 	path: '/team/:slug',
+			// 	element: <TeamDetails />
+			// },
 			{
 				path: '/brand',
 				element: <Brand />

@@ -76,7 +76,7 @@ export default function AboutSection() {
             {/* Main Image Card */}
             <div className="relative overflow-hidden rounded-[32px] shadow-[0_30px_80px_rgba(35,36,102,0.15)]">
               <img
-                src="/Hero/04.jpeg"
+                src="/Hero/about.png"
                 alt="Adroit Audial"
                 className="w-full h-[450px] lg:h-[650px] object-cover transition-transform duration-700 hover:scale-105"
               />

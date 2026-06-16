@@ -10,7 +10,7 @@ export default function AboutSection() {
       {/* Image */}
       <div className="relative overflow-hidden">
         <img
-          src="/Hero/about.jpg"
+          src="/Hero/about.png"
           alt="About Adroit Audial"
           className="w-full h-[350px] sm:h-[450px] lg:h-[600px] object-cover"
         />

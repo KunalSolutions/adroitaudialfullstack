@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 export default function Footer() {
   const socialLinks = [
     { icon: FaFacebookF, name: "Facebook", bgColor: "#1877F2", link: "https://www.facebook.com/profile.php?id=61590875490545&sk=about" },
-    { icon: FaInstagram, name: "Instagram", bgColor: "#E4405F", link: "#" },
+    { icon: FaInstagram, name: "Instagram", bgColor: "#E4405F", link: "https://www.instagram.com/adroit_audial/" },
     { icon: FaLinkedinIn, name: "Linkedin", bgColor: "#0A66C2", link: "#" },
     { icon: FaYoutube, name: "Youtube", bgColor: "#FF0000", link: "https://www.youtube.com/@AdroitAudial" },
   ];

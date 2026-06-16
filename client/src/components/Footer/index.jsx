@@ -98,11 +98,11 @@ export default function Footer() {
             <ul className="space-y-3 text-white/70">
 
               <li><Link className="hover:text-white" to="/">Home</Link></li>
-              <li><Link className="hover:text-white" to="/about">About Us</Link></li>
-              <li><Link className="hover:text-white" to="/brands">Brands</Link></li>
+              <li><Link className="hover:text-white" to="/about-us">About Us</Link></li>
+              <li><Link className="hover:text-white" to="/brand">Brands</Link></li>
               <li><Link className="hover:text-white" to="/products">Products</Link></li>
-              <li><Link className="hover:text-white" to="/products">Services</Link></li>
-              <li><Link className="hover:text-white" to="/products">Software & Plugins</Link></li>
+              <li><Link className="hover:text-white" to="/services">Services</Link></li>
+              <li><Link className="hover:text-white" to="/software">Software & Plugins</Link></li>
               <li><Link className="hover:text-white" to="/contact">Contact</Link></li>
 
             </ul>

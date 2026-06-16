@@ -55,7 +55,27 @@ export default function ProductSlider() {
   ];
 
   return (
-    <section className="py-16 bg-white overflow-hidden">
+    <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-bl from-slate-50 via-white to-orange-50">
+
+      {/* Live Background */}
+      <div className="absolute inset-0 pointer-events-none">
+
+        <div className="absolute top-10 left-10 w-72 h-72 bg-[#EF5622]/10 rounded-full blur-3xl animate-pulse"></div>
+
+        <div className="absolute bottom-10 right-40 w-96 h-96 bg-[#232466]/10 rounded-full blur-3xl animate-pulse"></div>
+
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-sky-300/10 rounded-full blur-3xl animate-pulse"></div>
+
+        {/* Floating dots */}
+        <div className="absolute top-14 left-1/1 w-3 h-3 rounded-full bg-[#EF5622] animate-bounce"></div>
+
+        <div className="absolute bottom-22 right-1/2 w-2 h-2 rounded-full bg-[#232466] animate-ping"></div>
+
+        <div className="absolute top-1/1 left-14 w-2 h-2 rounded-full bg-[#EF5622] animate-pulse"></div>
+
+        <div className="absolute top-10 right-16 w-4 h-4 rounded-full bg-[#232466]/30 animate-bounce"></div>
+
+      </div>
 
       <div className="max-w-7xl mx-auto px-4">
 
@@ -83,10 +103,10 @@ export default function ProductSlider() {
           <div className="relative overflow-hidden">
 
             {/* Left Fade */}
-            <div className="absolute left-0 top-0 z-10 h-full w-24 bg-gradient-to-r from-white to-transparent" />
+            <div className="absolute left-0 top-0 z-10 h-full w-24" />
 
             {/* Right Fade */}
-            <div className="absolute right-0 top-0 z-10 h-full w-24 bg-gradient-to-l from-white to-transparent" />
+            <div className="absolute right-0 top-0 z-10 h-full w-24" />
 
             <div className="flex animate-marquee gap-6 w-max">
 
@@ -94,13 +114,13 @@ export default function ProductSlider() {
                 <Link
                 key={index}
                 to={`/category/${product.slug}`}
-                className="group w-[220px] flex-shrink-0 block  rounded-2xl overflow-hidden hover:shadow-xl transition-all duration-500 hover:-translate-y-2"
+                className="group w-[220px] flex-shrink-0 block  rounded-2xl overflow-hidden hover:shadow-sm transition-all duration-500 hover:-translate-y-2"
               >
                 <div className="h-[220px] bg-white overflow-hidden">
                   <img
                     src={product.image}
                     alt={product.name}
-                    className="w-full h-full grayscale hover:grayscale-0 object-contain p-2 group-hover:scale-110 transition-transform duration-700"
+                    className="w-full h-full grayscale hover:grayscale-0 object-contain p-2"
                   />
                 </div>
 

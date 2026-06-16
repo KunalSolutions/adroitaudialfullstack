@@ -30,7 +30,23 @@ const HomeCards = () => {
   ];
 
   return (
-    <section className="py-12 bg-white mb-10">
+    <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-tr from-slate-50 via-white to-orange-50">
+
+      {/* Live Background */}
+      <div className="absolute inset-0 pointer-events-none">
+
+        <div className="absolute top-20 left-10 w-72 h-72 bg-[#EF5622]/10 rounded-full blur-3xl animate-pulse"></div>
+
+        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#232466]/10 rounded-full blur-3xl animate-pulse"></div>
+
+        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-sky-300/10 rounded-full blur-3xl animate-pulse"></div>
+
+        {/* Floating dots */}
+        <div className="absolute top-1/2 left-12 w-2 h-2 rounded-full bg-[#EF5622] animate-pulse"></div>
+
+        <div className="absolute top-20 right-20 w-4 h-4 rounded-full bg-[#232466]/30 animate-bounce"></div>
+
+      </div>
     <div className="max-w-7xl mx-auto px-4">
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

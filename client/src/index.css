@@ -129,3 +129,75 @@ Orange    #EF5622  (10%) */
     transition: width .2s ease, height .2s ease;
   }
 }
+
+/* for about section  */
+@keyframes float {
+  0%,100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
+
+.animate-float-delay {
+  animation: float 4s ease-in-out infinite 1.5s;
+}
+
+@keyframes slideLine {
+  0% {
+    left: 0;
+  }
+
+  50% {
+    left: 48px;
+  }
+
+  100% {
+    left: 0;
+  }
+}
+
+.animate-slideLine {
+  animation: slideLine 3s linear infinite;
+}
+
+
+/* anncounment bar  */
+.ticker-track {
+  width: max-content;
+  animation: ticker 30s linear infinite;
+}
+
+.ticker-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes ticker {
+  from {
+    transform: translateX(0);
+  }
+
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes zoomOut {
+  0% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-zoomOut {
+  animation: zoomOut 3s ease-out forwards;
+}

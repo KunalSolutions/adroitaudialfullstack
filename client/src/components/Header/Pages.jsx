@@ -71,7 +71,7 @@ const Pages = () => {
 
   {showProducts && (
     <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50">
-      <div className="w-72 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden">
+      <div className="w-72  rounded-xl shadow-2xl border border-slate-200 overflow-hidden">
 
         {productCategories.map((category) => (
           <Link

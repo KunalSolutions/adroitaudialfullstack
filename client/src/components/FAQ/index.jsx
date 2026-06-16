@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FaPlus, FaMinus } from "react-icons/fa";
+import { FaAngleUp , FaAngleDown } from "react-icons/fa6";
 import faqData from "../../data/faq";
 
 const FAQ = () => {
@@ -67,7 +67,7 @@ return ( <section
                         : "bg-[#232466] text-white"
                     }`}
                     >
-                    {active === index ? <FaMinus /> : <FaPlus />}
+                    {active === index ? <FaAngleDown /> : <FaAngleDown  />}
                     </div>
                 </button>
 

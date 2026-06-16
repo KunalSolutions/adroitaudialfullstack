@@ -7,7 +7,7 @@ import CompanyValues from './CompanyValues'
 import FAQ from '@components/FAQ'
 import Team from './Team'
 
-const About = () => {
+const  About = () => {
   return (
     <div>
       <>

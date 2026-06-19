@@ -97,8 +97,8 @@ const Pages = () => {
   )}
 </div>
 
-      <NavLink to="/services" className={navLinkClass}>
-        Services
+      <NavLink to="/solutions" className={navLinkClass}>
+        Solutions
       </NavLink>
 
       <NavLink to="/software-and-plugins" className={navLinkClass}>

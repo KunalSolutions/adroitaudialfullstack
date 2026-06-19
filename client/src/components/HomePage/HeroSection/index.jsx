@@ -9,6 +9,7 @@ const slides = [
   // "/Hero/01.jpg",
   // "/Hero/02.jpg",
   "/Hero.jpg",
+  "/hero2.jpg",
   // "/hero1.jpg",
 ];
 
@@ -26,7 +27,7 @@ export default function HeroSection() {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 4000);
+    }, 1000);
 
     return () => clearInterval(interval);
   }, []);
@@ -39,8 +40,8 @@ export default function HeroSection() {
         {slides.map((slide, index) => (
           <div
             key={index}
-            className={`absolute inset-0 transition-opacity duration-1000 ${
-              current === index ? "opacity-100" : "opacity-0"
+            className={`absolute inset-0 transition-opacity duration-2000 ${
+              current === index ? "opacity-100" : "opacity-100"
             }`}
           >
             <img

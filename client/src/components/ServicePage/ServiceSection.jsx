@@ -11,7 +11,7 @@ const ServiceSection = () => {
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
 
     <h1 className="absolute left-1/2 top-4 sm:top-6 md:top-8 lg:top-10 -translate-x-1/2 text-[16vw] sm:text-[14vw] md:text-[12vw] lg:text-[10vw] font-black text-[#232466]/5 whitespace-nowrap">
-      AUDIO SERVICES
+      AUDIO SOLUTIONS
     </h1>
 
     <div className="absolute top-16 left-4 sm:left-10 md:left-16 lg:left-20 h-3 w-3 sm:h-4 sm:w-4 md:h-5 md:w-5 rounded-full bg-[#EF5622] animate-bounce" />
@@ -41,7 +41,7 @@ const ServiceSection = () => {
       </span>
 
       <h2 className="mt-4 sm:mt-5 md:mt-6 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-[#232466] leading-tight">
-        Professional Audio Services
+        Professional Audio Solutions
       </h2>
 
       <p className="mx-auto mt-4 sm:mt-5 md:mt-6 max-w-xs sm:max-w-xl md:max-w-2xl lg:max-w-3xl text-sm sm:text-base md:text-lg lg:text-xl text-slate-600 leading-relaxed">

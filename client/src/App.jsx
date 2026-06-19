@@ -116,7 +116,7 @@ const router = createBrowserRouter([
 				element: <ProductDetails />
 			},
 			{
-				path: '/services',
+				path: '/solutions',
 				element: <ServicePage />,
 			},
 			{

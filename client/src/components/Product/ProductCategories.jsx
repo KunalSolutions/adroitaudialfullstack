@@ -10,7 +10,7 @@ const ProductCategories = () => {
     {
       name: "Audio Interfaces",
       image: "https://i.pinimg.com/1200x/d4/60/b1/d460b1df8e28aff9103f95fb4558f3a4.jpg",
-      slug: "AudioInterfaces",
+      slug: "audio-interfaces",
     },
     {
       name: "Monitor Speakers",

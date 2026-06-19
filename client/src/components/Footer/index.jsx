@@ -6,7 +6,7 @@ export default function Footer() {
   const socialLinks = [
     { icon: FaFacebookF, name: "Facebook", bgColor: "#1877F2", link: "https://www.facebook.com/profile.php?id=61590875490545&sk=about" },
     { icon: FaInstagram, name: "Instagram", bgColor: "#E4405F", link: "https://www.instagram.com/adroit_audial/" },
-    { icon: FaLinkedinIn, name: "Linkedin", bgColor: "#0A66C2", link: "#" },
+    { icon: FaLinkedinIn, name: "Linkedin", bgColor: "#0A66C2", link: "https://www.linkedin.com/company/adroit-audial-llp/" },
     { icon: FaYoutube, name: "Youtube", bgColor: "#FF0000", link: "https://www.youtube.com/@AdroitAudial" },
   ];
 
@@ -101,8 +101,8 @@ export default function Footer() {
               <li><Link className="hover:text-white" to="/about-us">About Us</Link></li>
               <li><Link className="hover:text-white" to="/brand">Brands</Link></li>
               <li><Link className="hover:text-white" to="/products">Products</Link></li>
-              <li><Link className="hover:text-white" to="/services">Services</Link></li>
-              <li><Link className="hover:text-white" to="/software">Software & Plugins</Link></li>
+              <li><Link className="hover:text-white" to="/solutions">Solutions</Link></li>
+              <li><Link className="hover:text-white" to="/software-and-plugins">Software & Plugins</Link></li>
               <li><Link className="hover:text-white" to="/contact">Contact</Link></li>
 
             </ul>

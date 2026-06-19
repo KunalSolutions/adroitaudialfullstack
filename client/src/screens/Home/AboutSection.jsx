@@ -17,15 +17,6 @@ export default function AboutSection() {
 
         <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-sky-300/10 rounded-full blur-3xl animate-pulse"></div>
 
-        {/* Floating dots */}
-        <div className="absolute top-24 left-1/4 w-3 h-3 rounded-full bg-[#EF5622] animate-bounce"></div>
-
-        <div className="absolute bottom-32 right-1/4 w-2 h-2 rounded-full bg-[#232466] animate-ping"></div>
-
-        <div className="absolute top-1/2 left-12 w-2 h-2 rounded-full bg-[#EF5622] animate-pulse"></div>
-
-        <div className="absolute top-20 right-20 w-4 h-4 rounded-full bg-[#232466]/30 animate-bounce"></div>
-
       </div>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

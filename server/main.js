@@ -25,11 +25,17 @@ const app = express();
 app.use(express.json()); // Request body parsing
 app.use(cookieParser()); // Cookies parsing and reading
 
+import cors from 'cors';
+
 app.use(
-  cors({
-    origin: "http://localhost:3000", // your frontend URL
-    credentials: true,
-  })
+	cors({
+		origin: [
+			'http://localhost:3000',
+			'https://www.adroitaudial.in',
+			'https://adroitaudial.in',
+		],
+		credentials: true,
+	})
 );
 
 app.use(morgan('dev'));

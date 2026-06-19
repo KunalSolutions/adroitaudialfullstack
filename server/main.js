@@ -27,8 +27,6 @@ app.set('trust proxy', 1); // 🔥 REQUIRED for Render cookies
 app.use(express.json()); // Request body parsing
 app.use(cookieParser()); // Cookies parsing and reading
 
-import cors from 'cors';
-
 app.use(
 	cors({
 		origin: [

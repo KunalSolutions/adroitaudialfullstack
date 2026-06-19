@@ -14,9 +14,9 @@ const Header = () => {
 	return (
 		<header className='fixed z-50  w-full bg-gradient-to-tl shadow-md from-slate-50 via-white to-orange-50'>
 			<TopAnnouncementBar />
-			<div className='relative z-50 max-w-7xl  mx-auto px-3 sm:px-6 lg:px-8'>
+			<div className='relative z-50 max-w-full  mx-auto px-3 sm:px-6 lg:px-6'>
 				<div className='relative flex h-28 w-full items-center justify-between sm:h-30'>
-					<div className='flex flex-1 items-center justify-between gap-10'>
+					<div className='flex  flex-1 items-center justify-between gap-10'>
 						<Logo />
 						<Pages  />
 						{/* <SearchBar /> */}

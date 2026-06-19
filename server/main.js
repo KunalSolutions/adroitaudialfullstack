@@ -22,6 +22,8 @@ const port =  process.env.PORT || 5000;
 
 const app = express();
 
+app.set('trust proxy', 1); // 🔥 REQUIRED for Render cookies
+
 app.use(express.json()); // Request body parsing
 app.use(cookieParser()); // Cookies parsing and reading
 

@@ -19,7 +19,7 @@ const Pages = () => {
   ];
 
   const navLinkClass = ({ isActive }) =>
-    `relative text-sm font-medium transition-all duration-300 ${
+    `relative text-base font-medium transition-all duration-300 ${
       isActive
         ? "text-[#232466] after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-full after:bg-[#EF5622]"
         : "text-[#232466] hover:text-[#EF5622]"
@@ -29,7 +29,7 @@ const Pages = () => {
     text.toLowerCase().replace(/\s+/g, "-");
 
   return (
-    <nav className="hidden md:flex items-center gap-8 lg:gap-10">
+    <nav className="hidden md:flex  gap-8 lg:gap-10">
 
       <NavLink to="/" end className={navLinkClass}>
         Home
@@ -52,7 +52,7 @@ const Pages = () => {
   <NavLink
     to="/products"
     className={({ isActive }) =>
-      `relative flex items-center gap-1 text-sm font-medium ${
+      `relative flex items-center gap-1 text-base font-medium ${
         isActive
           ? "text-[#232466]"
           : "text-[#232466] hover:text-[#EF5622]"

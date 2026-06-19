@@ -1,17 +1,16 @@
 import { Link } from "react-router-dom";
 
 const ProductCategories = () => {
-  
   const categories = [
     {
       name: "Microphones",
       image: "https://i.pinimg.com/1200x/87/e0/73/87e0732e48d139dea1f4b9f2b7e6ffe4.jpg",
-      slug: "microphone",
+      slug: "microphones",
     },
     {
       name: "Audio Interfaces",
       image: "https://i.pinimg.com/1200x/d4/60/b1/d460b1df8e28aff9103f95fb4558f3a4.jpg",
-      slug: "audio-interfaces",
+      slug: "AudioInterfaces",
     },
     {
       name: "Monitor Speakers",
@@ -45,59 +44,18 @@ const ProductCategories = () => {
     },
     {
       name: "Sound Proofing",
-      image: "https://cdn.shopify.com/s/files/1/0657/6821/files/primacoustic-sound-proofing-acoustic-treatment-horizontal-primacoustic-rx5-recoil-professional-studio-monitor-isolator-mount-13708590350408_540x.jpg?v=1768999038&width=1080",
+      image: "https://cdn.shopify.com/s/files/1/0657/6821/files/primacoustic-sound-proofing-acoustic-treatment-horizontal-primacoustic-rx5-recoil-professional-studio-monitor-isolator-mount-13708590350408_540x.jpg",
       slug: "sound-proofing",
     },
     {
       name: "Studio Accessories",
       image: "https://i.pinimg.com/1200x/93/c2/05/93c2056c90d0327554b621519335845e.jpg",
       slug: "studio-accessories",
-    }, 
+    },
   ];
 
   return (
     <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-tr from-slate-50 via-white to-orange-50">
-
-      {/* Live Background */}
-      <div className="absolute inset-0 pointer-events-none">
-        
-        <div className="absolute top-20 left-10 w-72 h-72 bg-[#EF5622]/10 rounded-full blur-3xl animate-pulse"></div>
-
-        <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#232466]/10 rounded-full blur-3xl animate-pulse"></div>
-
-        <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-sky-300/10 rounded-full blur-3xl animate-pulse"></div>
-
-        {/* Floating dots */}
-        <div className="absolute top-24 left-1/4 w-3 h-3 rounded-full bg-[#EF5622] animate-bounce"></div>
-
-        <div className="absolute bottom-32 right-1/4 w-2 h-2 rounded-full bg-[#232466] animate-ping"></div>
-
-        <div className="absolute top-1/2 left-12 w-2 h-2 rounded-full bg-[#EF5622] animate-pulse"></div>
-
-        <div className="absolute top-20 right-20 w-4 h-4 rounded-full bg-[#232466]/30 animate-bounce"></div>
-
-      </div>
-
-      {/* Heading */}
-      <div className="mb-12 text-center">
-
-        <span className="text-[#EF5622] uppercase tracking-[0.25em] text-sm font-semibold">
-          Browse Categories
-        </span>
-
-        <h2 className="mt-4 text-4xl md:text-5xl font-bold text-[#232466]">
-          Explore Our Products
-        </h2>
-
-        <p className="mt-4 max-w-2xl mx-auto text-slate-600">
-          Discover professional audio equipment, integrated solutions,
-          and industry-leading technologies designed for commercial,
-          educational, hospitality, and entertainment environments.
-        </p>
-
-        <div className="w-24 h-1 bg-[#EF5622] mx-auto mt-8"></div>
-
-      </div>
 
       {/* Categories */}
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-6">
@@ -118,12 +76,10 @@ const ProductCategories = () => {
                 />
               </div>
 
-              <div className="max-w-xl px-1 bg-[#232466]">
-
-                <h3 className="text-sm md:text-base font-semibold text-center text-[#fff] leading-5 min-h-[40px] flex items-center justify-center">
+              <div className="bg-[#232466]">
+                <h3 className="text-sm md:text-base font-semibold text-center text-white flex items-center justify-center min-h-[40px]">
                   {category.name}
                 </h3>
-
               </div>
 
             </div>
@@ -131,7 +87,6 @@ const ProductCategories = () => {
         ))}
 
       </div>
-
     </section>
   );
 };

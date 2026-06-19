@@ -39,6 +39,10 @@ import Brand from '@components/Brand';
 import ServicePage from '@components/ServicePage';
 import Software from '@components/Software';
 import TeamDetails from '@components/About/TeamDetails';
+import ProductScreen from '@screens/ProductDetails';
+import AdminDashboard from '@components/AdminDashboard';
+import CategoryProductsScreen from '@components/Product/CategoryProductsScreen';
+import SoftwareAndPluginsScreen from '@components/Product/SoftwareAndPluginsScreen';
 
 const router = createBrowserRouter([
 	{
@@ -64,8 +68,8 @@ const router = createBrowserRouter([
 				element: <HomeScreen />,
 			},
 			{
-				path: '/product/:id',
-				element: <ProductDetails />,
+				path: '/shop/:id',
+				element: <ProductScreen />,
 			},
 			{
 				path: '/orders',
@@ -97,8 +101,12 @@ const router = createBrowserRouter([
 			},
 			{
 				path: '/category/:category',
-				element: <CategoryProducts />
+				element: <CategoryProductsScreen />
 			},
+			// {
+			// 	path: '/category/:category',
+			// 	element: <CategoryProducts />
+			// },
 			{
 				path: '/category/:category/:subCategory',
 				element: <SubCategoryProduct />
@@ -112,8 +120,8 @@ const router = createBrowserRouter([
 				element: <ServicePage />,
 			},
 			{
-				path: '/software',
-				element: <Software />,
+				path: '/software-and-plugins',
+				element: <SoftwareAndPluginsScreen />,
 			},
 			{
 				path: '/blog',
@@ -161,6 +169,10 @@ const router = createBrowserRouter([
 				path: '',
 				element: <AdminRoute />,
 				children: [
+					{
+						path: '/admin/dashboard',
+						element: <AdminDashboard />,
+					},
 					{
 						path: '/admin/orderlist',
 						element: <OrderListScreen />,

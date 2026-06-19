@@ -49,91 +49,153 @@ const UserEditScreen = () => {
 	};
 
 	return (
-		<div className='bg-white'>
-			<div className='mx-auto max-w-2xl px-4 pb-24 pt-10 sm:px-6 lg:max-w-7xl lg:px-8'>
-				<h1 className='text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl'>
-					Edit User - {user?.name}
-				</h1>
+		<div className="min-h-screen bg-white">
+  <div className="mx-auto max-w-4xl px-4 py-10 sm:px-6 lg:px-8">
 
-				{isLoading ? (
-					<Loader />
-				) : error ? (
-					<Alert type='error'>{error?.data?.message || error?.message}</Alert>
-				) : (
-					<form className='mx-auto mt-20 max-w-3xl' onSubmit={handleSubmit}>
-						<div className='space-y-12'>
-							<div className='border-b border-gray-900/10 pb-12'>
-								<div className='mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6'>
-									<div className='sm:col-span-full'>
-										<label
-											htmlFor='name'
-											className='block text-sm font-medium leading-6 text-gray-900'>
-											Name
-										</label>
-										<div className='mt-2'>
-											<input
-												value={name}
-												onChange={(e) => setName(e.target.value)}
-												id='name'
-												type='text'
-												className='block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
-											/>
-										</div>
-									</div>
+    {/* Header */}
+    <div className="mb-8">
+      <h1 className="text-4xl font-bold text-[#232466]">
+        Edit User
+      </h1>
+      <p className="mt-2 text-slate-500">
+        Update user account information and permissions
+      </p>
+    </div>
 
-									<div className='sm:col-span-full'>
-										<label
-											htmlFor='email'
-											className='block text-sm font-medium leading-6 text-gray-900'>
-											Email
-										</label>
-										<div className='mt-2'>
-											<input
-												value={email}
-												onChange={(e) => setEmail(e.target.value)}
-												id='email'
-												type='email'
-												className='block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
-											/>
-										</div>
-									</div>
+    {isLoading ? (
+      <Loader />
+    ) : error ? (
+      <Alert type="error">
+        {error?.data?.message || error?.message}
+      </Alert>
+    ) : (
+      <form
+        onSubmit={handleSubmit}
+        className="max-w-3xl"
+      >
+        <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
 
-									<div className='sm:col-span-full'>
-										<div className='relative flex gap-x-3'>
-											<div className='flex h-6 items-center'>
-												<input
-													checked={isAdmin}
-													onChange={(e) => setIsAdmin(e.target.checked)}
-													id='isAdmin'
-													name='isAdmin'
-													type='checkbox'
-													className='h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600'
-												/>
-											</div>
-											<div className='text-sm leading-6'>
-												<label
-													htmlFor='isAdmin'
-													className='font-medium text-gray-900'>
-													Is Administrator
-												</label>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
+          {/* User Info Header */}
+          <div className="mb-8 flex items-center gap-4">
+            <div className="flex h-16 w-16 items-center justify-center rounded-full bg-[#232466] text-xl font-bold text-white">
+              {name?.charAt(0)?.toUpperCase()}
+            </div>
 
-						<div className='mt-6 flex items-center justify-end gap-x-6'>
-							<button
-								type='submit'
-								className='rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
-								{loadingUpdate ? 'Updating...' : 'Update'}
-							</button>
-						</div>
-					</form>
-				)}
-			</div>
-		</div>
+            <div>
+              <h2 className="text-xl font-bold text-[#232466]">
+                {user?.name}
+              </h2>
+
+              <p className="text-sm text-slate-500">
+                User ID: {user?._id}
+              </p>
+            </div>
+          </div>
+
+          <div className="grid gap-6">
+
+            {/* Name */}
+            <div>
+              <label
+                htmlFor="name"
+                className="mb-2 block text-sm font-semibold text-slate-700"
+              >
+                Full Name
+              </label>
+
+              <input
+                id="name"
+                type="text"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                className="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 transition focus:border-[#EF5622] focus:outline-none focus:ring-2 focus:ring-[#EF5622]/20"
+              />
+            </div>
+
+            {/* Email */}
+            <div>
+              <label
+                htmlFor="email"
+                className="mb-2 block text-sm font-semibold text-slate-700"
+              >
+                Email Address
+              </label>
+
+              <input
+                id="email"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                className="w-full rounded-xl border border-slate-300 px-4 py-3 text-slate-900 transition focus:border-[#EF5622] focus:outline-none focus:ring-2 focus:ring-[#EF5622]/20"
+              />
+            </div>
+
+            {/* Admin Toggle */}
+            <div className="rounded-2xl border border-slate-200 bg-slate-50 p-5">
+
+              <div className="flex items-center justify-between">
+
+                <div>
+                  <h3 className="font-semibold text-[#232466]">
+                    Administrator Access
+                  </h3>
+
+                  <p className="mt-1 text-sm text-slate-500">
+                    Grant full access to products, users and orders management.
+                  </p>
+                </div>
+
+                <label className="flex items-center gap-3">
+                  <input
+                    id="isAdmin"
+                    type="checkbox"
+                    checked={isAdmin}
+                    onChange={(e) => setIsAdmin(e.target.checked)}
+                    className="h-5 w-5 accent-[#EF5622]"
+                  />
+
+                  <span
+                    className={`rounded-full px-3 py-1 text-xs font-semibold ${
+                      isAdmin
+                        ? "bg-green-100 text-green-700"
+                        : "bg-slate-200 text-slate-600"
+                    }`}
+                  >
+                    {isAdmin ? "Admin" : "Customer"}
+                  </span>
+                </label>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          {/* Footer Buttons */}
+          <div className="mt-8 flex justify-end gap-4 border-t border-slate-200 pt-6">
+
+            <button
+              type="button"
+              onClick={() => window.history.back()}
+              className="rounded-xl border border-slate-300 px-6 py-3 font-semibold text-slate-700 transition hover:bg-slate-50"
+            >
+              Cancel
+            </button>
+
+            <button
+              type="submit"
+              className="rounded-xl bg-[#EF5622] px-8 py-3 font-semibold text-white shadow-lg transition hover:bg-[#d84b1b]"
+            >
+              {loadingUpdate ? "Updating User..." : "Save Changes"}
+            </button>
+
+          </div>
+
+        </div>
+      </form>
+    )}
+  </div>
+</div>
 	);
 };
 

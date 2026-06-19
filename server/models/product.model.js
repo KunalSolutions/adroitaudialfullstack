@@ -62,7 +62,6 @@ const productSchema = new mongoose.Schema(
     user: {
       type: mongoose.Schema.Types.ObjectId,
       ref: "UserModel",
-      required: true,
     },
 
     name: {
@@ -71,7 +70,6 @@ const productSchema = new mongoose.Schema(
       trim: true,
     },
 
-    // ✅ For normal products (connectors, mic, etc.)
     price: {
       type: Number,
       default: 0,
@@ -82,43 +80,7 @@ const productSchema = new mongoose.Schema(
       default: 0,
     },
 
-    countInStock: {
-      type: Number,
-      default: 0,
-    },
-
-    // ✅ For variant products (TV with sizes)
-    variants: {
-      type: [variantSchema],
-      default: [],
-    },
-
-    description: {
-      type: String,
-      required: true,
-    },
-
-    content: {
-      type: String,
-      required: true,
-    },
-
     image: {
-      type: String,
-      required: true,
-    },
-
-    section: {
-      type: String,
-      required: true,
-    },
-
-    category: {
-      type: String,
-      required: true,
-    },
-
-    subcategory: {
       type: String,
       required: true,
     },
@@ -128,9 +90,39 @@ const productSchema = new mongoose.Schema(
       required: true,
     },
 
+    category: {
+      type: String,
+      required: true,
+    },
+
+    subCategory: {
+      type: String,
+      required: true,
+    },
+
+    description: {
+      type: String,
+      default: "",
+    },
+
+    content: {
+      type: String,
+      default: "",
+    },
+
+    section: {
+      type: String,
+      default: "Audio Equipment",
+    },
+
+    countInStock: {
+      type: Number,
+      default: 10,
+    },
+
     rating: {
       type: Number,
-      default: 0,
+      default: 5,
     },
 
     numReviews: {
@@ -151,6 +143,17 @@ const productSchema = new mongoose.Schema(
     isActive: {
       type: Boolean,
       default: true,
+    },
+
+    seo: {
+      metaTitle: String,
+      metaDescription: String,
+      keywords: [String],
+    },
+
+    variants: {
+      type: [variantSchema],
+      default: [],
     },
 
     reviews: [reviewSchema],

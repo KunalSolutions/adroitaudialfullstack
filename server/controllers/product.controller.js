@@ -6,7 +6,7 @@ import ProductModel from "#models/product.model.js";
  * @access  Public
  */
 const getProducts = async (req, res) => {
-  const pageSize = 12;
+  const pageSize = 1000;
   const page = Number(req.query.pageNumber) || 1;
 
   const keyword = req.query.keyword
@@ -46,10 +46,16 @@ const getTopDeals = async (req, res) => {
  * @access  Public
  */
 const getProductsByCategory = async (req, res) => {
+  const { category } = req.params;
+  const exclude = req.query.exclude;
+
   const products = await ProductModel.find({
-    category: { $regex: `^${req.params.category}$`, $options: "i" },
+    category: {
+      $regex: new RegExp(`^${category}$`, "i"),
+    },
+    _id: { $ne: exclude },
     isActive: true,
-  });
+  }).limit(8);
 
   res.json(products);
 };

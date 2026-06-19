@@ -146,7 +146,17 @@ const ProductDetails = () => {
   </script>
 </Helmet>
 
-     <section className="py-16 lg:py-20 bg-white">
+    <section className="relative py-16 md:py-24 overflow-hidden bg-gradient-to-l from-slate-50 via-white to-orange-50">
+
+          {/* Live Background */}
+          <div className="absolute inset-0 pointer-events-none">
+            
+            <div className="absolute top-20 left-10 w-72 h-72 bg-[#EF5622]/10 rounded-full blur-3xl animate-pulse"></div>
+
+            <div className="absolute bottom-20 right-10 w-96 h-96 bg-[#232466]/10 rounded-full blur-3xl animate-pulse"></div>
+
+            <div className="absolute top-1/2 left-1/2 w-80 h-80 bg-sky-300/10 rounded-full blur-3xl animate-pulse"></div>
+          </div>
       <div className="container mx-auto px-4">
 
         {/* Back Button */}
@@ -210,7 +220,7 @@ const ProductDetails = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
 
           {/* Product Image */}
-          <div className="bg-slate-50 shadow-sm">
+          <div className="bg-slate-50 ">
             <img
               src={product.image}
               alt={product.name}

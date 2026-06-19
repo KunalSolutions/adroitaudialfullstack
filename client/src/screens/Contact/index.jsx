@@ -120,7 +120,7 @@ const handleSubmit = async (e) => {
                 <div>
                   <p className="font-semibold">Phone</p>
                   <p className="text-slate-300">
-                    +91 77096 83131
+                    +91 95116 09437
                   </p>
                 </div>
               </div>

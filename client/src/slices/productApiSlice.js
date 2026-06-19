@@ -44,7 +44,6 @@ export const productsApiSlice = apiSlice.injectEndpoints({
       query: (category) => ({
         url: `${PRODUCTS_URL}/category/${category}`,
       }),
-      providesTags: ["Product"],
     }),
 
     // 🔹 Create Product

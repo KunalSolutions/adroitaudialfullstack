@@ -9,43 +9,85 @@ const Summary = ({
 	handleCheckout,
 }) => {
 	return (
-		<section className='mt-16 rounded-lg bg-slate-50 px-4 py-6 sm:p-6 lg:col-span-5 lg:mt-0 lg:p-8'>
-			<h2 className='text-lg font-medium text-slate-900'>
-				Order Summary{' '}
-				<span>
-					({cartItems.reduce((acc, currVal) => acc + currVal.qty, 0)} items)
-				</span>
-			</h2>
+		<section className="sticky top-24 overflow-hidden rounded-3xl border border-slate-200 bg-white shadow-xl lg:col-span-5">
 
-			<dl className='mt-6 space-y-4'>
-				<div className='flex items-center justify-between'>
-					<dt className='text-sm text-slate-600'>Subtotal</dt>
-					<dd className='text-sm font-medium text-slate-900'>₹{itemsPrice}</dd>
-				</div>
-				<div className='flex items-center justify-between border-t border-slate-200 pt-4'>
-					<dt className='text-sm text-slate-600'>Shipping</dt>
-					<dd className='text-sm font-medium text-slate-900'>
-						₹{shippingPrice}
-					</dd>
-				</div>
-				<div className='flex items-center justify-between border-t border-slate-200 pt-4'>
-					<dt className='text-sm text-slate-600'>Tax (18%)</dt>
-					<dd className='text-sm font-medium text-slate-900'>₹{taxPrice}</dd>
-				</div>
-				<div className='flex items-center justify-between border-t border-slate-200 pt-4'>
-					<dt className='text-sm text-slate-600'>Order Total</dt>
-					<dd className='text-sm font-medium text-slate-900'>₹{totalPrice}</dd>
-				</div>
-			</dl>
+			{/* Header */}
+			<div className="bg-[#232466] p-6 text-white">
 
-			<div className='mt-10'>
-				<button
-					onClick={handleCheckout}
-					className='w-full rounded-md border border-transparent bg-indigo-600 px-4 py-3 text-base font-medium text-white shadow-sm transition-all hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 focus:ring-offset-gray-50'>
-					Checkout
-				</button>
+				<h2 className="text-2xl font-bold">
+				Order Summary
+				</h2>
+
+				<p className="mt-1 text-sm text-slate-200">
+				{cartItems.reduce((acc, currVal) => acc + currVal.qty, 0)} Items in Cart
+				</p>
+
 			</div>
-		</section>
+
+			<div className="p-6">
+
+				{/* Summary Rows */}
+				<div className="space-y-5">
+
+				<div className="flex items-center justify-between">
+					<span className="text-slate-500">
+					Subtotal
+					</span>
+
+					<span className="font-semibold text-[#232466]">
+					₹{itemsPrice}
+					</span>
+				</div>
+
+				<div className="flex items-center justify-between">
+					<span className="text-slate-500">
+					Shipping
+					</span>
+
+					<span className="font-semibold text-[#232466]">
+					₹{shippingPrice}
+					</span>
+				</div>
+
+				<div className="flex items-center justify-between">
+					<span className="text-slate-500">
+					GST (18%)
+					</span>
+
+					<span className="font-semibold text-[#232466]">
+					₹{taxPrice}
+					</span>
+				</div>
+
+				<div className="border-t border-dashed border-slate-300 pt-5">
+
+					<div className="flex items-center justify-between">
+
+					<span className="text-lg font-bold text-slate-900">
+						Total
+					</span>
+
+					<span className="text-3xl font-black text-[#EF5622]">
+						₹{totalPrice}
+					</span>
+
+					</div>
+
+				</div>
+
+				</div>
+
+				{/* Checkout Button */}
+				<button
+				onClick={handleCheckout}
+				className="mt-8 w-full rounded-2xl bg-[#EF5622] px-6 py-4 text-lg font-bold text-white shadow-lg transition-all duration-300 hover:bg-[#232466] hover:shadow-xl"
+				>
+				Proceed To Checkout
+				</button>
+
+			</div>
+
+			</section>
 	);
 };
 

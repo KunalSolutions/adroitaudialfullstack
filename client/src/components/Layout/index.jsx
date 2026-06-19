@@ -14,7 +14,7 @@ const Layout = () => {
 			<WhatsAppButton />
 			<Header />
 
-			<div className='h-[56px] sm:h-[64px] lg:h-[65px] mt-10'></div>
+			<div className='h-[56px] sm:h-[64px] lg:h-[65px] mt-25'></div>
 
 			<div className='flex-grow'>
 				<Outlet />

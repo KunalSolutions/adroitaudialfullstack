@@ -9,66 +9,114 @@ const CartItem = ({
 	handleRemoveFromCart,
 }) => {
 	return (
-		<li className='flex py-6 sm:py-10'>
-			<div className='flex-shrink-0'>
-				<img
-					src={product.image}
-					alt={product.alt}
-					className='h-24 w-24 rounded-md object-cover object-center sm:h-48 sm:w-48'
-				/>
-			</div>
+		<li className="group rounded-3xl border gap-10 border-slate-200 bg-white p-5 shadow-sm transition-all duration-300 hover:shadow-xl">
 
-			<div className='ml-4 flex flex-1 flex-col justify-between sm:ml-6'>
-				<div className='relative pr-9 sm:grid sm:grid-cols-2 sm:gap-x-6 sm:pr-0'>
-					<div>
-						<div className='flex justify-between'>
-							<h3 className='text-sm'>
-								<Link
-									to={`/product/${product._id}`}
-									className='text-base font-semibold text-slate-700 hover:text-slate-800'>
-									{product.name}
-								</Link>
-							</h3>
-						</div>
+			<div className="flex flex-col gap-5 sm:flex-row">
 
-						<div className='mt-1 flex text-sm'>
-							<p className='text-slate-500'>{product.brand}</p>
-						</div>
+				{/* Product Image */}
+				<div className="relative flex-shrink-0">
 
-						<p className='mt-1 text-sm font-medium text-slate-900'>
-							₹{product.price}
-						</p>
+				<Link to={`/shop/${product._id}`}>
+					<div className="overflow-hidden rounded-2xl">
+
+					<img
+						src={product.image}
+						alt={product.name}
+						className="h-40 w-full sm:h-36 sm:w-36 object-contain p-3 transition duration-500 group-hover:scale-105"
+					/>
+
 					</div>
+				</Link>
 
-					<div className='mt-4 sm:mt-0 sm:pr-9'>
-						<ItemQuantityDropdown
-							product={product}
-							index={index}
-							handleAddToCart={handleAddToCart}
-						/>
-
-						<div className='absolute right-0 top-0'>
-							<button
-								onClick={() => handleRemoveFromCart(product._id)}
-								className='-m-2 inline-flex p-2 text-red-400 hover:text-red-500'>
-								<span className='sr-only'>Remove</span>
-								<XMarkIcon className='h-5 w-5' />
-							</button>
-						</div>
-					</div>
+				{product.offerPrice &&
+					product.price > product.offerPrice && (
+					<span className="absolute left-3 top-3 rounded-full bg-[#EF5622] px-3 py-1 text-xs font-bold text-white">
+						{Math.round(
+						((product.price - product.offerPrice) /
+							product.price) *
+							100
+						)}
+						% OFF
+					</span>
+					)}
 				</div>
 
-				<p className='mt-4 flex space-x-2 text-sm text-slate-700'>
+				{/* Product Info */}
+				<div className="flex flex-1 flex-col justify-between">
+
+				<div>
+
+					{/* Brand */}
+					<span className="inline-flex rounded-full bg-[#EF5622]/10 px-3 py-1 text-xs font-semibold text-[#EF5622]">
+					{product.brand}
+					</span>
+
+					{/* Product Name */}
+					<Link to={`/shop/${product._id}`}>
+					<h3 className="mt-3 text-lg font-bold text-[#232466] transition hover:text-[#EF5622]">
+						{product.name}
+					</h3>
+					</Link>
+
+					{/* Price */}
+					<div className="mt-3 flex items-center gap-3">
+
+					<span className="text-2xl font-black text-[#232466]">
+						₹{product.offerPrice || product.price}
+					</span>
+
+					{product.offerPrice &&
+						product.price > product.offerPrice && (
+						<span className="text-sm text-slate-400 line-through">
+							₹{product.price}
+						</span>
+						)}
+
+					</div>
+
+					{/* Stock */}
+					<div className="mt-4">
+
 					{product.countInStock > 0 ? (
-						<CheckIcon className='h-5 w-5 text-green-500' />
+						<span className="inline-flex items-center gap-2 rounded-full bg-green-50 px-3 py-1 text-sm font-medium text-green-700">
+						<CheckIcon className="h-4 w-4" />
+						In Stock
+						</span>
 					) : (
-						<ClockIcon className='h-5 w-5 text-slate-300' />
+						<span className="inline-flex items-center gap-2 rounded-full bg-red-50 px-3 py-1 text-sm font-medium text-red-600">
+						<ClockIcon className="h-4 w-4" />
+						Out Of Stock
+						</span>
 					)}
 
-					<span>{product.countInStock > 0 ? 'In Stock' : 'Not Available'}</span>
-				</p>
+					</div>
+
+				</div>
+
+				{/* Bottom Actions */}
+				<div className="mt-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+
+					<ItemQuantityDropdown
+					product={product}
+					index={index}
+					handleAddToCart={handleAddToCart}
+					/>
+
+					<button
+					onClick={() => handleRemoveFromCart(product._id)}
+					className="inline-flex items-center justify-center gap-2 rounded-xl border border-red-200 px-4 py-2 text-red-500 transition hover:bg-red-50"
+					>
+					<XMarkIcon className="h-5 w-5" />
+					Remove
+					</button>
+
+				</div>
+
+				</div>
+
 			</div>
-		</li>
+
+			</li>
 	);
 };
 

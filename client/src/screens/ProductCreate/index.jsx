@@ -81,221 +81,352 @@ const ProductCreate = () => {
   };
 
   return (
-    <div className="bg-white">
-      <div className="max-w-4xl mx-auto px-4 py-10">
-        <h1 className="text-3xl font-bold mb-8">Create Product</h1>
+   <div className="min-h-screen bg-white">
+  <div className="mx-auto max-w-7xl px-4 py-10 sm:px-6 lg:px-8">
 
-        <form onSubmit={handleSubmit} className="space-y-6">
+    {/* Header */}
+    <div className="mb-8">
+      <h1 className="text-4xl font-bold text-[#232466]">
+        Create Product
+      </h1>
+      <p className="mt-2 text-slate-500">
+        Add a new product to your catalog
+      </p>
+    </div>
 
-          {/* Basic Info */}
-          <input
-            type="text"
-            name="name"
-            placeholder="Product Name"
-            onChange={handleChange}
-            required
-            className="w-full border p-2 rounded"
-          />
+    <form onSubmit={handleSubmit} className="space-y-8">
 
-          <input
-            type="text"
-            name="image"
-            placeholder="Image URL"
-            onChange={handleChange}
-            required
-            className="w-full border p-2 rounded"
-          />
+      {/* Basic Information */}
+      <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+        <h2 className="mb-6 text-xl font-bold text-[#232466]">
+          Basic Information
+        </h2>
 
-          <textarea
-            name="description"
-            placeholder="Short Description"
-            onChange={handleChange}
-            required
-            className="w-full border p-2 rounded"
-          />
+        <div className="grid gap-6">
 
-          <textarea
-            name="content"
-            placeholder="Full Content"
-            onChange={handleChange}
-            required
-            className="w-full border p-2 rounded"
-          />
+          <div>
+            <label className="mb-2 block text-sm font-semibold text-slate-700">
+              Product Name
+            </label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter product name"
+              onChange={handleChange}
+              required
+              className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-[#EF5622] focus:outline-none focus:ring-2 focus:ring-[#EF5622]/20"
+            />
+          </div>
 
-          {/* Category Info */}
-          <div className="grid grid-cols-2 gap-4">
+          <div>
+            <label className="mb-2 block text-sm font-semibold text-slate-700">
+              Image URL
+            </label>
+            <input
+              type="text"
+              name="image"
+              placeholder="Enter image URL"
+              onChange={handleChange}
+              required
+              className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-[#EF5622] focus:outline-none focus:ring-2 focus:ring-[#EF5622]/20"
+            />
+          </div>
+
+          <div>
+            <label className="mb-2 block text-sm font-semibold text-slate-700">
+              Short Description
+            </label>
+            <textarea
+              name="description"
+              rows={4}
+              placeholder="Enter short description"
+              onChange={handleChange}
+              required
+              className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-[#EF5622] focus:outline-none focus:ring-2 focus:ring-[#EF5622]/20"
+            />
+          </div>
+
+          <div>
+            <label className="mb-2 block text-sm font-semibold text-slate-700">
+              Full Content
+            </label>
+            <textarea
+              name="content"
+              rows={8}
+              placeholder="Enter detailed content"
+              onChange={handleChange}
+              required
+              className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-[#EF5622] focus:outline-none focus:ring-2 focus:ring-[#EF5622]/20"
+            />
+          </div>
+
+        </div>
+      </div>
+
+      {/* Category Information */}
+      <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+        <h2 className="mb-6 text-xl font-bold text-[#232466]">
+          Category Information
+        </h2>
+
+        <div className="grid gap-6 md:grid-cols-2">
+
+          <div>
+            <label className="mb-2 block text-sm font-semibold text-slate-700">
+              Section
+            </label>
             <input
               type="text"
               name="section"
               placeholder="Section"
               onChange={handleChange}
               required
-              className="border p-2 rounded"
+              className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-[#EF5622] focus:outline-none focus:ring-2 focus:ring-[#EF5622]/20"
             />
+          </div>
+
+          <div>
+            <label className="mb-2 block text-sm font-semibold text-slate-700">
+              Category
+            </label>
             <input
               type="text"
               name="category"
               placeholder="Category"
               onChange={handleChange}
               required
-              className="border p-2 rounded"
+              className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-[#EF5622] focus:outline-none focus:ring-2 focus:ring-[#EF5622]/20"
             />
+          </div>
+
+          <div>
+            <label className="mb-2 block text-sm font-semibold text-slate-700">
+              Subcategory
+            </label>
             <input
               type="text"
               name="subcategory"
               placeholder="Subcategory"
               onChange={handleChange}
               required
-              className="border p-2 rounded"
+              className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-[#EF5622] focus:outline-none focus:ring-2 focus:ring-[#EF5622]/20"
             />
+          </div>
+
+          <div>
+            <label className="mb-2 block text-sm font-semibold text-slate-700">
+              Brand
+            </label>
             <input
               type="text"
               name="brand"
               placeholder="Brand"
               onChange={handleChange}
               required
-              className="border p-2 rounded"
+              className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-[#EF5622] focus:outline-none focus:ring-2 focus:ring-[#EF5622]/20"
             />
           </div>
 
-          {/* Variant Toggle */}
-          <div className="flex items-center gap-3">
+        </div>
+      </div>
+
+      {/* Variant Settings */}
+      <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+        <div className="flex items-center justify-between">
+          <div>
+            <h2 className="text-xl font-bold text-[#232466]">
+              Product Variants
+            </h2>
+            <p className="mt-1 text-sm text-slate-500">
+              Enable for TVs, Displays and products with multiple sizes.
+            </p>
+          </div>
+
+          <label className="flex items-center gap-3">
             <input
               type="checkbox"
               checked={hasVariants}
               onChange={() => setHasVariants(!hasVariants)}
+              className="h-5 w-5 accent-[#EF5622]"
             />
-            <label>This product has size variants (TV etc.)</label>
-          </div>
+            <span className="font-medium text-slate-700">
+              Has Variants
+            </span>
+          </label>
+        </div>
 
-          {/* Normal Product Pricing */}
-          {!hasVariants && (
-            <div className="grid grid-cols-3 gap-4">
+        {!hasVariants && (
+          <div className="mt-8 grid gap-6 md:grid-cols-3">
+
+            <div>
+              <label className="mb-2 block text-sm font-semibold text-slate-700">
+                Price
+              </label>
               <input
                 type="number"
                 name="price"
                 placeholder="Price"
                 onChange={handleChange}
-                className="border p-2 rounded"
+                className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-[#EF5622] focus:outline-none"
               />
+            </div>
+
+            <div>
+              <label className="mb-2 block text-sm font-semibold text-slate-700">
+                Offer Price
+              </label>
               <input
                 type="number"
                 name="offerPrice"
                 placeholder="Offer Price"
                 onChange={handleChange}
-                className="border p-2 rounded"
+                className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-[#EF5622] focus:outline-none"
               />
+            </div>
+
+            <div>
+              <label className="mb-2 block text-sm font-semibold text-slate-700">
+                Stock
+              </label>
               <input
                 type="number"
                 name="countInStock"
                 placeholder="Stock"
                 onChange={handleChange}
-                className="border p-2 rounded"
+                className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-[#EF5622] focus:outline-none"
               />
             </div>
-          )}
 
-          {/* Variants Section */}
-          {hasVariants && (
+          </div>
+        )}
+
+        {hasVariants && (
+          <div className="mt-8">
+
+            <button
+              type="button"
+              onClick={addVariant}
+              className="mb-6 rounded-xl bg-[#232466] px-5 py-3 font-semibold text-white hover:bg-[#1b1c52]"
+            >
+              + Add Variant
+            </button>
+
             <div className="space-y-4">
-              <button
-                type="button"
-                onClick={addVariant}
-                className="bg-gray-200 px-4 py-2 rounded"
-              >
-                + Add Variant
-              </button>
-
               {variants.map((variant, index) => (
-                <div key={index} className="grid grid-cols-4 gap-3">
-                  <input
-                    type="text"
-                    name="size"
-                    placeholder="Size (32, 43...)"
-                    value={variant.size}
-                    onChange={(e) => handleVariantChange(index, e)}
-                    className="border p-2 rounded"
-                  />
-                  <input
-                    type="number"
-                    name="price"
-                    placeholder="Price"
-                    value={variant.price}
-                    onChange={(e) => handleVariantChange(index, e)}
-                    className="border p-2 rounded"
-                  />
-                  <input
-                    type="number"
-                    name="offerPrice"
-                    placeholder="Offer Price"
-                    value={variant.offerPrice}
-                    onChange={(e) => handleVariantChange(index, e)}
-                    className="border p-2 rounded"
-                  />
-                  <input
-                    type="number"
-                    name="countInStock"
-                    placeholder="Stock"
-                    value={variant.countInStock}
-                    onChange={(e) => handleVariantChange(index, e)}
-                    className="border p-2 rounded"
-                  />
+                <div
+                  key={index}
+                  className="rounded-2xl border border-slate-200 p-5"
+                >
+                  <div className="grid gap-4 md:grid-cols-4">
+
+                    <input
+                      type="text"
+                      name="size"
+                      placeholder="Size"
+                      value={variant.size}
+                      onChange={(e) => handleVariantChange(index, e)}
+                      className="rounded-xl border border-slate-300 px-4 py-3"
+                    />
+
+                    <input
+                      type="number"
+                      name="price"
+                      placeholder="Price"
+                      value={variant.price}
+                      onChange={(e) => handleVariantChange(index, e)}
+                      className="rounded-xl border border-slate-300 px-4 py-3"
+                    />
+
+                    <input
+                      type="number"
+                      name="offerPrice"
+                      placeholder="Offer Price"
+                      value={variant.offerPrice}
+                      onChange={(e) => handleVariantChange(index, e)}
+                      className="rounded-xl border border-slate-300 px-4 py-3"
+                    />
+
+                    <input
+                      type="number"
+                      name="countInStock"
+                      placeholder="Stock"
+                      value={variant.countInStock}
+                      onChange={(e) => handleVariantChange(index, e)}
+                      className="rounded-xl border border-slate-300 px-4 py-3"
+                    />
+
+                  </div>
 
                   <button
                     type="button"
                     onClick={() => removeVariant(index)}
-                    className="text-red-500 text-sm"
+                    className="mt-4 text-sm font-semibold text-red-600 hover:text-red-700"
                   >
-                    Remove
+                    Remove Variant
                   </button>
                 </div>
               ))}
             </div>
-          )}
 
-          {/* Flags */}
-          <div className="flex gap-6">
-            <label>
-              <input
-                type="checkbox"
-                name="isTopDeal"
-                onChange={handleChange}
-              />{" "}
-              Top Deal
-            </label>
-
-            <label>
-              <input
-                type="checkbox"
-                name="isBestSeller"
-                onChange={handleChange}
-              />{" "}
-              Best Seller
-            </label>
-
-            <label>
-              <input
-                type="checkbox"
-                name="isActive"
-                defaultChecked
-                onChange={handleChange}
-              />{" "}
-              Active
-            </label>
           </div>
-
-          <div className="flex justify-end">
-            <button
-              type="submit"
-              className="bg-indigo-600 text-white px-6 py-2 rounded hover:bg-indigo-700"
-            >
-              {isLoading ? "Creating..." : "Create Product"}
-            </button>
-          </div>
-
-        </form>
+        )}
       </div>
-    </div>
+
+      {/* Product Flags */}
+      <div className="rounded-3xl border border-slate-200 bg-white p-8 shadow-sm">
+        <h2 className="mb-6 text-xl font-bold text-[#232466]">
+          Product Status
+        </h2>
+
+        <div className="flex flex-wrap gap-8">
+
+          <label className="flex items-center gap-3">
+            <input
+              type="checkbox"
+              name="isTopDeal"
+              onChange={handleChange}
+              className="h-5 w-5 accent-[#EF5622]"
+            />
+            <span>Top Deal</span>
+          </label>
+
+          <label className="flex items-center gap-3">
+            <input
+              type="checkbox"
+              name="isBestSeller"
+              onChange={handleChange}
+              className="h-5 w-5 accent-[#EF5622]"
+            />
+            <span>Best Seller</span>
+          </label>
+
+          <label className="flex items-center gap-3">
+            <input
+              type="checkbox"
+              name="isActive"
+              defaultChecked
+              onChange={handleChange}
+              className="h-5 w-5 accent-[#EF5622]"
+            />
+            <span>Active</span>
+          </label>
+
+        </div>
+      </div>
+
+      {/* Submit */}
+      <div className="flex justify-end">
+        <button
+          type="submit"
+          className="rounded-xl bg-[#EF5622] px-8 py-4 text-sm font-semibold text-white shadow-lg transition hover:bg-[#d84b1b]"
+        >
+          {isLoading ? "Creating Product..." : "Create Product"}
+        </button>
+      </div>
+
+    </form>
+  </div>
+</div>
   );
 };
 

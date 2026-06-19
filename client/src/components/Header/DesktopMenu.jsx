@@ -60,7 +60,7 @@ const DesktopMenu = () => {
 			<div className='flex items-center gap-2'>
 				<MenuItem url='/cart' label='Cart' icon={ShoppingBagIcon} />
 				{cartItems.length > 0 && (
-					<span className='min-w-5 rounded-full bg-indigo-500 text-center text-sm font-semibold text-black'>
+					<span className='min-w-5 rounded-full bg-[#EF5622] text-center text-sm font-semibold text-white'>
 						{cartItems.length}
 					</span>
 				)}
@@ -79,7 +79,7 @@ const DesktopMenu = () => {
 			{userInfo ? (
 				<div className='relative z-50' ref={menuRef}>
 					<button
-						className='focus:outline-offset-3 rounded-full bg-white text-black p-2 focus:outline focus:outline-2'
+						className='focus:outline-offset-3 rounded-full bg-[#232466] text-white p-2 focus:outline focus:outline-2'
 						onClick={() => setIsOpen(!isOpen)}>
 						<UserIcon className='h-5 w-5' />
 					</button>
@@ -115,10 +115,14 @@ const DesktopMenu = () => {
 			{userInfo && userInfo.isAdmin && (
 				<div className='relative z-50' ref={adminMenuRef}>
 					<button
-						className='focus:outline-offset-3 rounded-xl px-2 bg-red-400 text-black p-1 cursor-pointer focus:outline focus:outline-2'
+						className='focus:outline-offset-3 rounded-xl px-0  bg-[#EF5622] cursor-pointer focus:outline focus:outline-2'
 						onClick={() => setAdminIsOpen(!adminIsOpen)}>
 						{/* <Cog8ToothIcon className='h-5 w-5' /> */}
-						<h1 className='text-black text-sm'>Dashboard</h1>
+						 <Link
+							to='/admin/dashboard'
+							className='block px-2 py-1 text-sm text-[#fff] font-bold'>
+							Dashboard
+						</Link>
 
 					</button>
 

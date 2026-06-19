@@ -30,7 +30,6 @@ const HomeScreen = () => {
         <BrandSlider />
         {/* <ProductSection /> */}
         {/* <Features />   */}
-
         {/* <BigSaving />
         <Offers />
         <UpComing /> */}

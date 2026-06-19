@@ -11,13 +11,19 @@ import { useLogoutMutation } from '@slices/userApiSlice';
 import MenuItemMobile from './MenuItemMobile';
 import Pages from './Pages';
 import { NavLink } from 'react-router-dom'; 
+import { useState } from 'react';
 
 const MobileMenu = ({ setIsOpen }) => {
+ 
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
   const { cartItems } = useSelector((state) => state.cart);
   const { userInfo } = useSelector((state) => state.auth);
+
+  const closeMenu = () => setIsOpen(false);
 
   const [logoutApiCall] = useLogoutMutation();
 
@@ -43,6 +49,7 @@ const MobileMenu = ({ setIsOpen }) => {
         <NavLink
         to="/"
         end
+        onClick={closeMenu}
         className={({ isActive }) =>
           `${baseStyle} ${
             isActive
@@ -56,6 +63,7 @@ const MobileMenu = ({ setIsOpen }) => {
 
       <NavLink
               to="/about-us"
+              onClick={closeMenu}
               className={({ isActive }) =>
                 `${baseStyle} ${
                   isActive
@@ -69,6 +77,7 @@ const MobileMenu = ({ setIsOpen }) => {
       
             <NavLink
               to="/brand"
+              onClick={closeMenu}
               className={({ isActive }) =>
                 `${baseStyle} ${
                   isActive
@@ -82,6 +91,7 @@ const MobileMenu = ({ setIsOpen }) => {
       
             <NavLink
               to="/products"
+              onClick={closeMenu}
               className={({ isActive }) =>
                 `${baseStyle} ${
                   isActive
@@ -95,6 +105,7 @@ const MobileMenu = ({ setIsOpen }) => {
       
             <NavLink
               to="/services"
+              onClick={closeMenu}
               className={({ isActive }) =>
                 `${baseStyle} ${
                   isActive
@@ -108,6 +119,7 @@ const MobileMenu = ({ setIsOpen }) => {
       
             <NavLink
               to="/software"
+              onClick={closeMenu}
               className={({ isActive }) =>
                 `${baseStyle} ${
                   isActive
@@ -121,6 +133,7 @@ const MobileMenu = ({ setIsOpen }) => {
       
             <NavLink
               to="/contact"
+              onClick={closeMenu}
               className={({ isActive }) =>
                 `${baseStyle} ${
                   isActive

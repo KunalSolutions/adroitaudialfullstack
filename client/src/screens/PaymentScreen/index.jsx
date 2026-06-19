@@ -27,50 +27,139 @@ const PaymentScreen = () => {
 	};
 
 	return (
-		<div className='mt-10'>
-			<div className='flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8'>
-				<div className='flex justify-center'>
-					<CheckoutSteps step1 step2 step3 />
-				</div>
-				<div className='sm:mx-auto sm:w-full sm:max-w-sm'>
-					<h2 className='tracking-light mt-10 text-center text-2xl font-bold leading-9 text-slate-900'>
-						Payment Method
-					</h2>
-				</div>
+		<div className="min-h-screen bg-gradient-to-b from-white via-slate-50 to-white py-12">
 
-				<div className='mt-10 sm:mx-auto sm:w-full sm:max-w-sm'>
-					<form onSubmit={handleSubmit} className='space-y-6'>
-						<div>
-							<div className='mt-6 space-y-6'>
-								<div className='flex items-center gap-x-3'>
-									<input
-										type='radio'
-										id='paymentMethod'
-										value={paymentMethod}
-										onChange={(e) => setPaymentMethod(e.target.value)}
-										className='h-4 w-4 font-medium leading-6 text-slate-900'
-										defaultChecked
-									/>
-									<label
-										htmlFor='paymentMethod'
-										className='block text-sm font-medium leading-6 text-slate-900'>
-										Continue for cash on delivery
-									</label>
-								</div>
+  <div className="mx-auto max-w-6xl px-4">
 
-								<div>
-									<button
-										type='submit'
-										className='flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600'>
-										Continue
-									</button>
-								</div>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</div>
+    {/* Checkout Steps */}
+    <div className="mb-12 flex justify-center">
+      <CheckoutSteps step1 step2 step3 />
+    </div>
+
+    <div className="grid lg:grid-cols-12 gap-10">
+
+      {/* Left Side */}
+      <div className="lg:col-span-5 hidden lg:block">
+
+        <div className="sticky top-24 rounded-3xl bg-[#232466] p-10 text-white">
+
+          <span className="inline-flex rounded-full bg-white/10 px-4 py-2 text-sm font-semibold">
+            Secure Payment
+          </span>
+
+          <h2 className="mt-6 text-4xl font-black leading-tight">
+            Payment
+            <br />
+            Method
+          </h2>
+
+          <p className="mt-5 text-slate-300 leading-7">
+            Choose your preferred payment option to complete your order
+            securely.
+          </p>
+
+          <div className="mt-10 space-y-4">
+
+            <div className="flex items-center gap-3">
+              <span className="text-green-400">✓</span>
+              <span>Safe & Secure Checkout</span>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <span className="text-green-400">✓</span>
+              <span>Trusted Payment Processing</span>
+            </div>
+
+            <div className="flex items-center gap-3">
+              <span className="text-green-400">✓</span>
+              <span>Fast Order Confirmation</span>
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      {/* Right Side */}
+      <div className="lg:col-span-7">
+
+        <div className="rounded-3xl border border-slate-100 bg-white p-8 sm:p-10 shadow-xl">
+
+          <h1 className="mt-4 text-4xl font-black text-[#232466]">
+            Choose Payment Method
+          </h1>
+
+          <p className="mt-2 text-slate-500">
+            Select how you would like to pay for your order.
+          </p>
+
+          <form onSubmit={handleSubmit} className="mt-8">
+
+            {/* COD CARD */}
+            <label
+              htmlFor="cod"
+              className={`group flex cursor-pointer items-center gap-5 rounded-3xl border-2 p-6 transition-all ${
+                paymentMethod === "COD"
+                  ? "border-[#EF5622] bg-[#EF5622]/5"
+                  : "border-slate-200 hover:border-[#EF5622]/50"
+              }`}
+            >
+              <input
+                type="radio"
+                id="cod"
+                name="paymentMethod"
+                value="COD"
+                checked={paymentMethod === "COD"}
+                onChange={(e) => setPaymentMethod(e.target.value)}
+                className="h-5 w-5 accent-[#EF5622]/10"
+              />
+
+              <div className="flex-1">
+
+                <h3 className="font-bold text-[#232466]">
+                  Cash On Delivery
+                </h3>
+
+                <p className="mt-1 text-sm text-slate-500">
+                  Pay when your order is delivered to your doorstep.
+                </p>
+
+              </div>
+
+              <div className="rounded-2xl bg-slate-50 px-4 py-2 text-sm font-semibold text-[#232466]">
+                COD
+              </div>
+
+            </label>
+
+            {/* Future Payment Options */}
+
+            {/* 
+            UPI
+            Razorpay
+            Credit Card
+            Net Banking
+            */}
+
+            <button
+              type="submit"
+              className="mt-8 flex h-14 w-full items-center justify-center rounded-2xl bg-[#EF5622] text-lg font-bold text-white transition-all duration-300 hover:bg-[#232466]"
+            >
+              Continue To Review Order
+            </button>
+
+          </form>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+</div>
 	);
 };
 

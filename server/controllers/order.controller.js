@@ -1,5 +1,33 @@
 import OrderModel from '#models/order.model.js';
+import Razorpay from 'razorpay';
+import crypto from 'crypto';
 
+const createRazorpayOrder = async (req, res) => {
+	try {
+		console.log('RAZORPAY_KEY_ID:', process.env.RAZORPAY_KEY_ID);
+		console.log('SECRET EXISTS:', !!process.env.RAZORPAY_KEY_SECRET);
+
+		const razorpay = new Razorpay({
+			key_id: process.env.RAZORPAY_KEY_ID,
+			key_secret: process.env.RAZORPAY_KEY_SECRET,
+		});
+
+		const { amount } = req.body;
+
+		const options = {
+			amount: amount * 100,
+			currency: 'INR',
+			receipt: `rcpt_${Date.now()}`,
+		};
+
+		const order = await razorpay.orders.create(options);
+
+		res.json(order);
+	} catch (error) {
+		console.log(error);
+		res.status(500).json({ message: error.message });
+	}
+};
 /**
  * @desc		Create new order
  * @route		POST /api/orders
@@ -78,23 +106,43 @@ const getOrderById = async (req, res) => {
 const updateOrderToPaid = async (req, res) => {
 	const order = await OrderModel.findById(req.params.id);
 
-	if (order) {
-		order.isPaid = true;
-		order.paidAt = Date.now();
-
-		order.paymentResult = {
-			id: req.body?.id,
-			status: req.body?.status,
-			update_time: req.body?.update_time,
-			email_address: req.body?.payer?.email_address || '',
-		};
-
-		const updatedOrder = await order.save();
-		res.status(200).json(updatedOrder);
-	} else {
+	if (!order) {
 		res.status(404);
 		throw new Error('Order not found');
 	}
+
+	const {
+		razorpay_order_id,
+		razorpay_payment_id,
+		razorpay_signature,
+	} = req.body;
+
+	// 1. Create expected signature
+	const generatedSignature = crypto
+		.createHmac('sha256', process.env.RAZORPAY_KEY_SECRET)
+		.update(razorpay_order_id + '|' + razorpay_payment_id)
+		.digest('hex');
+
+	// 2. Verify signature
+	if (generatedSignature !== razorpay_signature) {
+		res.status(400);
+		throw new Error('Invalid payment signature');
+	}
+
+	// 3. Mark order as paid ONLY after verification
+	order.isPaid = true;
+	order.paidAt = Date.now();
+
+	order.paymentResult = {
+		razorpay_order_id,
+		razorpay_payment_id,
+		razorpay_signature,
+		status: 'success',
+	};
+
+	const updatedOrder = await order.save();
+
+	res.status(200).json(updatedOrder);
 };
 
 /**
@@ -134,4 +182,5 @@ export {
 	getOrders,
 	updateOrderToDelivered,
 	updateOrderToPaid,
+	createRazorpayOrder,
 };

@@ -1,6 +1,8 @@
 import colors from 'colors';
 import cookieParser from 'cookie-parser';
 import dotenv from 'dotenv';
+dotenv.config();
+
 import express from 'express';
 import morgan from 'morgan';
 import cors from "cors";
@@ -14,7 +16,8 @@ import uploadRoutes from '#routes/upload.route.js';
 import userRoutes from '#routes/user.route.js';
 import contactRoutes from "./routes/contactRoutes.js";
 
-dotenv.config();
+console.log('RAZORPAY_KEY_ID:', process.env.RAZORPAY_KEY_ID);
+console.log('RAZORPAY_KEY_SECRET exists:', !!process.env.RAZORPAY_KEY_SECRET);
 
 connectDB();
 
@@ -46,8 +49,8 @@ app.use('/api/v1/orders', orderRoutes);
 app.use('/api/v1/upload', uploadRoutes);
 app.use("/api/contact", contactRoutes);
 
-app.get('/api/v1/config/paypal', (req, res) => {
-	res.json({ clientId: process.env.PAYPAL_CLIENT_ID });
+app.get('/api/v1/config/razorpay', (req, res) => {
+	res.json({ keyId: process.env.RAZORPAY_KEY_ID });
 });
 
 const __dirname = path.resolve();

@@ -2,8 +2,6 @@ import {
 	CheckBadgeIcon,
 	ExclamationTriangleIcon,
 } from '@heroicons/react/24/outline';
-import { PayPalButtons, usePayPalScriptReducer } from '@paypal/react-paypal-js';
-import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { Link, useParams } from 'react-router-dom';
 import { toast } from 'react-toastify';
@@ -13,7 +11,6 @@ import Loader from '@components/Loader';
 import {
 	useDeliverOrderMutation,
 	useGetOrderDetailsQuery,
-	useGetPayPalClientIdQuery,
 	usePayOrderMutation,
 } from '@slices/orderApiSlice';
 
@@ -33,68 +30,6 @@ const OrderScreen = () => {
 
 	const [deliverOrder, { isLoading: loadingDeliver }] =
 		useDeliverOrderMutation();
-
-	const [{ isPending }, paypalDispatch] = usePayPalScriptReducer();
-
-	const {
-		data: paypal,
-		isLoading: loadingPayPal,
-		error: errorPayPal,
-	} = useGetPayPalClientIdQuery();
-
-	useEffect(() => {
-		if (!errorPayPal && !loadingPayPal && paypal.clientId) {
-			const loadPayPalScipt = async () => {
-				paypalDispatch({
-					type: 'resetOptions',
-					value: {
-						clientId: paypal.clientId,
-						currency: 'USD',
-					},
-				});
-				paypalDispatch({ type: 'setLoadingStatus', value: 'pending' });
-			};
-
-			if (order && !order.isPaid) {
-				if (!window.paypal) {
-					loadPayPalScipt();
-				}
-			}
-		}
-	}, [order, paypal, paypalDispatch, loadingPay, errorPayPal, loadingPayPal]);
-
-	const onApprove = (data, actions) => {
-		return actions.order.capture().then(async function (details) {
-			try {
-				console.log(details);
-				await payOrder({ id: orderId, details });
-				refetch();
-				toast.success('Order paid successfully');
-			} catch (error) {
-				toast.error(error?.data?.message || error?.error);
-			}
-		});
-	};
-
-	const onError = (error) => {
-		toast.error(error?.data?.message || error?.error);
-	};
-
-	const createOrder = (data, actions) => {
-		return actions.order
-			.create({
-				purchase_units: [
-					{
-						amount: {
-							value: order.totalPrice,
-						},
-					},
-				],
-			})
-			.then((orderId) => {
-				return orderId;
-			});
-	};
 
 	const handleDeliver = async () => {
 		try {
@@ -340,25 +275,6 @@ const OrderScreen = () => {
               </div>
 
             </div>
-
-            {/* Paypal */}
-            {!order.isPaid && (
-              <div className="mt-8">
-
-                {loadingPay && <Loader />}
-
-                {isPending ? (
-                  <Loader />
-                ) : (
-                  <PayPalButtons
-                    createOrder={createOrder}
-                    onApprove={onApprove}
-                    onError={onError}
-                  />
-                )}
-
-              </div>
-            )}
 
             {/* Admin Deliver */}
             {userInfo &&

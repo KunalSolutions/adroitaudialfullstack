@@ -11,6 +11,7 @@ import {
   getProductsByCategory,
   getTopRatedProducts,
   toggleProductStatus,
+  getCategories,
 } from "#controllers/product.controller.js";
 
 import { admin, protect } from "#middlewares/auth.middleware.js";
@@ -27,6 +28,9 @@ router.get("/top-deals", getTopDeals);
 
 // Top Rated (numReviews > 50)
 router.get("/top-rated", getTopRatedProducts);
+
+// category 
+router.get('/categories', getCategories);
 
 // Products by Category
 router.get("/category/:category", getProductsByCategory);

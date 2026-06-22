@@ -55,7 +55,7 @@ const getProductsByCategory = async (req, res) => {
     },
     _id: { $ne: exclude },
     isActive: true,
-  }).limit(8);
+  }).limit(30);
 
   res.json(products);
 };
@@ -89,7 +89,16 @@ const getProductById = async (req, res) => {
     throw new Error("Product not found");
   }
 };
+/**
+ * @desc    Get all categories
+ * @route   GET /api/v1/products/categories
+ * @access  Public
+ */
+const getCategories = async (req, res) => {
+  const categories = await ProductModel.distinct('category');
 
+  res.json(categories);
+};
 /**
  * @desc    Create product
  * @route   POST /api/v1/products
@@ -105,7 +114,7 @@ const createProduct = async (req, res) => {
     brand,
     category,
     section,
-    subcategory,
+    subCategory,
     countInStock,
     content,
     isTopDeal,
@@ -122,7 +131,7 @@ const createProduct = async (req, res) => {
     brand,
     category,
     section,
-    subcategory,
+    subCategory,
     countInStock,
     description,
     content,
@@ -242,6 +251,7 @@ export {
   getTopDeals,
   getProductsByCategory,
   getTopRatedProducts,
+  getCategories,
   createProduct,
   updateProduct,
   deleteProduct,

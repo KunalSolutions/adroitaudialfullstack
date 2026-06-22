@@ -6,7 +6,11 @@ import { toast } from 'react-toastify';
 import CheckoutSteps from '@components/CheckoutSteps';
 import Loader from '@components/Loader';
 import { clearCartItems } from '@slices/cartSlice';
-import { useCreateOrderMutation } from '@slices/orderApiSlice';
+import {
+	useCreateOrderMutation,
+	useCreateRazorpayOrderMutation,
+	useVerifyRazorpayPaymentMutation,
+} from '@slices/orderApiSlice';
 
 const PlaceOrderScreen = () => {
 	const navigate = useNavigate();
@@ -23,27 +27,135 @@ const PlaceOrderScreen = () => {
 	}, [cart.shippingAddress, cart.paymentMethod, navigate]);
 
 	const [createOrder, { isLoading }] = useCreateOrderMutation();
+	const [createRazorpayOrder] = useCreateRazorpayOrderMutation();
+	const [verifyRazorpayPayment] = useVerifyRazorpayPaymentMutation();
+
+	// const handlerPlaceOrder = async () => {
+	// 	try {
+	// 		// Create MongoDB order first
+	// 		const createdOrder = await createOrder({
+	// 			orderItems: cart.cartItems,
+	// 			shippingAddress: cart.shippingAddress,
+	// 			paymentMethod: cart.paymentMethod,
+	// 			itemsPrice: cart.itemsPrice,
+	// 			shippingPrice: cart.shippingPrice,
+	// 			taxPrice: cart.taxPrice,
+	// 			totalPrice: cart.totalPrice,
+	// 		}).unwrap();
+
+	// 		// COD Flow
+	// 		if (cart.paymentMethod === 'COD') {
+	// 			dispatch(clearCartItems());
+	// 			navigate(`/order/${createdOrder._id}`);
+	// 			return;
+	// 		}
+
+	// 		// Razorpay Flow
+	// 		// Razorpay Flow
+	// 		if (cart.paymentMethod === 'Razorpay') {
+	// 		console.log('Step 1: Razorpay selected');
+
+	// 		const razorpayOrder = await createRazorpayOrder(
+	// 			cart.totalPrice
+	// 		).unwrap();
+
+	// 		console.log('Step 2: Razorpay order created', razorpayOrder);
+
+	// 		console.log('window.Razorpay =', window.Razorpay);
+
+	// 		const options = {
+	// 			key: import.meta.env.VITE_RAZORPAY_KEY_ID,
+	// 			amount: razorpayOrder.amount,
+	// 			currency: razorpayOrder.currency,
+	// 			name: 'Adroit Audial',
+	// 			description: 'Order Payment',
+	// 			order_id: razorpayOrder.id,
+
+	// 			handler: async function (response) {
+	// 			console.log('Step 3: Payment success', response);
+	// 			},
+	// 		};
+
+	// 		const rzp = new window.Razorpay(options);
+
+	// 		console.log('Step 4: Opening popup');
+
+	// 		rzp.open();
+	// 		}
+	// 	} catch (error) {
+	// 		toast.error(error?.data?.message || 'Something went wrong');
+	// 	}
+	// };
 
 	const handlerPlaceOrder = async () => {
-		try {
-			const response = await createOrder({
-				orderItems: cart.cartItems,
-				shippingAddress: cart.shippingAddress,
-				paymentMethod: cart.paymentMethod,
-				itemsPrice: cart.itemsPrice,
-				shippingPrice: cart.shippingPrice,
-				taxPrice: cart.taxPrice,
-				totalPrice: cart.totalPrice,
-			}).unwrap();
+	try {
+		console.log('Payment Method:', cart.paymentMethod);
 
+		const createdOrder = await createOrder({
+			orderItems: cart.cartItems,
+			shippingAddress: cart.shippingAddress,
+			paymentMethod: cart.paymentMethod,
+			itemsPrice: cart.itemsPrice,
+			shippingPrice: cart.shippingPrice,
+			taxPrice: cart.taxPrice,
+			totalPrice: cart.totalPrice,
+		}).unwrap();
+
+		console.log('Mongo Order Created:', createdOrder);
+
+		if (cart.paymentMethod === 'COD') {
+			console.log('COD Flow');
 			dispatch(clearCartItems());
-
-			navigate(`/order/${response._id}`);
-		} catch (error) {
-			toast.error(error?.data?.message);
+			navigate(`/order/${createdOrder._id}`);
+			return;
 		}
-	};
 
+		if (cart.paymentMethod === 'Razorpay') {
+			console.log('Razorpay Flow Started');
+
+			const razorpayOrder = await createRazorpayOrder(
+				cart.totalPrice
+			).unwrap();
+
+			console.log('Razorpay Order:', razorpayOrder);
+
+			console.log('window.Razorpay:', window.Razorpay);
+
+			const rzp = new window.Razorpay({
+				key: import.meta.env.VITE_RAZORPAY_KEY_ID,
+				amount: razorpayOrder.amount,
+				currency: razorpayOrder.currency,
+				order_id: razorpayOrder.id,
+
+				handler: async function (response) {
+					try {
+					await verifyRazorpayPayment({
+						orderId: createdOrder._id,
+						paymentData: response,
+					}).unwrap();
+
+					dispatch(clearCartItems());
+
+					toast.success('Payment successful');
+
+					navigate(`/order/${createdOrder._id}`);
+					} catch (error) {
+					toast.error(
+						error?.data?.message || 'Payment verification failed'
+					);
+					}
+				},
+				});
+
+			console.log('Opening Razorpay');
+
+			rzp.open();
+		}
+	} catch (error) {
+		console.log('ERROR:', error);
+		toast.error(error?.data?.message || 'Something went wrong');
+	}
+};
 	return (
 		<div className="min-h-screen bg-gradient-to-b from-white via-slate-50 to-white py-12">
 

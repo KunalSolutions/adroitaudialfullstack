@@ -6,6 +6,7 @@ import {
   useGetTopDealsQuery,
   useGetTopRatedProductsQuery,
   useGetProductsByCategoryQuery,
+  useGetCategoriesQuery,
 } from "@slices/productApiSlice";
 import { addToCart } from "@slices/cartSlice";
 import Loader from "@components/Loader";
@@ -23,6 +24,7 @@ const ShopPage = () => {
 
   const { data: topDeals } = useGetTopDealsQuery();
   const { data: topRated } = useGetTopRatedProductsQuery();
+  const { data: categories = [] } = useGetCategoriesQuery();
   const { data: categoryProducts } =
     useGetProductsByCategoryQuery(selectedCategory, {
       skip: !selectedCategory,
@@ -30,10 +32,12 @@ const ShopPage = () => {
 
   let products = data?.products || [];
 
+  // Category Filter
   if (selectedCategory && categoryProducts) {
     products = categoryProducts;
   }
 
+  // Quick Filters
   if (quickFilter === "deals" && topDeals) {
     products = topDeals;
   }
@@ -42,10 +46,13 @@ const ShopPage = () => {
     products = topRated;
   }
 
+  // Price Filter
   if (priceRange) {
     const [min, max] = priceRange.split("-").map(Number);
+
     products = products.filter((product) => {
-      const hasVariants = product.variants?.length > 0;
+      const hasVariants = product?.variants?.length > 0;
+
       const price = hasVariants
         ? product.variants[0].offerPrice
         : product.offerPrice;
@@ -103,7 +110,55 @@ const ShopPage = () => {
                 {error?.data?.message || error?.error}
               </Alert>
             ) : (
-              <>
+                <>
+                {/* Filters */}
+                <div className="mb-8">
+                  <div className="flex flex-wrap gap-4 mb-6">
+
+                    {/* Category */}
+                    <select
+                      value={selectedCategory}
+                      onChange={(e) => {
+                        setSelectedCategory(e.target.value);
+                        setQuickFilter("");
+                      }}
+                      className="border rounded-lg px-4 py-2"
+                    >
+                      <option value="">All Categories</option>
+
+                      {categories?.map((category) => (
+                        <option key={category} value={category}>
+                          {category}
+                        </option>
+                      ))}
+
+                    </select>
+
+                    {/* Price */}
+                    <select
+                      value={priceRange}
+                      onChange={(e) => setPriceRange(e.target.value)}
+                      className="border rounded-lg px-4 py-2"
+                    >
+                      <option value="">All Prices</option>
+                      <option value="0-5000">₹0 - ₹5,000</option>
+                      <option value="5000-10000">₹5,000 - ₹10,000</option>
+                      <option value="10000-25000">₹10,000 - ₹25,000</option>
+                      <option value="25000-50000">₹25,000 - ₹50,000</option>
+                      <option value="50000-9999999">₹50,000+</option>
+                    </select>
+
+                    <button
+                      onClick={clearFilters}
+                      className="px-4 py-2 bg-[#232466] text-white rounded-lg"
+                    >
+                      Clear Filters
+                    </button>
+
+                  </div>
+
+
+                </div>
                 {/* <div className="mb-6 text-sm text-gray-600">
                   Showing {products.length} products
                 </div> */}
@@ -199,8 +254,8 @@ const ShopPage = () => {
           </div>
 
         </div>
+            </div>
       </div>
-    </div>
   );
 };
 

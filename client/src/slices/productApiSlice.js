@@ -46,6 +46,13 @@ export const productsApiSlice = apiSlice.injectEndpoints({
       }),
     }),
 
+    // 🔹 Get All Categories
+    getCategories: builder.query({
+      query: () => ({
+        url: `${PRODUCTS_URL}/categories`,
+      }),
+    }),
+
     // 🔹 Create Product
     createProduct: builder.mutation({
       query: (data) => ({
@@ -118,4 +125,5 @@ export const {
   useDeleteProductMutation,
   useCreateReviewMutation,
   useToggleProductStatusMutation,
+  useGetCategoriesQuery,
 } = productsApiSlice;

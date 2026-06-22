@@ -1,4 +1,3 @@
-import { PayPalScriptProvider } from '@paypal/react-paypal-js';
 import { Provider } from 'react-redux';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
@@ -67,6 +66,10 @@ const router = createBrowserRouter([
 				path: '/search/:keyword/page/:pageNumber',
 				element: <HomeScreen />,
 			},
+			// {
+			// 	path: '/shop',
+			// 	element: <ShopPage />,
+			// },
 			{
 				path: '/shop/:id',
 				element: <ProductScreen />,
@@ -210,18 +213,12 @@ const router = createBrowserRouter([
 const App = () => {
 	return (
 		<Provider store={store}>
-			<PayPalScriptProvider
-				deferLoading={true}
-				options={{
-					currency: 'USD',
-				}}>
-				<RouterProvider router={router} />
-				<ToastContainer
-					position='bottom-right'
-					hideProgressBar
-					autoClose={5000}
-				/>
-			</PayPalScriptProvider>
+		<RouterProvider router={router} />
+		<ToastContainer
+			position="bottom-right"
+			hideProgressBar
+			autoClose={5000}
+		/>
 		</Provider>
 	);
 };

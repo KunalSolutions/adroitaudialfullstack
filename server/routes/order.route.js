@@ -7,6 +7,7 @@ import {
 	getOrders,
 	updateOrderToDelivered,
 	updateOrderToPaid,
+	createRazorpayOrder
 } from '#controllers/order.controller.js';
 import { admin, protect } from '#middlewares/auth.middleware.js';
 
@@ -17,5 +18,6 @@ router.route('/mine').get(protect, getMyOrders);
 router.route('/:id').get(protect, getOrderById);
 router.route('/:id/pay').put(protect, updateOrderToPaid);
 router.route('/:id/deliver').put(protect, admin, updateOrderToDelivered);
+router.post('/razorpay', protect, createRazorpayOrder);
 
 export default router;

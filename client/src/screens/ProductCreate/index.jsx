@@ -14,7 +14,7 @@ const ProductCreate = () => {
     image: "",
     section: "",
     category: "",
-    subcategory: "",
+    subCategory: "",
     brand: "",
     price: "",
     offerPrice: "",
@@ -201,12 +201,12 @@ const ProductCreate = () => {
 
           <div>
             <label className="mb-2 block text-sm font-semibold text-slate-700">
-              Subcategory
+              subCategory
             </label>
             <input
               type="text"
-              name="subcategory"
-              placeholder="Subcategory"
+              name="subCategory"
+              placeholder="subCategory"
               onChange={handleChange}
               required
               className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-[#EF5622] focus:outline-none focus:ring-2 focus:ring-[#EF5622]/20"

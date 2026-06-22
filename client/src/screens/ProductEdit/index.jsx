@@ -14,7 +14,8 @@ const ProductEditScreen = () => {
 	const { id: productId } = useParams();
 
 	const [name, setName] = useState('');
-	const [price, setPrice] = useState(0);
+	const [price, setPrice] = useState();
+	const [offprice, setOffprice] = useState();
 	const [image, setImage] = useState('');
 	const [brand, setBrand] = useState('');
 	const [category, setCategory] = useState('');
@@ -39,6 +40,7 @@ const ProductEditScreen = () => {
 		if (product) {
 			setName(product.name);
 			setPrice(product.price);
+			setOffprice(product.offprice);
 			setImage(product.image);
 			setBrand(product.brand);
 			setCategory(product.category);
@@ -55,6 +57,7 @@ const ProductEditScreen = () => {
 			productId,
 			name,
 			price,
+      offprice,
 			image,
 			brand,
 			category,
@@ -249,6 +252,19 @@ const ProductEditScreen = () => {
                   <input
                     value={price}
                     onChange={(e) => setPrice(e.target.value)}
+                    type="number"
+                    className="w-full rounded-xl border border-slate-300 px-4 py-3 transition focus:border-[#EF5622] focus:outline-none focus:ring-2 focus:ring-[#EF5622]/20"
+                  />
+                </div>
+
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-[#232466]">
+                    OffPrice (₹)
+                  </label>
+
+                  <input
+                    value={offprice}
+                    onChange={(e) => setOffprice(e.target.value)}
                     type="number"
                     className="w-full rounded-xl border border-slate-300 px-4 py-3 transition focus:border-[#EF5622] focus:outline-none focus:ring-2 focus:ring-[#EF5622]/20"
                   />

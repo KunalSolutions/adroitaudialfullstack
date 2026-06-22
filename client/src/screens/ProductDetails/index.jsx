@@ -217,7 +217,7 @@ return (
 
                 <button
                   onClick={addToCartHandler}
-                  className="flex-1 h-14 rounded-2xl bg-[#EF5622] hover:bg-[#232466] text-white font-bold transition-all duration-300"
+                  className="flex-1 h-20 py-5 lg:h-15  rounded-2xl bg-[#EF5622] hover:bg-[#232466] text-white font-bold transition-all duration-300 md"
                 >
                   Add To Cart
                 </button>

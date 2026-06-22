@@ -36,7 +36,7 @@ const CartScreen = () => {
 					<div className='mt-8'>
 						<Alert type='info'>
 							Your cart is empty.{' '}
-							<Link to='/Shop' className='underline'>
+							<Link to='/products' className='underline'>
 								Go back to shop
 							</Link>
 						</Alert>

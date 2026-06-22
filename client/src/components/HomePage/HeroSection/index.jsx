@@ -35,7 +35,7 @@ export default function HeroSection() {
   return (
     <section className="relative w-full overflow-hidden">
       {/* Slider */}
-      <div className="relative h-[10vh] sm:h-[65vh] md:h-[70vh] lg:h-[10vh] xl:h-[80vh]">
+      <div className="relative h-[30vh] sm:h-[65vh] md:h-[70vh] lg:h-[10vh] xl:h-[80vh]">
 
         {slides.map((slide, index) => (
           <div
@@ -72,7 +72,7 @@ export default function HeroSection() {
         </button>
 
         {/* Dots */}
-        <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-10">
+        {/* <div className="absolute bottom-6 left-1/2 -translate-x-1/2 flex gap-3 z-10">
           {slides.map((_, index) => (
             <button
               key={index}
@@ -84,7 +84,7 @@ export default function HeroSection() {
               }`}
             />
           ))}
-        </div>
+        </div> */}
       </div>
     </section>
   );

@@ -2,7 +2,7 @@ const brands = [
   "/Brands/01.svg",
   "/Brands/02.avif",
   "/Brands/03.png",
-  "/Brands/04.avif",
+  "/Brands/Sennheiser-logo-new.png",
   "/Brands/05.png",
   "/Brands/06.png",
   "/Brands/07.png",

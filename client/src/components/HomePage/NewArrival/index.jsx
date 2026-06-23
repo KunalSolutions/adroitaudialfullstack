@@ -16,7 +16,7 @@ const HomeCards = () => {
       description:
         "Discover professional audio software, virtual instruments, effects, and creative production tools.",
       image: "/images/software.webp",
-      link: "/software",
+      link: "/software-and-plugins",
       bg: "bg-gradient-to-br from-purple-50 to-purple-100",
     },
     {

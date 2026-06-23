@@ -15,8 +15,8 @@ const brands = [
     image: "/Brands/03.png",
   },
   {
-    name: "QSC",
-    image: "/Brands/04.png",
+    name: "sennheiser",
+    image: "/Brands/Sennheiser-logo-new.png",
   },
   {
     name: "Bose Professional",
@@ -135,7 +135,7 @@ export default function BrandSection() {
             Professional Audio
           </h3>
 
-         <div className="grid grid-cols-3 sm:grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-6">
+         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-3 gap-6">
 
           {brands.map((brand, index) => (
             <div

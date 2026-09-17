@@ -50,7 +50,7 @@ const CorporateProductScreen = () => {
           </h1>
 
           <p className="mx-auto mt-5 max-w-3xl text-lg text-[#232466]">
-            Discover premium Repeet audio solutions
+            Discover premium Sonic audio solutions
             designed for professional audio, commercial installations,
             events, studios and businesses.
           </p>

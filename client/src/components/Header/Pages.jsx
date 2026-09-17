@@ -45,29 +45,29 @@ const Pages = () => {
 
       {/* Products Dropdown */}
       <div
-  className="relative"
-  onMouseEnter={() => setShowProducts(true)}
-  onMouseLeave={() => setShowProducts(false)}
->
-  <NavLink
-    to="/products"
-    className={({ isActive }) =>
-      `relative flex items-center gap-1 text-base font-medium ${
-        isActive
-          ? "text-[#232466]"
-          : "text-[#232466] hover:text-[#EF5622]"
-      }`
-    }
-  >
-    Products
+        className="relative"
+        onMouseEnter={() => setShowProducts(true)}
+        onMouseLeave={() => setShowProducts(false)}
+      >
+        <NavLink
+          to="/products"
+          className={({ isActive }) =>
+            `relative flex items-center gap-1 text-base font-medium ${
+              isActive
+                ? "text-[#232466]"
+                : "text-[#232466] hover:text-[#EF5622]"
+            }`
+          }
+        >
+          Regular products
 
-    <ChevronDown
-      size={16}
-      className={`transition-transform ${
-        showProducts ? "rotate-0" : ""
-      }`}
-    />
-  </NavLink>
+          <ChevronDown
+            size={16}
+            className={`transition-transform ${
+              showProducts ? "rotate-0" : ""
+            }`}
+          />
+        </NavLink>
 
   {showProducts && (
     <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50">
@@ -96,6 +96,10 @@ const Pages = () => {
     </div>
   )}
 </div>
+
+     <NavLink to="/co-prod" className={navLinkClass}>
+        Corporate products
+      </NavLink>
 
       <NavLink to="/solutions" className={navLinkClass}>
         Solutions

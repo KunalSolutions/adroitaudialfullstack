@@ -42,6 +42,8 @@ import ProductScreen from '@screens/ProductDetails';
 import AdminDashboard from '@components/AdminDashboard';
 import CategoryProductsScreen from '@components/Product/CategoryProductsScreen';
 import SoftwareAndPluginsScreen from '@components/Product/SoftwareAndPluginsScreen';
+import CorporateProductScreen from '@screens/CorporateProductScreen';
+import AdroitProjectDetailsScreen from '@screens/CorporateProductScreen/AdroitProjectDetailsScreen';
 
 const router = createBrowserRouter([
 	{
@@ -66,10 +68,10 @@ const router = createBrowserRouter([
 				path: '/search/:keyword/page/:pageNumber',
 				element: <HomeScreen />,
 			},
-			// {
-			// 	path: '/shop',
-			// 	element: <ShopPage />,
-			// },
+			{
+				path: '/shop',
+				element: <ShopPage />,
+			},
 			{
 				path: '/shop/:id',
 				element: <ProductScreen />,
@@ -101,6 +103,14 @@ const router = createBrowserRouter([
 			{
 				path: '/products',
 				element: <Product />
+			},
+			{
+				path: '/co-prod',
+				element: <CorporateProductScreen />
+			},
+			{
+				path: '/co-prod/adroit/:id',
+				element: <AdroitProjectDetailsScreen />
 			},
 			{
 				path: '/category/:category',

@@ -46,7 +46,7 @@ const CorporateProductScreen = () => {
         <div className="mx-auto max-w-7xl px-4 text-center">
 
           <h1 className="mt-0 text-5xl font-black uppercase text-[#EF5622]">
-            Repeet
+            Sonic
           </h1>
 
           <p className="mx-auto mt-5 max-w-3xl text-lg text-[#232466]">

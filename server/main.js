@@ -16,9 +16,6 @@ import uploadRoutes from '#routes/upload.route.js';
 import userRoutes from '#routes/user.route.js';
 import contactRoutes from "./routes/contactRoutes.js";
 
-console.log('RAZORPAY_KEY_ID:', process.env.RAZORPAY_KEY_ID);
-console.log('RAZORPAY_KEY_SECRET exists:', !!process.env.RAZORPAY_KEY_SECRET);
-
 connectDB();
 
 const port = process.env.PORT || 5000;

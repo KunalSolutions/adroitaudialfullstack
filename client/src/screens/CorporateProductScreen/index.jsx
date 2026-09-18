@@ -118,13 +118,13 @@ const CorporateProductScreen = () => {
 
                       {/* Name */}
                       <Link to={`/shop/${product._id}`}>
-                        <h3 className="mt-2 min-h-[5px] font-semibold text-slate-800">
+                        <h3 className="mt-2 min-h-[5px] line-clamp-1 font-semibold text-slate-800">
                           {product.name}
                         </h3>
                       </Link>
 
                        <Link to={`/shop/${product._id}`}>
-                        <h3 className="mt-2 line-clamp-2 min-h-[52px] font-semibold text-slate-800/70">
+                        <h3 className="mt-2 line-clamp-3 min-h-[52px] font-semibold text-slate-800/70">
                           {product.description}
                         </h3>
                       </Link>

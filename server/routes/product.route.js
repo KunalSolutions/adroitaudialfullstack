@@ -12,6 +12,7 @@ import {
   getTopRatedProducts,
   toggleProductStatus,
   getCategories,
+  getProductsByBrand,
 } from "#controllers/product.controller.js";
 
 import { admin, protect } from "#middlewares/auth.middleware.js";
@@ -34,6 +35,9 @@ router.get('/categories', getCategories);
 
 // Products by Category
 router.get("/category/:category", getProductsByCategory);
+
+// Product by Brand 
+router.get("/brand/:brand", getProductsByBrand);
 
 // Single product
 router.route("/:id").get(getProductById);

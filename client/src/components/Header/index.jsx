@@ -16,7 +16,7 @@ const Header = () => {
 			<TopAnnouncementBar />
 			<div className='relative z-50 max-w-full bg-white  mx-auto px-3 sm:px-6 lg:px-6'>
 				<div className='relative flex h-28 w-full bg-white items-center justify-between sm:h-30'>
-					<div className='flex bg-white flex-1 items-center justify-between gap-10'>
+					<div className='flex bg-white flex-1 items-center justify-between gap-5'>
 						<Logo />
 						<Pages  />
 						{/* <SearchBar /> */}

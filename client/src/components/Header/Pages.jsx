@@ -4,6 +4,7 @@ import { ChevronDown } from "lucide-react";
 
 const Pages = () => {
   const [showProducts, setShowProducts] = useState(false);
+  const [showCorporateProducts, setShowCorporateProducts] = useState(false);
 
   const productCategories = [
     "Microphone",
@@ -18,11 +19,15 @@ const Pages = () => {
     "Studio Accessories",
   ];
 
+  const corporateCategories = [
+    "sonic",
+    "sonic pro"
+  ]
+
   const navLinkClass = ({ isActive }) =>
-    `relative text-base font-medium transition-all duration-300 ${
-      isActive
-        ? "text-[#232466] after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-full after:bg-[#EF5622]"
-        : "text-[#232466] hover:text-[#EF5622]"
+    `relative text-base font-medium transition-all duration-300 ${isActive
+      ? "text-[#232466] after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-full after:bg-[#EF5622]"
+      : "text-[#232466] hover:text-[#EF5622]"
     }`;
 
   const createSlug = (text) =>
@@ -43,7 +48,6 @@ const Pages = () => {
         Brands
       </NavLink>
 
-      {/* Products Dropdown */}
       <div
         className="relative"
         onMouseEnter={() => setShowProducts(true)}
@@ -52,10 +56,9 @@ const Pages = () => {
         <NavLink
           to="/products"
           className={({ isActive }) =>
-            `relative flex items-center gap-1 text-base font-medium ${
-              isActive
-                ? "text-[#232466]"
-                : "text-[#232466] hover:text-[#EF5622]"
+            `relative flex items-center gap-1 text-base font-medium ${isActive
+              ? "text-[#232466]"
+              : "text-[#232466] hover:text-[#EF5622]"
             }`
           }
         >
@@ -63,22 +66,21 @@ const Pages = () => {
 
           <ChevronDown
             size={16}
-            className={`transition-transform ${
-              showProducts ? "rotate-0" : ""
-            }`}
+            className={`transition-transform ${showProducts ? "rotate-0" : ""
+              }`}
           />
         </NavLink>
 
-  {showProducts && (
-    <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50">
-      <div className="w-72 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden">
+        {showProducts && (
+          <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50">
+            <div className="w-72 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden">
 
-        {productCategories.map((category) => (
-          <Link
-            key={category}
-            to={`/category/${category.toLowerCase().replace(/\s+/g, "-")}`}
-            onClick={() => setShowProducts(false)}
-            className="
+              {productCategories.map((category) => (
+                <Link
+                  key={category}
+                  to={`/category/${category.toLowerCase().replace(/\s+/g, "-")}`}
+                  onClick={() => setShowProducts(false)}
+                  className="
               block
               px-5
               py-3
@@ -87,19 +89,68 @@ const Pages = () => {
               hover:bg-[#232466]
               hover:text-white
             "
-          >
-            {category}
-          </Link>
-        ))}
+                >
+                  {category}
+                </Link>
+              ))}
 
+            </div>
+          </div>
+        )}
       </div>
-    </div>
-  )}
-</div>
 
-     <NavLink to="/co-prod" className={navLinkClass}>
-        Corporate products
-      </NavLink>
+      <div
+        className="relative"
+        onMouseEnter={() => setShowCorporateProducts(true)}
+        onMouseLeave={() => setShowCorporateProducts(false)}
+      >
+        <NavLink
+          to="/brand"
+          className={({ isActive }) =>
+            `relative flex items-center gap-1 text-base font-medium ${
+              isActive
+                ? "text-[#232466]"
+                : "text-[#232466] hover:text-[#EF5622]"
+            }`
+          }
+        >
+          Corporate products
+
+          <ChevronDown
+            size={16}
+            className={`transition-transform ${
+              showCorporateProducts ? "rotate-0" : ""
+            }`}
+          />
+        </NavLink>
+
+        {showCorporateProducts && (
+          <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50">
+            <div className="w-72 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden">
+              {corporateCategories.map((brand) => (
+                <Link
+                  key={brand}
+                  to={`/brand/${brand
+                    .toLowerCase()
+                    .replace(/\s+/g, "-")}`}
+                  onClick={() => setShowCorporateProducts(false)}
+                  className="
+                    block
+                    px-5
+                    py-3
+                    text-sm
+                    text-slate-700
+                    hover:bg-[#232466]
+                    hover:text-white
+                  "
+                >
+                  {brand}
+                </Link>
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
 
       <NavLink to="/solutions" className={navLinkClass}>
         Solutions

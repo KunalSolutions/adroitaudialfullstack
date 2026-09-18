@@ -21,14 +21,14 @@ console.log('RAZORPAY_KEY_SECRET exists:', !!process.env.RAZORPAY_KEY_SECRET);
 
 connectDB();
 
-const port =  process.env.PORT || 5000;
+const port = process.env.PORT || 5000;
 
 const app = express();
 
-app.set('trust proxy', 1); // 🔥 REQUIRED for Render cookies
+app.set('trust proxy', 1); 
 
-app.use(express.json()); // Request body parsing
-app.use(cookieParser()); // Cookies parsing and reading
+app.use(express.json());
+app.use(cookieParser()); 
 
 app.use(
 	cors({
@@ -56,19 +56,11 @@ app.get('/api/v1/config/razorpay', (req, res) => {
 const __dirname = path.resolve();
 app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
 
-if (process.env.NODE_ENV === 'production') {
-	app.use(express.static(path.join(__dirname, '/client/dist')));
-
-	app.get('/*splat', (req, res) => {
-		res.sendFile(path.resolve(__dirname, 'client', 'dist', 'index.html'));
+app.get('/', (req, res) => {
+	res.json({
+		message: 'API is running...',
 	});
-} else {
-	app.get('/', (req, res) => {
-		res.json({
-			message: 'API is running...',
-		});
-	});
-}
+});
 
 app.use(errorHandler);
 

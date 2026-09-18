@@ -99,6 +99,7 @@ const getCategories = async (req, res) => {
 
   res.json(categories);
 };
+
 /**
  * @desc    Create product
  * @route   POST /api/v1/products
@@ -144,6 +145,7 @@ const createProduct = async (req, res) => {
   const createdProduct = await product.save();
   res.status(201).json(createdProduct);
 };
+
 /**
  * @desc    Update product
  * @route   PUT /api/v1/products/:id
@@ -245,6 +247,42 @@ const toggleProductStatus = async (req, res) => {
   }
 };
 
+/**
+ * @desc    Fetch products by brand
+ * @route   GET /api/v1/products/brand/:brand
+ * @access  Public
+ */
+const getProductsByBrand = async (req, res) => {
+  try {
+    const { brand } = req.params;
+    const exclude = req.query.exclude;
+
+    const query = {
+      brand: {
+        $regex: new RegExp(`^${brand}$`, "i"),
+      },
+      isActive: true,
+    };
+
+    if (exclude) {
+      query._id = { $ne: exclude };
+    }
+
+    const products = await ProductModel.find(query)
+      .sort({ createdAt: -1 })
+      .limit(30);
+
+    res.json(products);
+  } catch (error) {
+    console.error("Get Products By Brand Error:", error);
+
+    res.status(500).json({
+      success: false,
+      message: error.message,
+    });
+  }
+};
+
 export {
   getProducts,
   getProductById,
@@ -257,4 +295,5 @@ export {
   deleteProduct,
   createProductReview,
   toggleProductStatus,
+  getProductsByBrand,
 };

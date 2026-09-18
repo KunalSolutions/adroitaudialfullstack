@@ -110,6 +110,13 @@ export const productsApiSlice = apiSlice.injectEndpoints({
       invalidatesTags: ["Product"],
     }),
 
+    // 🔹 Get Products by Brand
+    getProductsByBrand: builder.query({
+      query: (brand) => ({
+        url: `${PRODUCTS_URL}/brand/${brand}`,
+      }),
+    }),
+
   }),
 });
 
@@ -126,4 +133,5 @@ export const {
   useCreateReviewMutation,
   useToggleProductStatusMutation,
   useGetCategoriesQuery,
+  useGetProductsByBrandQuery,
 } = productsApiSlice;

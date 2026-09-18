@@ -31,9 +31,6 @@ const CategoryProductsScreen = () => {
     toast.success(`Item added to cart`)
   };
 
-    console.log("Category:", category);
-    console.log("Products:", products);
-
   return (
     <div className="bg-white min-h-screen">
 

@@ -9,6 +9,7 @@ import {
   useGetProductsQuery,
 } from '@slices/productApiSlice';
 import { toast } from 'react-toastify';
+import { BASE_URL } from '@constants';
 
 const ProductListScreen = () => {
   const { data, error, isLoading, refetch } = useGetProductsQuery();
@@ -165,7 +166,7 @@ const ProductListScreen = () => {
         <div className="flex flex-col gap-4 border-b border-slate-200 pb-6 md:flex-row md:items-center md:justify-between">
           <div>
             <h1 className="text-4xl font-bold text-[#232466]">
-              All Products
+              Adroit Audial All Products
             </h1>
 
             <p className="mt-2 text-sm text-slate-500">
@@ -365,7 +366,11 @@ const ProductListScreen = () => {
                             <div className="flex items-center gap-4">
 
                               <img
-                                src={product.image}
+                                src={
+                                  product.image?.startsWith('http')
+                                    ? product.image
+                                    : `${BASE_URL.replace('/api/v1', '')}${product.image}`
+                                }
                                 alt={product.name}
                                 className="h-16 w-16 rounded-2xl border border-slate-200 object-cover"
                               />

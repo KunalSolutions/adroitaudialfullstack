@@ -9,7 +9,7 @@ import {
   useGetProductsQuery,
 } from '@slices/productApiSlice';
 import { toast } from 'react-toastify';
-import { BASE_URL } from '@constants';
+import { BASE_URL } from '../../constants';
 
 const ProductListScreen = () => {
   const { data, error, isLoading, refetch } = useGetProductsQuery();

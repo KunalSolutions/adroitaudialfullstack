@@ -365,15 +365,17 @@ const ProductCreate = () => {
                   Section
                 </label>
 
-                <input
-                  type="text"
+                <select
                   name="section"
-                  placeholder="Section"
                   value={formData.section}
                   onChange={handleChange}
                   required
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-[#EF5622] focus:outline-none focus:ring-2 focus:ring-[#EF5622]/20"
-                />
+                  className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 focus:border-[#EF5622] focus:outline-none focus:ring-2 focus:ring-[#EF5622]/20"
+                >
+                  <option value="">Select Section</option>
+                  <option value="Regular">Regular</option>
+                  <option value="Corporate">Corporate</option>
+                </select>
               </div>
 
               <div>

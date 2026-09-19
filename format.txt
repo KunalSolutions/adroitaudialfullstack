@@ -1,0 +1,51 @@
+Professional Audio
+├── Speakers
+│   ├── Active Speakers
+│   ├── Passive Speakers
+│   ├── Line Array Speakers
+│   ├── Subwoofers
+│   ├── Column Speakers
+│   └── Installation Speakers
+│
+├── Microphones
+│   ├── Wired Microphones
+│   ├── Wireless Microphones
+│   ├── Lavalier Microphones
+│   ├── Headset Microphones
+│   └── Conference Microphones
+│
+├── Amplifiers
+│   ├── Power Amplifiers
+│   ├── Installation Amplifiers
+│   ├── Mixer Amplifiers
+│   └── Multi-Channel Amplifiers
+│
+├── Mixers
+│   ├── Analog Mixers
+│   ├── Digital Mixers
+│   ├── Powered Mixers
+│   └── DJ Mixers
+│
+├── Audio Processors
+│   ├── Equalizers
+│   ├── Compressors
+│   ├── Signal Processors
+│   └── Digital Processors
+│
+├── Conference Systems
+│   ├── Conference Microphones
+│   ├── Conference Speakers
+│   └── Conference Systems
+│
+├── Installation Audio
+│   ├── Ceiling Speakers
+│   ├── Wall Mount Speakers
+│   ├── Horn Speakers
+│   └── PA Systems
+│
+└── Accessories
+    ├── Cables
+    ├── Stands
+    ├── Connectors
+    ├── Mounting Accessories
+    └── Speaker Accessories

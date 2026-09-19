@@ -95,9 +95,15 @@ const getProductById = async (req, res) => {
  * @access  Public
  */
 const getCategories = async (req, res) => {
-  const categories = await ProductModel.distinct('category');
+  const { section } = req.query;
 
-  res.json(categories);
+  const query = section
+    ? { section, isActive: true }
+    : { isActive: true };
+
+  const categories = await ProductModel.distinct("category", query);
+
+  res.json(categories.filter(Boolean).sort());
 };
 
 /**

@@ -2,39 +2,29 @@ import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 
+import { useGetCategoriesQuery } from "../../slices/productApiSlice";
+
 const Pages = () => {
   const [showProducts, setShowProducts] = useState(false);
   const [showCorporateProducts, setShowCorporateProducts] = useState(false);
 
-  const productCategories = [
-    "Microphone",
-    "Audio Interfaces",
-    "Monitor Speakers",
-    "Monitor Speaker Bundle",
-    "Mixers",
-    "Studio Headphones",
-    "Pre Amps",
-    "Groove Production",
-    "Sound Proofing",
-    "Studio Accessories",
-  ];
+  const { data: categories = [] } = useGetCategoriesQuery();
 
-  const corporateCategories = [
-    "sonic",
-    "sonic pro"
-  ]
+  const { data: corporateCategories = [] } =
+    useGetCategoriesQuery("Corporate");
 
-  const navLinkClass = ({ isActive }) =>
-    `relative text-base font-medium transition-all duration-300 ${isActive
-      ? "text-[#232466] after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-full after:bg-[#EF5622]"
-      : "text-[#232466] hover:text-[#EF5622]"
+    const navLinkClass = ({ isActive }) =>
+    `relative text-base font-medium transition-all duration-300 ${
+      isActive
+        ? "text-[#232466] after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-full after:bg-[#EF5622]"
+        : "text-[#232466] hover:text-[#EF5622]"
     }`;
 
   const createSlug = (text) =>
     text.toLowerCase().replace(/\s+/g, "-");
 
   return (
-    <nav className="hidden md:flex  gap-8 lg:gap-10">
+    <nav className="hidden md:flex gap-8 lg:gap-10">
 
       <NavLink to="/" end className={navLinkClass}>
         Home
@@ -56,9 +46,10 @@ const Pages = () => {
         <NavLink
           to="/products"
           className={({ isActive }) =>
-            `relative flex items-center gap-1 text-base font-medium ${isActive
-              ? "text-[#232466]"
-              : "text-[#232466] hover:text-[#EF5622]"
+            `relative flex items-center gap-1 text-base font-medium ${
+              isActive
+                ? "text-[#232466]"
+                : "text-[#232466] hover:text-[#EF5622]"
             }`
           }
         >
@@ -66,8 +57,9 @@ const Pages = () => {
 
           <ChevronDown
             size={16}
-            className={`transition-transform ${showProducts ? "rotate-0" : ""
-              }`}
+            className={`transition-transform ${
+              showProducts ? "rotate-0" : ""
+            }`}
           />
         </NavLink>
 
@@ -75,24 +67,30 @@ const Pages = () => {
           <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50">
             <div className="w-72 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden">
 
-              {productCategories.map((category) => (
-                <Link
-                  key={category}
-                  to={`/category/${category.toLowerCase().replace(/\s+/g, "-")}`}
-                  onClick={() => setShowProducts(false)}
-                  className="
-              block
-              px-5
-              py-3
-              text-sm
-              text-slate-700
-              hover:bg-[#232466]
-              hover:text-white
-            "
-                >
-                  {category}
-                </Link>
-              ))}
+              {categories.length > 0 ? (
+                categories.map((category) => (
+                  <Link
+                    key={category}
+                    to={`/category/${createSlug(category)}`}
+                    onClick={() => setShowProducts(false)}
+                    className="
+                      block
+                      px-5
+                      py-3
+                      text-sm
+                      text-slate-700
+                      hover:bg-[#232466]
+                      hover:text-white
+                    "
+                  >
+                    {category}
+                  </Link>
+                ))
+              ) : (
+                <div className="px-5 py-3 text-sm text-slate-500">
+                  No categories available
+                </div>
+              )}
 
             </div>
           </div>
@@ -105,7 +103,7 @@ const Pages = () => {
         onMouseLeave={() => setShowCorporateProducts(false)}
       >
         <NavLink
-          to="/brand"
+          to="/products"
           className={({ isActive }) =>
             `relative flex items-center gap-1 text-base font-medium ${
               isActive
@@ -127,26 +125,32 @@ const Pages = () => {
         {showCorporateProducts && (
           <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50">
             <div className="w-72 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden">
-              {corporateCategories.map((brand) => (
-                <Link
-                  key={brand}
-                  to={`/brand/${brand
-                    .toLowerCase()
-                    .replace(/\s+/g, "-")}`}
-                  onClick={() => setShowCorporateProducts(false)}
-                  className="
-                    block
-                    px-5
-                    py-3
-                    text-sm
-                    text-slate-700
-                    hover:bg-[#232466]
-                    hover:text-white
-                  "
-                >
-                  {brand}
-                </Link>
-              ))}
+
+              {corporateCategories.length > 0 ? (
+                corporateCategories.map((category) => (
+                  <Link
+                    key={category}
+                    to={`/category/${createSlug(category)}`}
+                    onClick={() => setShowCorporateProducts(false)}
+                    className="
+                      block
+                      px-5
+                      py-3
+                      text-sm
+                      text-slate-700
+                      hover:bg-[#232466]
+                      hover:text-white
+                    "
+                  >
+                    {category}
+                  </Link>
+                ))
+              ) : (
+                <div className="px-5 py-3 text-sm text-slate-500">
+                  No corporate categories available
+                </div>
+              )}
+
             </div>
           </div>
         )}

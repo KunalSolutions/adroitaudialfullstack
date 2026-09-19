@@ -166,7 +166,7 @@ const ProductListScreen = () => {
         <div className="flex flex-col gap-4 border-b border-slate-200 pb-6 md:flex-row md:items-center md:justify-between">
           <div>
             <h1 className="text-4xl font-bold text-[#232466]">
-              Adroit Audial All Products
+              All Products
             </h1>
 
             <p className="mt-2 text-sm text-slate-500">

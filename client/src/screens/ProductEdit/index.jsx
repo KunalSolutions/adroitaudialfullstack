@@ -9,6 +9,7 @@ import {
 	useUpdateProductMutation,
 	useUploadProductImageMutation,
 } from '@slices/productApiSlice';
+import { BASE_URL } from '../../constants';
 
 const ProductEditScreen = () => {
 	const { id: productId } = useParams();
@@ -214,7 +215,11 @@ const ProductEditScreen = () => {
 
                 {image && (
                   <img
-                    src={image}
+                    src={
+                      image?.startsWith("http")
+                        ? image
+                        : `${BASE_URL.replace("/api/v1", "")}${image}`
+                    }
                     alt={name}
                     className="mb-5 h-64 w-full rounded-2xl border-2 border-[#232466]/10 object-cover"
                   />

@@ -4,6 +4,7 @@ import Loader from "@components/Loader";
 import Alert from "@components/Alert";
 
 import { useGetProductsByBrandQuery } from "@slices/productApiSlice";
+import { BASE_URL } from '../../constants';
 
 const BrandProductsScreen = () => {
   const { brand } = useParams();
@@ -55,10 +56,14 @@ const BrandProductsScreen = () => {
                 <Link to={`/co-prod/adroit/${product._id}`}>
                   <div className="relative bg-white p-0">
                     <img
-                      src={product.image}
-                      alt={product.name}
-                      className="mx-auto h-56 object-contain transition duration-500"
-                    />
+                        src={
+                          product.image?.startsWith("http")
+                            ? product.image
+                            : `${BASE_URL.replace("/api/v1", "")}${product.image}`
+                        }
+                        alt={product.name}
+                        className="mx-auto h-56 object-contain transition duration-500"
+                      />
                   </div>
                 </Link>
 

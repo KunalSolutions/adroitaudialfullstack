@@ -2,6 +2,7 @@ import { Link, useNavigate, useParams } from "react-router-dom";
 import { useGetProductDetailsQuery } from "@slices/productApiSlice";
 import Loader from "@components/Loader";
 import Alert from "@components/Alert";
+import { BASE_URL } from '../../constants';
 
 const AdroitProjectDetailsScreen = () => {
   const { id } = useParams();
@@ -48,10 +49,14 @@ const AdroitProjectDetailsScreen = () => {
           {/* Image */}
           <div className="flex items-center justify-center rounded-2xl p-8">
             <img
-              src={product?.image}
-              alt={product?.name}
-              className="max-h-[500px] w-full object-contain"
-            />
+                src={
+                    product?.image?.startsWith("http")
+                      ? product.image
+                      : `${BASE_URL.replace("/api/v1", "")}${product?.image}`
+                  }
+                  alt={product?.name}
+                  className="max-h-[500px] w-full object-contain"
+                />
           </div>
 
           {/* Information */}

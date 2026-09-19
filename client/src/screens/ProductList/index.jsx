@@ -367,9 +367,11 @@ const ProductListScreen = () => {
 
                               <img
                                 src={
-                                  product.image?.startsWith('http')
+                                  product.image?.startsWith("http")
                                     ? product.image
-                                    : `${BASE_URL.replace('/api/v1', '')}${product.image}`
+                                    : product.image?.startsWith("/uploads/")
+                                      ? `${BASE_URL.replace("/api/v1", "")}${product.image}`
+                                      : product.image
                                 }
                                 alt={product.name}
                                 className="h-16 w-16 rounded-2xl border border-slate-200 object-cover"

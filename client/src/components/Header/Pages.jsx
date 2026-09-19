@@ -8,10 +8,14 @@ const Pages = () => {
   const [showProducts, setShowProducts] = useState(false);
   const [showCorporateProducts, setShowCorporateProducts] = useState(false);
 
-  const { data: categories = [] } = useGetCategoriesQuery();
+  const regularSection = "Regular";
+  const corporateSection = "Corporate";
+
+  const { data: categories = [] } =
+    useGetCategoriesQuery(regularSection);
 
   const { data: corporateCategories = [] } =
-    useGetCategoriesQuery("Corporate");
+    useGetCategoriesQuery(corporateSection);
 
   const navLinkClass = ({ isActive }) =>
     `relative text-base font-medium transition-all duration-300 ${
@@ -25,7 +29,6 @@ const Pages = () => {
 
   return (
     <nav className="hidden md:flex gap-8 lg:gap-10">
-
       <NavLink to="/" end className={navLinkClass}>
         Home
       </NavLink>
@@ -66,12 +69,11 @@ const Pages = () => {
         {showProducts && (
           <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50">
             <div className="w-72 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden">
-
               {categories.length > 0 ? (
                 categories.map((category) => (
                   <Link
                     key={category}
-                    to={`/category/regular/${createSlug(category)}`}
+                    to={`/category/${createSlug(regularSection)}/${createSlug(category)}`}
                     onClick={() => setShowProducts(false)}
                     className="
                       block
@@ -91,7 +93,6 @@ const Pages = () => {
                   No categories available
                 </div>
               )}
-
             </div>
           </div>
         )}
@@ -125,12 +126,11 @@ const Pages = () => {
         {showCorporateProducts && (
           <div className="absolute top-full left-1/2 -translate-x-1/2 pt-4 z-50">
             <div className="w-72 bg-white rounded-xl shadow-2xl border border-slate-200 overflow-hidden">
-
               {corporateCategories.length > 0 ? (
                 corporateCategories.map((category) => (
                   <Link
                     key={category}
-                    to={`/category/corporate/${createSlug(category)}`}
+                    to={`/category/${createSlug(corporateSection)}/${createSlug(category)}`}
                     onClick={() => setShowCorporateProducts(false)}
                     className="
                       block
@@ -150,7 +150,6 @@ const Pages = () => {
                   No corporate categories available
                 </div>
               )}
-
             </div>
           </div>
         )}
@@ -167,7 +166,6 @@ const Pages = () => {
       <NavLink to="/contact" className={navLinkClass}>
         Contact
       </NavLink>
-
     </nav>
   );
 };

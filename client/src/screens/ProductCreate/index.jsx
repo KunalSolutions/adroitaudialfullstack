@@ -230,14 +230,10 @@ const ProductCreate = () => {
 
                     <label className="flex cursor-pointer flex-col items-center justify-center">
 
-                      <div className="mb-3 text-4xl">
-                        📷
-                      </div>
-
                       <span className="font-semibold text-[#232466]">
                         {isUploading
                           ? "Uploading image..."
-                          : "Choose Image"}
+                          : "Upload a Image"}
                       </span>
 
                       <span className="mt-1 text-sm text-slate-500">
@@ -383,15 +379,31 @@ const ProductCreate = () => {
                   Category
                 </label>
 
-                <input
-                  type="text"
+                <select
                   name="category"
-                  placeholder="Category"
                   value={formData.category}
                   onChange={handleChange}
                   required
-                  className="w-full rounded-xl border border-slate-300 px-4 py-3 focus:border-[#EF5622] focus:outline-none focus:ring-2 focus:ring-[#EF5622]/20"
-                />
+                  className="w-full rounded-xl border border-slate-300 bg-white px-4 py-3 focus:border-[#EF5622] focus:outline-none focus:ring-2 focus:ring-[#EF5622]/20"
+                >
+                  <option value="">Select Category</option>
+
+                  <option value="Speakers">Speakers</option>
+                  <option value="Microphones">Microphones</option>
+                  <option value="Amplifiers">Amplifiers</option>
+                  <option value="Mixers">Mixers</option>
+                  <option value="Audio Interfaces">Audio Interfaces</option>
+                  <option value="Audio Processors">Audio Processors</option>
+                  <option value="Conference Systems">Conference Systems</option>
+                  <option value="Ceiling Speakers">Ceiling Speakers</option>
+                  <option value="Wall Mount Speakers">Wall Mount Speakers</option>
+                  <option value="Installation Audio">Installation Audio</option>
+                  <option value="PA Systems">PA Systems</option>
+                  <option value="Subwoofers">Subwoofers</option>
+                  <option value="Accessories">Accessories</option>
+                  <option value="Cables">Cables</option>
+                  <option value="Stands">Stands</option>
+                </select>
               </div>
 
               <div>

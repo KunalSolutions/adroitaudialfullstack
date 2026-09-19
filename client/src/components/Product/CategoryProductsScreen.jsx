@@ -115,12 +115,17 @@ const CategoryProductsScreen = () => {
                     <Link to={`/co-prod/adroit/${product._id}`}>
                       <div className="relative bg-white p-0">
 
-                        <img
-                          src={getProductImage(product.image)}
+                      <img
+                          src={
+                            product.image?.startsWith("http")
+                              ? product.image
+                              : product.image?.startsWith("/uploads/")
+                                ? `https://adroitaudialfullstack.onrender.com${product.image}`
+                                : product.image
+                          }
                           alt={product.name}
-                          className="mx-auto h-56 object-contain transition duration-500"
+                          className="mx-auto h-56 w-full object-contain transition duration-500"
                         />
-
                       </div>
                     </Link>
 
@@ -205,12 +210,17 @@ const CategoryProductsScreen = () => {
                       )}
 
                       {/* Image */}
-
                       <img
-                        src={getProductImage(product.image)}
-                        alt={product.name}
-                        className="mx-auto h-56 object-contain transition duration-500"
-                      />
+                          src={
+                            product.image?.startsWith("http")
+                              ? product.image
+                              : product.image?.startsWith("/uploads/")
+                                ? `https://adroitaudialfullstack.onrender.com${product.image}`
+                                : product.image
+                          }
+                          alt={product.name}
+                          className="mx-auto h-56 w-full object-contain transition duration-500"
+                        />
 
                     </div>
                   </Link>

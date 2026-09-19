@@ -11,15 +11,23 @@ const CategoryProductsScreen = () => {
   const { section, category } = useParams();
   const dispatch = useDispatch();
 
+  const sectionName = section?.replace(/-/g, " ");
+  const categoryName = category?.replace(/-/g, " ");
+
   const {
     data: products = [],
     isLoading,
     error,
-  } = useGetProductsByCategoryQuery({ category, section });
-  
+  } = useGetProductsByCategoryQuery({
+    category: categoryName,
+    section: sectionName,
+  });
+
+  console.log("Section:", sectionName);
+  console.log("Category:", categoryName);
   console.log("Products:", products);
   console.log("Products count:", products.length);
-  
+
   const addToCartHandler = (product) => {
     dispatch(
       addToCart({
@@ -57,7 +65,6 @@ const CategoryProductsScreen = () => {
 
     return url;
   };
-  
 
   return (
     <div className="min-h-screen bg-white">
@@ -97,7 +104,8 @@ const CategoryProductsScreen = () => {
         ) : (
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
             {products.map((product) => {
-              const isCorporate = section === "corporate";
+              const isCorporate =
+                sectionName?.toLowerCase() === "corporate";
 
               if (isCorporate) {
                 return (
@@ -142,9 +150,11 @@ const CategoryProductsScreen = () => {
               }
 
               const hasVariants = product.variants?.length > 0;
+
               const displayPrice = hasVariants
                 ? product.variants[0].offerPrice
                 : product.offerPrice;
+
               const originalPrice = hasVariants
                 ? product.variants[0].price
                 : product.price;

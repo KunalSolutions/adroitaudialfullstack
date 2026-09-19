@@ -55,6 +55,12 @@ export const productsApiSlice = apiSlice.injectEndpoints({
       }),
     }),
 
+    getSections: builder.query({
+      query: () => ({
+        url: `${PRODUCTS_URL}/sections`,
+      }),
+    }),
+
     // 🔹 Create Product
     createProduct: builder.mutation({
       query: (data) => ({
@@ -136,4 +142,5 @@ export const {
   useToggleProductStatusMutation,
   useGetCategoriesQuery,
   useGetProductsByBrandQuery,
+  useGetSectionsQuery,
 } = productsApiSlice;

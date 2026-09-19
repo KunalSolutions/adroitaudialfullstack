@@ -2,20 +2,42 @@ import { useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { ChevronDown } from "lucide-react";
 
-import { useGetCategoriesQuery } from "../../slices/productApiSlice";
+import {
+  useGetCategoriesQuery,
+  useGetSectionsQuery,
+} from "../../slices/productApiSlice";
 
 const Pages = () => {
   const [showProducts, setShowProducts] = useState(false);
   const [showCorporateProducts, setShowCorporateProducts] = useState(false);
 
-  const regularSection = "Regular";
-  const corporateSection = "Corporate";
+  const { data: sections = [] } = useGetSectionsQuery();
+
+  const sectionNames = sections.map((section) =>
+    typeof section === "string" ? section : section.section
+  );
+
+  const regularSection =
+    sectionNames.find(
+      (section) =>
+        section?.toLowerCase() === "audio equipment"
+    ) || sectionNames[0];
+
+  const corporateSection =
+    sectionNames.find(
+      (section) =>
+        section?.toLowerCase() === "corporate"
+    );
 
   const { data: categories = [] } =
-    useGetCategoriesQuery(regularSection);
+    useGetCategoriesQuery(regularSection, {
+      skip: !regularSection,
+    });
 
   const { data: corporateCategories = [] } =
-    useGetCategoriesQuery(corporateSection);
+    useGetCategoriesQuery(corporateSection, {
+      skip: !corporateSection,
+    });
 
   const navLinkClass = ({ isActive }) =>
     `relative text-base font-medium transition-all duration-300 ${
@@ -56,7 +78,7 @@ const Pages = () => {
             }`
           }
         >
-          Regular products
+          {regularSection || "Products"}
 
           <ChevronDown
             size={16}
@@ -73,7 +95,9 @@ const Pages = () => {
                 categories.map((category) => (
                   <Link
                     key={category}
-                    to={`/category/${createSlug(regularSection)}/${createSlug(category)}`}
+                    to={`/category/${createSlug(
+                      regularSection
+                    )}/${createSlug(category)}`}
                     onClick={() => setShowProducts(false)}
                     className="
                       block
@@ -130,8 +154,12 @@ const Pages = () => {
                 corporateCategories.map((category) => (
                   <Link
                     key={category}
-                    to={`/category/${createSlug(corporateSection)}/${createSlug(category)}`}
-                    onClick={() => setShowCorporateProducts(false)}
+                    to={`/category/${createSlug(
+                      corporateSection
+                    )}/${createSlug(category)}`}
+                    onClick={() =>
+                      setShowCorporateProducts(false)
+                    }
                     className="
                       block
                       px-5

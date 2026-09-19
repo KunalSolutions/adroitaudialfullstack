@@ -13,6 +13,7 @@ import {
   toggleProductStatus,
   getCategories,
   getProductsByBrand,
+  getSections,
 } from "#controllers/product.controller.js";
 
 import { admin, protect } from "#middlewares/auth.middleware.js";
@@ -23,6 +24,8 @@ const router = express.Router();
 
 // All products (with pagination + search)
 router.route("/").get(getProducts);
+
+router.get("/sections", getSections);
 
 // Top Deals
 router.get("/top-deals", getTopDeals);

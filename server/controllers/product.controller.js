@@ -49,37 +49,47 @@ const getProductsByCategory = async (req, res) => {
   const { category } = req.params;
   const { section, exclude } = req.query;
 
-  const categoryName = category.replace(/-/g, " ");
+  const categoryName = category?.replace(/-/g, " ").trim();
+  const sectionName = section?.replace(/-/g, " ").trim();
+
+  const normalizeRegex = (value) => {
+    const parts = value
+      .replace(/-/g, " ")
+      .trim()
+      .split(/\s+/)
+      .map((part) =>
+        part.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")
+      );
+
+    return new RegExp(`^${parts.join("[-\\s]+")}$`, "i");
+  };
 
   const query = {
-    category: {
-      $regex: new RegExp(
-        `^${categoryName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`,
-        "i"
-      ),
-    },
+    category: normalizeRegex(categoryName),
     isActive: true,
   };
 
-  if (section) {
-    query.section = {
-      $regex: new RegExp(
-        `^${section.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`,
-        "i"
-      ),
-    };
+  if (sectionName) {
+    query.section = normalizeRegex(sectionName);
   }
 
   if (exclude) {
     query._id = { $ne: exclude };
   }
 
+  console.log("CATEGORY:", categoryName);
+  console.log("SECTION:", sectionName);
+  console.log("QUERY:", query);
+
   const products = await ProductModel.find(query)
     .sort({ createdAt: -1 })
     .limit(30);
 
+  console.log("PRODUCT COUNT:", products.length);
+
   res.json(products);
 };
+
 
 /**
  * @desc    Fetch Top Rated Products (numReviews > 50)
@@ -119,11 +129,18 @@ const getProductById = async (req, res) => {
 const getCategories = async (req, res) => {
   const { section } = req.query;
 
-  const query = section
-    ? { section, isActive: true }
-    : { isActive: true };
+  if (!section) {
+    return res.status(400).json({
+      message: "Section is required",
+    });
+  }
 
-  const products = await ProductModel.find(query)
+  const products = await ProductModel.find({
+    section: {
+      $regex: new RegExp(`^${section}$`, "i"),
+    },
+    isActive: true,
+  })
     .select("category createdAt")
     .sort({ createdAt: 1 });
 
@@ -141,6 +158,13 @@ const getCategories = async (req, res) => {
   res.json(categories);
 };
 
+const getSections = async (req, res) => {
+  const sections = await ProductModel.find({
+    isActive: true,
+  }).select("section category name");
+
+  res.json(sections);
+};
 /**
  * @desc    Create product
  * @route   POST /api/v1/products
@@ -337,4 +361,5 @@ export {
   createProductReview,
   toggleProductStatus,
   getProductsByBrand,
+  getSections,
 };

@@ -16,7 +16,10 @@ const CategoryProductsScreen = () => {
     isLoading,
     error,
   } = useGetProductsByCategoryQuery({ category, section });
-
+  
+  console.log("Products:", products);
+  console.log("Products count:", products.length);
+  
   const addToCartHandler = (product) => {
     dispatch(
       addToCart({
@@ -30,16 +33,31 @@ const CategoryProductsScreen = () => {
   };
 
   const getProductImage = (image) => {
+    console.log("IMAGE FROM DB:", image);
+
     if (!image) return "";
 
-    if (image.startsWith("http")) return image;
-
-    if (image.startsWith("/uploads/")) {
-      return `https://adroitaudialfullstack.onrender.com${image}`;
+    if (image.startsWith("http://") || image.startsWith("https://")) {
+      console.log("IMAGE URL:", image);
+      return image;
     }
 
-    return image.startsWith("/") ? image : `/${image}`;
+    if (image.startsWith("/uploads/") || image.startsWith("uploads/")) {
+      const url = `https://adroitaudialfullstack.onrender.com/${
+        image.startsWith("/") ? image.slice(1) : image
+      }`;
+
+      console.log("IMAGE URL:", url);
+      return url;
+    }
+
+    const url = image.startsWith("/") ? image : `/${image}`;
+
+    console.log("IMAGE URL:", url);
+
+    return url;
   };
+  
 
   return (
     <div className="min-h-screen bg-white">

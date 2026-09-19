@@ -51,7 +51,7 @@ app.get('/api/v1/config/razorpay', (req, res) => {
 });
 
 const __dirname = path.resolve();
-app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
+app.use('/uploads', express.static(path.join(__dirname, 'upload')));
 
 app.get('/', (req, res) => {
 	res.json({

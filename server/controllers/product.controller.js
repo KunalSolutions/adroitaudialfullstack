@@ -49,16 +49,24 @@ const getProductsByCategory = async (req, res) => {
   const { category } = req.params;
   const { section, exclude } = req.query;
 
+  const categoryName = category.replace(/-/g, " ");
+
   const query = {
     category: {
-      $regex: new RegExp(`^${category}$`, "i"),
+      $regex: new RegExp(
+        `^${categoryName.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`,
+        "i"
+      ),
     },
     isActive: true,
   };
 
   if (section) {
     query.section = {
-      $regex: new RegExp(`^${section}$`, "i"),
+      $regex: new RegExp(
+        `^${section.replace(/[.*+?^${}()|[\]\\]/g, "\\$&")}$`,
+        "i"
+      ),
     };
   }
 

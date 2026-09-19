@@ -141,11 +141,11 @@ const AdroitProjectDetailsScreen = () => {
           {product.description}
         </p>
 
-        {product.content && (
+        {/* {product.content && (
           <div className="mt-6 text-slate-600 leading-8">
             {product.content}
           </div>
-        )}
+        )} */}
 
       </div>
 

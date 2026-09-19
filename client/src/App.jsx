@@ -115,7 +115,7 @@ const router = createBrowserRouter([
 				element: <AdroitProjectDetailsScreen />
 			},
 			{
-				path: '/category/:category',
+				path: '/category/:section/:category',
 				element: <CategoryProductsScreen />
 			},
 			{

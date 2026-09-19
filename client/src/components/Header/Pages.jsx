@@ -13,7 +13,7 @@ const Pages = () => {
   const { data: corporateCategories = [] } =
     useGetCategoriesQuery("Corporate");
 
-    const navLinkClass = ({ isActive }) =>
+  const navLinkClass = ({ isActive }) =>
     `relative text-base font-medium transition-all duration-300 ${
       isActive
         ? "text-[#232466] after:absolute after:left-0 after:-bottom-2 after:h-[2px] after:w-full after:bg-[#EF5622]"
@@ -71,7 +71,7 @@ const Pages = () => {
                 categories.map((category) => (
                   <Link
                     key={category}
-                    to={`/category/${createSlug(category)}`}
+                    to={`/category/regular/${createSlug(category)}`}
                     onClick={() => setShowProducts(false)}
                     className="
                       block
@@ -130,7 +130,7 @@ const Pages = () => {
                 corporateCategories.map((category) => (
                   <Link
                     key={category}
-                    to={`/category/${createSlug(category)}`}
+                    to={`/category/corporate/${createSlug(category)}`}
                     onClick={() => setShowCorporateProducts(false)}
                     className="
                       block

@@ -41,8 +41,9 @@ export const productsApiSlice = apiSlice.injectEndpoints({
 
     // 🔹 Get Products by Category
     getProductsByCategory: builder.query({
-      query: (category) => ({
+      query: ({ category, section }) => ({
         url: `${PRODUCTS_URL}/category/${category}`,
+        params: { section },
       }),
     }),
 

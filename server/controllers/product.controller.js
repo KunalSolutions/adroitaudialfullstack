@@ -47,15 +47,28 @@ const getTopDeals = async (req, res) => {
  */
 const getProductsByCategory = async (req, res) => {
   const { category } = req.params;
-  const exclude = req.query.exclude;
+  const { section, exclude } = req.query;
 
-  const products = await ProductModel.find({
+  const query = {
     category: {
       $regex: new RegExp(`^${category}$`, "i"),
     },
-    _id: { $ne: exclude },
     isActive: true,
-  }).limit(30);
+  };
+
+  if (section) {
+    query.section = {
+      $regex: new RegExp(`^${section}$`, "i"),
+    };
+  }
+
+  if (exclude) {
+    query._id = { $ne: exclude };
+  }
+
+  const products = await ProductModel.find(query)
+    .sort({ createdAt: -1 })
+    .limit(30);
 
   res.json(products);
 };
@@ -89,6 +102,7 @@ const getProductById = async (req, res) => {
     throw new Error("Product not found");
   }
 };
+
 /**
  * @desc    Get all categories
  * @route   GET /api/v1/products/categories
@@ -101,9 +115,22 @@ const getCategories = async (req, res) => {
     ? { section, isActive: true }
     : { isActive: true };
 
-  const categories = await ProductModel.distinct("category", query);
+  const products = await ProductModel.find(query)
+    .select("category createdAt")
+    .sort({ createdAt: 1 });
 
-  res.json(categories.filter(Boolean).sort());
+  const categories = [];
+
+  products.forEach((product) => {
+    if (
+      product.category &&
+      !categories.includes(product.category)
+    ) {
+      categories.push(product.category);
+    }
+  });
+
+  res.json(categories);
 };
 
 /**

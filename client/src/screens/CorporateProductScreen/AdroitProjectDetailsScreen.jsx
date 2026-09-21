@@ -33,13 +33,13 @@ const AdroitProjectDetailsScreen = () => {
   return (
     <div className="min-h-screen bg-white">
 
-        {/* Back Button */}
-        <button
-          onClick={() => navigate(-1)}
-          className="px-16 mt-3 text-[#232466] font-medium hover:text-[#EF5622] transition-colors"
-        >
-          ← Back
-        </button>
+      {/* Back Button */}
+      <button
+        onClick={() => navigate(-1)}
+        className="px-16 mt-3 text-[#232466] font-medium hover:text-[#EF5622] transition-colors"
+      >
+        ← Back
+      </button>
 
       {/* Product Details */}
       <section className="mx-auto max-w-7xl px-4 py-1">
@@ -49,14 +49,10 @@ const AdroitProjectDetailsScreen = () => {
           {/* Image */}
           <div className="flex items-center justify-center rounded-2xl p-8">
             <img
-                src={
-                    product?.image?.startsWith("http")
-                      ? product.image
-                      : `${BASE_URL.replace("/api/v1", "")}${product?.image}`
-                  }
-                  alt={product?.name}
-                  className="max-h-[500px] w-full object-contain"
-                />
+              src={product.image}
+              alt={product.name}
+              className="max-h-[500px] w-full object-contain"
+            />
           </div>
 
           {/* Information */}
@@ -82,47 +78,47 @@ const AdroitProjectDetailsScreen = () => {
               </div>
             )}
 
-             {/* Query */}
+            {/* Query */}
             <div className="mt-8 rounded-2xl p-0">
 
-                <h3 className="text-xl font-bold text-gray-900">
-                    Interested in this solution?
-                </h3>
+              <h3 className="text-xl font-bold text-gray-900">
+                Interested in this solution?
+              </h3>
 
-                <p className="mt-2 text-gray-600">
-                    Contact our team for product information, pricing,
-                    installation requirements or a project quotation.
-                </p>
+              <p className="mt-2 text-gray-600">
+                Contact our team for product information, pricing,
+                installation requirements or a project quotation.
+              </p>
 
-                <div className="mt-5 flex flex-wrap gap-3">
+              <div className="mt-5 flex flex-wrap gap-3">
 
-                    <Link
-                    to="/contact"
-                    className="inline-flex rounded-xl bg-[#EF5622] px-6 py-3 font-semibold text-white transition hover:opacity-90"
-                    >
-                    Send an Enquiry
-                    </Link>
+                <Link
+                  to="/contact"
+                  className="inline-flex rounded-xl bg-[#EF5622] px-6 py-3 font-semibold text-white transition hover:opacity-90"
+                >
+                  Send an Enquiry
+                </Link>
 
-                    <a
-                    href="https://wa.me/919511609437"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex rounded-xl bg-green-600 px-6 py-3 font-semibold text-white transition hover:opacity-90"
-                    >
-                    WhatsApp
-                    </a>
+                <a
+                  href="https://wa.me/919511609437"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex rounded-xl bg-green-600 px-6 py-3 font-semibold text-white transition hover:opacity-90"
+                >
+                  WhatsApp
+                </a>
 
-                    {/* Call */}
-                    <a
-                    href="tel:+919511609437"
-                    className="inline-flex rounded-xl text-white px-6 py-3 font-semibold bg-[#232466] transition hover:opacity-90"
-                    >
-                    Call Now
-                    </a>
+                {/* Call */}
+                <a
+                  href="tel:+919511609437"
+                  className="inline-flex rounded-xl text-white px-6 py-3 font-semibold bg-[#232466] transition hover:opacity-90"
+                >
+                  Call Now
+                </a>
 
-                </div>
+              </div>
 
-                </div>
+            </div>
 
           </div>
 

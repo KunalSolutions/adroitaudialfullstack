@@ -3,54 +3,37 @@ import dotenv from 'dotenv';
 
 import connectDB from '#config/db.config.js';
 import products from '#data/products.data.js';
-import users from '#data/users.data.js';
-import OrderModel from '#models/order.model.js';
-import ProductModel from '#models/product.model.js';
 import UserModel from '#models/user.model.js';
+import ProductModel from '#models/product.model.js';
 
 dotenv.config();
 
 connectDB();
 
 const importData = async () => {
-	try {
-		await OrderModel.deleteMany();
-		await ProductModel.deleteMany();
-		await UserModel.deleteMany();
+  try {
+    const adminUser = await UserModel.findOne();
 
-		const createdUsers = await UserModel.insertMany(users);
-		const adminUser = createdUsers[0]._id;
+    if (!adminUser) {
+      console.log('No user found. Please create a user first.'.red);
+      process.exit(1);
+    }
 
-		const sampleProducts = products.map((product) => {
-			return { ...product, user: adminUser };
-		});
+    const sampleProducts = products.map((product) => {
+      return {
+        ...product,
+        user: adminUser._id,
+      };
+    });
 
-		await ProductModel.insertMany(sampleProducts);
+    await ProductModel.insertMany(sampleProducts);
 
-		console.log('Data Imported'.bgGreen);
-		process.exit();
-	} catch (error) {
-		console.error(`${error.message}`.red.underline);
-		process.exit(1);
-	}
+    console.log('Products Imported Successfully'.bgGreen);
+    process.exit();
+  } catch (error) {
+    console.error(`${error.message}`.red.underline);
+    process.exit(1);
+  }
 };
 
-const destroyData = async () => {
-	try {
-		await OrderModel.deleteMany();
-		await ProductModel.deleteMany();
-		await UserModel.deleteMany();
-
-		console.log('Data Destroyed'.bgRed);
-		process.exit();
-	} catch (error) {
-		console.error(`${error.message}`.red.underline);
-		process.exit(1);
-	}
-};
-
-if (process.argv[2] === '-d') {
-	destroyData();
-} else {
-	importData();
-}
+importData();

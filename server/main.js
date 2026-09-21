@@ -43,7 +43,7 @@ app.use(morgan('dev'));
 app.use('/api/v1/products', productRoutes);
 app.use('/api/v1/users', userRoutes);
 app.use('/api/v1/orders', orderRoutes);
-app.use('/api/v1/upload', uploadRoutes);
+app.use('/api/v1/uploads', uploadRoutes);
 app.use("/api/contact", contactRoutes);
 
 app.get('/api/v1/config/razorpay', (req, res) => {

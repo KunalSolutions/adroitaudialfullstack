@@ -187,7 +187,10 @@ const Pages = () => {
         Solutions
       </NavLink>
 
-      <NavLink to="/software-and-plugins" className={navLinkClass}>
+      <NavLink
+        to="/category/audio-equipment/software-and-plugins"
+        className={navLinkClass}
+      >
         Software
       </NavLink>
 

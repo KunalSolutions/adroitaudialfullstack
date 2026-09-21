@@ -1,57 +1,68 @@
 import { Link } from "react-router-dom";
 
 export default function ProductSlider() {
+  
   const categories = [
     {
       name: "Microphones",
       image: "https://i.pinimg.com/1200x/87/e0/73/87e0732e48d139dea1f4b9f2b7e6ffe4.jpg",
       slug: "microphone",
+      section: "audio-equipment",
     },
     {
       name: "Audio Interfaces",
       image: "https://i.pinimg.com/1200x/d4/60/b1/d460b1df8e28aff9103f95fb4558f3a4.jpg",
       slug: "audio-interfaces",
+      section: "audio-equipment",
     },
     {
       name: "Monitor Speakers",
       image: "https://i.pinimg.com/1200x/44/d8/07/44d807b49997b54f06ca7579314ef84b.jpg",
       slug: "monitor-speakers",
+      section: "audio-equipment",
     },
     {
       name: "Monitor Speaker Bundle",
       image: "https://i.pinimg.com/1200x/f7/e9/08/f7e908f200d99b6c9e2dd018260d7c0b.jpg",
       slug: "monitor-speaker-bundle",
+      section: "audio-equipment",
     },
     {
       name: "Mixers",
       image: "https://i.pinimg.com/1200x/38/50/4c/38504c7b79843b6d1be56423f2cb80a2.jpg",
       slug: "mixers",
+      section: "audio-equipment",
     },
     {
       name: "Studio Headphones",
       image: "https://i.pinimg.com/736x/56/ba/83/56ba83a4120c89af29b2d556da67b122.jpg",
       slug: "studio-headphones",
+      section: "audio-equipment",
     },
     {
       name: "Pre Amps",
       image: "https://i.pinimg.com/1200x/61/3e/3f/613e3f3c0eed0a3fb82f8b6e8438c98f.jpg",
       slug: "pre-amps",
+      section: "audio-equipment",
     },
     {
       name: "Groove Production",
       image: "https://i.pinimg.com/736x/60/05/70/6005701cdc98a1db216074b42a18dac4.jpg",
       slug: "groove-production",
+      section: "audio-equipment",
     },
     {
       name: "Sound Proofing",
       image: "https://cdn.shopify.com/s/files/1/0657/6821/files/primacoustic-sound-proofing-acoustic-treatment-horizontal-primacoustic-rx5-recoil-professional-studio-monitor-isolator-mount-13708590350408_540x.jpg?v=1768999038&width=1080",
       slug: "sound-proofing",
+      section: "audio-equipment",
     },
     {
       name: "Studio Accessories",
       image: "https://i.pinimg.com/1200x/93/c2/05/93c2056c90d0327554b621519335845e.jpg",
       slug: "studio-accessories",
-    }, 
+      section: "audio-equipment",
+    },
   ];
 
   return (
@@ -102,10 +113,10 @@ export default function ProductSlider() {
             <div className="flex animate-marquee gap-6 w-max">
 
               {[...categories, ...categories].map((product, index) => (
-                <Link
+              <Link
                 key={index}
-                to={`/category/${product.slug}`}
-                className="group w-[220px] flex-shrink-0 block  rounded-2xl overflow-hidden hover:shadow-sm transition-all duration-500 hover:-translate-y-2"
+                to={`/category/${product.section}/${product.slug}`}
+                className="group w-[220px] flex-shrink-0 block rounded-2xl overflow-hidden hover:shadow-sm transition-all duration-500 hover:-translate-y-2"
               >
                 <div className="h-[220px] bg-white overflow-hidden">
                   <img

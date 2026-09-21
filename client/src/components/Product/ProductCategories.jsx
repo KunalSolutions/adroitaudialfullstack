@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 
 const ProductCategories = () => {
+  
   const categories = [
     {
       name: "Microphones",

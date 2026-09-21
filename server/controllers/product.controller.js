@@ -82,7 +82,7 @@ const getProductsByCategory = async (req, res) => {
   console.log("QUERY:", query);
 
   const products = await ProductModel.find(query)
-    .sort({ createdAt: -1 })
+    .sort({ createdAt: 1 })
     .limit(30);
 
   console.log("PRODUCT COUNT:", products.length);
@@ -165,6 +165,7 @@ const getSections = async (req, res) => {
 
   res.json(sections);
 };
+
 /**
  * @desc    Create product
  * @route   POST /api/v1/products

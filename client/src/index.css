@@ -99,36 +99,6 @@ Orange    #EF5622  (10%) */
   animation-play-state: paused;
 }
 
-/* cursor  */
-@media (min-width: 768px) {
-
-  * {
-    cursor: none !important;
-  }
-
-  .cursor-dot {
-    position: fixed;
-    width: 8px;
-    height: 8px;
-    background: #232466;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 99999;
-    transform: translate(-50%, -50%);
-  }
-
-  .cursor-ring {
-    position: fixed;
-    width: 10px;
-    height: 10px;
-    border: 2px solid #EF5622;
-    border-radius: 50%;
-    pointer-events: none;
-    z-index: 99998;
-    transform: translate(-50%, -50%);
-    transition: width .2s ease, height .2s ease;
-  }
-}
 
 /* for about section  */
 @keyframes float {

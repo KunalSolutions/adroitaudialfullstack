@@ -345,6 +345,10 @@ const ProductListScreen = () => {
                         Stock
                       </th>
 
+                      <th className="px-6 py-4 text-left text-xs font-semibold uppercase tracking-wider text-white">
+                        Section
+                      </th>
+
                       <th className="px-6 py-4 text-right text-xs font-semibold uppercase tracking-wider text-white">
                         Actions
                       </th>
@@ -418,6 +422,13 @@ const ProductListScreen = () => {
                                 Out of Stock
                               </span>
                             )}
+                          </td>
+
+                          {/* Section */}
+                          <td className="px-6 py-5">
+                            <span className="text-base font-bold text-[#232466]">
+                              {product.section}
+                            </span>
                           </td>
 
                           {/* Actions */}

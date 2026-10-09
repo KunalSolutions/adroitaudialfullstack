@@ -133,11 +133,11 @@ const ProductCreate = () => {
         countInStock: Number(formData.countInStock),
         variants: hasVariants
           ? variants.map((v) => ({
-              size: v.size,
-              price: Number(v.price),
-              offerPrice: Number(v.offerPrice),
-              countInStock: Number(v.countInStock),
-            }))
+            size: v.size,
+            price: Number(v.price),
+            offerPrice: Number(v.offerPrice),
+            countInStock: Number(v.countInStock),
+          }))
           : [],
       }).unwrap();
 
@@ -202,11 +202,10 @@ const ProductCreate = () => {
                   <button
                     type="button"
                     onClick={() => setImageMode("upload")}
-                    className={`rounded-xl px-5 py-3 text-sm font-semibold ${
-                      imageMode === "upload"
+                    className={`rounded-xl px-5 py-3 text-sm font-semibold ${imageMode === "upload"
                         ? "bg-[#232466] text-white"
                         : "border border-slate-300 bg-white text-slate-700"
-                    }`}
+                      }`}
                   >
                     Upload Image
                   </button>
@@ -214,11 +213,10 @@ const ProductCreate = () => {
                   <button
                     type="button"
                     onClick={() => setImageMode("url")}
-                    className={`rounded-xl px-5 py-3 text-sm font-semibold ${
-                      imageMode === "url"
+                    className={`rounded-xl px-5 py-3 text-sm font-semibold ${imageMode === "url"
                         ? "bg-[#232466] text-white"
                         : "border border-slate-300 bg-white text-slate-700"
-                    }`}
+                      }`}
                   >
                     Image URL
                   </button>
@@ -277,8 +275,8 @@ const ProductCreate = () => {
                           imagePreview.startsWith("blob:")
                             ? imagePreview
                             : imagePreview.startsWith("http")
-                            ? imagePreview
-                            : `${import.meta.env.VITE_API_URL?.replace(
+                              ? imagePreview
+                              : `${import.meta.env.VITE_API_URL?.replace(
                                 "/api/v1",
                                 ""
                               )}${imagePreview}`
@@ -399,11 +397,13 @@ const ProductCreate = () => {
                   <option value="Wall Mount Speakers">Wall Mount Speakers</option>
                   <option value="Installation Audio">Installation Audio</option>
                   <option value="PA Systems">PA Systems</option>
+                  <option value="Connectrables">Connectrables</option>
                   <option value="Subwoofers">Subwoofers</option>
                   <option value="Accessories">Accessories</option>
                   <option value="Cables">Cables</option>
                   <option value="Stands">Stands</option>
                 </select>
+
               </div>
 
               <div>
@@ -665,8 +665,8 @@ const ProductCreate = () => {
               {isUploading
                 ? "Uploading Image..."
                 : isLoading
-                ? "Creating Product..."
-                : "Create Product"}
+                  ? "Creating Product..."
+                  : "Create Product"}
             </button>
 
           </div>

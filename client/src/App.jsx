@@ -46,6 +46,7 @@ import CorporateProductScreen from '@screens/CorporateProductScreen';
 import AdroitProjectDetailsScreen from '@screens/CorporateProductScreen/AdroitProjectDetailsScreen';
 import CoCategoryProductScreen from '@screens/CorporateProductScreen/BrandProductsScreen';
 import BrandProductsScreen from '@screens/CorporateProductScreen/BrandProductsScreen';
+import AVSIPromoPost from '@components/AVSIPromoPost';
 
 const router = createBrowserRouter([
 	{
@@ -98,10 +99,10 @@ const router = createBrowserRouter([
 				path: '/brand',
 				element: <Brand />
 			},
-			{
-				path: '/shop',
-				element: <ShopPage />
-			},
+			// {
+			// 	path: '/shop',
+			// 	element: <ShopPage />
+			// },
 			{
 				path: '/products',
 				element: <Product />
@@ -142,10 +143,10 @@ const router = createBrowserRouter([
 				path: '/software-and-plugins',
 				element: <SoftwareAndPluginsScreen />,
 			},
-			{
-				path: '/blog',
-				element: <Blog />,
-			},
+			// {
+			// 	path: '/blog',
+			// 	element: <AVSIPromoPost />,
+			// },
 			{
 				path: '/contact',
 				element: <Contact />,

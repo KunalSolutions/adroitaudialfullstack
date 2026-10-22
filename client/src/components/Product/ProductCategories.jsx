@@ -64,7 +64,7 @@ const ProductCategories = () => {
         {categories.map((category) => (
           <Link
             key={category.slug}
-            to={`/category/${category.slug}`}
+            to={`/category/audio-equipment/${category.slug}`}
             className="group"
           >
             <div className="bg-white p-3 shadow-md overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:shadow-lg">

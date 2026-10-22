@@ -63,6 +63,10 @@ const Pages = () => {
         Brands
       </NavLink>
 
+      {/* <NavLink to="/blog" className={navLinkClass}>
+        Blog
+      </NavLink> */}
+
       <div
         className="relative"
         onMouseEnter={() => setShowProducts(true)}
@@ -78,7 +82,7 @@ const Pages = () => {
             }`
           }
         >
-          {regularSection || "Products"}
+          {regularSection}
 
           <ChevronDown
             size={16}

@@ -82,8 +82,7 @@ const Pages = () => {
             }`
           }
         >
-          {regularSection}
-
+           {regularSection || "Products"}
           <ChevronDown
             size={16}
             className={`transition-transform ${
